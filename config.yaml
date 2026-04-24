@@ -1,0 +1,26 @@
+# NotebookLM 팟캐스트 설정 — config.yaml 로 복사해서 사용하세요.
+
+podcast:
+  title: "내 NotebookLM 팟캐스트"
+  author: "기욱"
+  email: "you@example.com"
+  description: "NotebookLM에서 생성한 음성개요 모음"
+  language: "ko"
+  category: "Education"
+  # GitHub Pages URL (마지막 슬래시 없이)
+  base_url: "https://kiuk104.github.io/notebooklm-podcast"
+  # 팟캐스트 커버 이미지 (1400x1400 권장, docs/ 안에 두고 상대경로 또는 절대 URL)
+  cover_image: "cover.jpg"
+
+notebooks:
+  auto_discover: true
+  exclude:
+    - "테스트"
+    - "draft"
+
+# 다운로드 받은 파일이 들어갈 폴더 (저장소 기준 상대경로)
+episodes_dir: "episodes"
+# RSS / GitHub Pages 출력 폴더
+public_dir: "docs"
+# Playwright 세션 저장 위치
+auth_dir: ".auth"

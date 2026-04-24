@@ -2,5 +2,4 @@
 __pycache__/
 *.pyc
 .auth/
-config.yaml
 .DS_Store

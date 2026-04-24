@@ -1,15 +1,13 @@
 """
 NotebookLM 음성개요(Audio Overview) 자동 다운로더.
 
-전략:
-- Playwright의 'persistent context' 사용 → .auth/ 폴더에 쿠키/스토리지 저장
-- 첫 실행은 --login 모드로 사용자가 직접 Google 로그인
-- 이후 실행은 headless로 노트북 페이지에 들어가 mp3를 다운로드
+- Playwright persistent context 로 Google 세션을 유지 (.auth/)
+- auto_discover=true 이면 홈 페이지의 모든 내 노트북을 자동 수집
+- 또는 config.yaml 에 개별 노트북 ID 지정 가능
+- 이미 받은 파일은 스킵
 
-⚠️ NotebookLM은 공식 API가 없어서 DOM 셀렉터에 의존합니다.
-   UI가 바뀌면 SELECTOR_* 상수만 갱신하면 됩니다.
+UI 가 바뀌면 SELECTOR_* 상수만 갱신하면 됩니다.
 """
-
 from __future__ import annotations
 
 import argparse
@@ -17,28 +15,26 @@ import asyncio
 import re
 import sys
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 import yaml
 from playwright.async_api import (
-    BrowserContext,
-    Download,
-    Page,
-    TimeoutError as PWTimeoutError,
-    async_playwright,
+    BrowserContext, Download, Page,
+    TimeoutError as PWTimeoutError, async_playwright,
 )
 
-
-# ── 셀렉터 (UI 변경 시 여기만 수정) ────────────────────────────
+SELECTOR_HOME_NOTEBOOK_LINK = 'a[href*="/notebook/"]'
 SELECTOR_AUDIO_TAB = 'button:has-text("음성 개요"), button:has-text("Audio Overview")'
+SELECTOR_AUDIO_CARD = '[data-testid*="audio"], [class*="audio-overview"]'
 SELECTOR_DOWNLOAD_BUTTON = (
     'button[aria-label*="다운로드"], button[aria-label*="Download"], '
     'button:has-text("다운로드"), button:has-text("Download")'
 )
-# 음성개요 카드(여러 개일 수 있음)
-SELECTOR_AUDIO_CARD = '[data-testid*="audio"], [class*="audio-overview"]'
 
+HOME_URL = "https://notebooklm.google.com/"
 NOTEBOOK_URL_TEMPLATE = "https://notebooklm.google.com/notebook/{id}"
+NOTEBOOK_ID_RE = re.compile(r"/notebook/([^/?#]+)")
 
 
 @dataclass
@@ -51,16 +47,29 @@ class NotebookConfig:
 class DownloaderConfig:
     auth_dir: Path
     episodes_dir: Path
-    notebooks: list[NotebookConfig]
+    auto_discover: bool
+    exclude_names: list
+    notebooks: list
 
 
 def load_config(path: Path) -> DownloaderConfig:
     with open(path, "r", encoding="utf-8") as f:
         raw = yaml.safe_load(f)
+    nb_raw = raw.get("notebooks", [])
+    auto_discover = False
+    exclude_names = []
+    notebooks = []
+    if isinstance(nb_raw, dict):
+        auto_discover = bool(nb_raw.get("auto_discover", False))
+        exclude_names = list(nb_raw.get("exclude", []))
+    elif isinstance(nb_raw, list):
+        notebooks = [NotebookConfig(id=n["id"], name=n["name"]) for n in nb_raw]
     return DownloaderConfig(
         auth_dir=Path(raw.get("auth_dir", ".auth")),
         episodes_dir=Path(raw.get("episodes_dir", "episodes")),
-        notebooks=[NotebookConfig(id=n["id"], name=n["name"]) for n in raw["notebooks"]],
+        auto_discover=auto_discover,
+        exclude_names=exclude_names,
+        notebooks=notebooks,
     )
 
 
@@ -70,8 +79,7 @@ def slugify(text: str) -> str:
     return text[:60] or "episode"
 
 
-async def open_context(auth_dir: Path, headless: bool) -> tuple[BrowserContext, "object"]:
-    """Playwright persistent context를 연다."""
+async def open_context(auth_dir: Path, headless: bool):
     auth_dir.mkdir(parents=True, exist_ok=True)
     pw = await async_playwright().start()
     ctx = await pw.chromium.launch_persistent_context(
@@ -87,39 +95,68 @@ async def cmd_login(auth_dir: Path) -> None:
     print("[login] 브라우저가 열리면 Google 로그인 후 NotebookLM이 보이면 창을 닫으세요.")
     ctx, pw = await open_context(auth_dir, headless=False)
     page = await ctx.new_page()
-    await page.goto("https://notebooklm.google.com/")
+    await page.goto(HOME_URL)
     print("[login] 로그인이 끝나면 이 터미널에서 Enter를 누르세요...")
-    # 사용자 입력은 이벤트 루프 밖에서:
     await asyncio.get_event_loop().run_in_executor(None, input)
     await ctx.close()
     await pw.stop()
     print(f"[login] 세션이 {auth_dir} 에 저장되었습니다.")
 
 
-async def download_audio_for_notebook(
-    page: Page, notebook: NotebookConfig, episodes_dir: Path
-) -> list[Path]:
-    """한 노트북의 모든 음성개요를 다운로드. 이미 받은 파일은 스킵."""
-    saved: list[Path] = []
+async def discover_notebooks(page: Page, exclude_names: list) -> list:
+    print(f"[discover] 홈 페이지에서 노트북 목록을 수집합니다…")
+    await page.goto(HOME_URL, wait_until="networkidle")
+    await page.wait_for_timeout(2000)
+
+    anchors = page.locator(SELECTOR_HOME_NOTEBOOK_LINK)
+    count = await anchors.count()
+
+    seen = set()
+    discovered = []
+    for i in range(count):
+        a = anchors.nth(i)
+        href = await a.get_attribute("href") or ""
+        m = NOTEBOOK_ID_RE.search(href)
+        if not m:
+            continue
+        nb_id = m.group(1)
+        if nb_id in seen:
+            continue
+        seen.add(nb_id)
+        try:
+            name = (await a.inner_text(timeout=1000)).strip().split("\n")[0] or nb_id
+        except PWTimeoutError:
+            name = nb_id
+        if any(ex.strip() and ex.strip() in name for ex in exclude_names):
+            print(f"[discover] 제외: {name}")
+            continue
+        discovered.append(NotebookConfig(id=nb_id, name=name))
+
+    print(f"[discover] 노트북 {len(discovered)}개 발견")
+    for nb in discovered:
+        print(f"           • {nb.name}  ({nb.id[:12]}…)")
+    return discovered
+
+
+async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, episodes_dir: Path) -> list:
+    saved = []
     url = NOTEBOOK_URL_TEMPLATE.format(id=notebook.id)
     print(f"[fetch] {notebook.name} → {url}")
     await page.goto(url, wait_until="networkidle")
 
-    # 음성개요 탭이 분리되어 있는 UI라면 클릭
     try:
         await page.locator(SELECTOR_AUDIO_TAB).first.click(timeout=3000)
     except PWTimeoutError:
-        pass  # 탭이 없으면 그냥 진행
+        pass
 
     cards = page.locator(SELECTOR_AUDIO_CARD)
     count = await cards.count()
     if count == 0:
-        print(f"[fetch] {notebook.name}: 음성개요가 없습니다.")
+        print(f"[fetch] {notebook.name}: 음성개요가 없습니다. (스튜디오에서 먼저 생성하세요)")
         return saved
 
     for i in range(count):
         card = cards.nth(i)
-        # 카드 안에서 다운로드 버튼 찾기
         try:
             dl_button = card.locator(SELECTOR_DOWNLOAD_BUTTON).first
             await dl_button.scroll_into_view_if_needed()
@@ -131,18 +168,13 @@ async def download_audio_for_notebook(
             continue
 
         suggested = download.suggested_filename or f"{notebook.name}-{i}.mp3"
-        # YYYYMMDD-노트북-제목.mp3 형식으로 저장 (RSS에서 파싱)
-        from datetime import date
-
         stem = Path(suggested).stem
         date_prefix = date.today().strftime("%Y%m%d")
         target_name = f"{date_prefix}__{slugify(notebook.name)}__{slugify(stem)}.mp3"
         target = episodes_dir / target_name
-
         if target.exists():
             print(f"[skip] 이미 존재: {target.name}")
             continue
-
         await download.save_as(str(target))
         saved.append(target)
         print(f"[saved] {target.name}")
@@ -155,8 +187,15 @@ async def cmd_run(config: DownloaderConfig) -> None:
     ctx, pw = await open_context(config.auth_dir, headless=True)
     try:
         page = await ctx.new_page()
-        all_saved: list[Path] = []
-        for nb in config.notebooks:
+        if config.auto_discover:
+            notebooks = await discover_notebooks(page, config.exclude_names)
+        else:
+            notebooks = config.notebooks
+            if not notebooks:
+                print("[error] config.yaml 에 노트북이 비어 있습니다. auto_discover: true 로 바꾸거나 수동으로 추가하세요.")
+                return
+        all_saved = []
+        for nb in notebooks:
             try:
                 saved = await download_audio_for_notebook(page, nb, config.episodes_dir)
                 all_saved.extend(saved)
@@ -170,17 +209,13 @@ async def cmd_run(config: DownloaderConfig) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="NotebookLM 음성개요 다운로더")
-    parser.add_argument("--config", default="config.yaml", help="설정 파일 경로")
-    parser.add_argument(
-        "--login",
-        action="store_true",
-        help="첫 실행 시 Google 로그인 (헤드풀 브라우저)",
-    )
+    parser.add_argument("--config", default="config.yaml")
+    parser.add_argument("--login", action="store_true", help="첫 실행 시 Google 로그인")
+    parser.add_argument("--list", action="store_true", help="발견된 노트북만 출력 (다운로드 안 함)")
     args = parser.parse_args()
 
     cfg_path = Path(args.config)
     if args.login:
-        # 로그인은 config의 auth_dir만 알면 됨
         auth_dir = Path(".auth")
         if cfg_path.exists():
             with open(cfg_path, "r", encoding="utf-8") as f:
@@ -190,9 +225,22 @@ def main() -> None:
         return
 
     if not cfg_path.exists():
-        print(f"[error] {cfg_path} 가 없습니다. config.example.yaml을 복사해서 만드세요.")
+        print(f"[error] {cfg_path} 가 없습니다.")
         sys.exit(1)
     config = load_config(cfg_path)
+
+    if args.list:
+        async def _list():
+            ctx, pw = await open_context(config.auth_dir, headless=True)
+            try:
+                page = await ctx.new_page()
+                await discover_notebooks(page, config.exclude_names)
+            finally:
+                await ctx.close()
+                await pw.stop()
+        asyncio.run(_list())
+        return
+
     asyncio.run(cmd_run(config))
 
 
