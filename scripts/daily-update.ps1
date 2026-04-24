@@ -18,8 +18,8 @@ try {
     $python = if (Test-Path $venvPy) { $venvPy } else { 'python' }
     Write-Output "[info] python: $python"
 
-    Write-Output "[step] git pull --rebase"
-    git pull --rebase origin main
+    Write-Output "[step] git pull --rebase --autostash"
+    git pull --rebase --autostash origin main
     if ($LASTEXITCODE -ne 0) { throw "git pull --rebase 실패" }
 
     Write-Output "[step] main.py (NotebookLM 다운로드 + RSS 생성)"

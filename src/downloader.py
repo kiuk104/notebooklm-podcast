@@ -169,12 +169,17 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
 
         suggested = download.suggested_filename or f"{notebook.name}-{i}.mp3"
         stem = Path(suggested).stem
-        date_prefix = date.today().strftime("%Y%m%d")
-        target_name = f"{date_prefix}__{slugify(notebook.name)}__{slugify(stem)}.mp3"
-        target = episodes_dir / target_name
-        if target.exists():
-            print(f"[skip] 이미 존재: {target.name}")
+        suffix = f"__{slugify(notebook.name)}__{slugify(stem)}.mp3"
+
+        existing = next(
+            (p for p in episodes_dir.glob("*.mp3") if p.name.endswith(suffix)),
+            None,
+        )
+        if existing is not None:
+            print(f"[skip] 이미 존재 (날짜 무시): {existing.name}")
             continue
+
+        target = episodes_dir / f"{date.today().strftime('%Y%m%d')}{suffix}"
         await download.save_as(str(target))
         saved.append(target)
         print(f"[saved] {target.name}")

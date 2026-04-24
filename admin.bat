@@ -1,5 +1,4 @@
 @echo off
-chcp 65001 >nul 2>&1
 setlocal
 
 cd /d "%~dp0"
@@ -12,10 +11,16 @@ if exist ".venv\Scripts\python.exe" (
 
 echo.
 echo ============================================
-echo  NotebookLM 팟캐스트 관리자 페이지
-echo  http://127.0.0.1:8080  (자동으로 열림)
-echo  창을 닫으려면 Ctrl+C
+echo  NotebookLM podcast admin
+echo  URL: http://127.0.0.1:8080  (opens automatically)
+echo  Press Ctrl+C to stop the server.
 echo ============================================
 echo.
 
-%PYTHON% src\admin.py
+"%PYTHON%" src\admin.py
+
+echo.
+echo ============================================
+echo  Server stopped. Check the log above for errors.
+echo ============================================
+pause
