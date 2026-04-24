@@ -114,7 +114,37 @@ git push
 
 ### 5. GitHub Pages 활성화
 
-GitHub repo → Settings → Pages → Source를 **`main` 브랜치 / `docs/` 폴더**로 설정하면 몇 분 뒤 `https://<user>.github.io/<repo>/feed.xml`로 접근 가능합니다.
+#### 5-A. `gh` CLI로 자동 설정 (추천)
+
+저장소까지 한 번에 만들고 Pages/Actions 권한까지 설정하는 방법입니다. `gh` CLI가 설치돼 있어야 합니다.
+
+```bash
+# 최초 1회 로그인
+gh auth login            # → Login with a web browser 선택
+
+# 로컬에 origin이 설정돼 있지 않다면 저장소 생성과 함께
+gh repo create <owner>/<repo> --public \
+  --description "NotebookLM 음성개요 팟캐스트"
+
+# 첫 푸시
+git push -u origin main
+
+# Pages 빌드 소스를 "GitHub Actions"로 지정
+gh api -X POST repos/<owner>/<repo>/pages -f build_type=workflow
+# 이미 활성화돼 있으면 POST 대신 PUT 사용
+
+# 워크플로우에 쓰기 권한 부여 (update.yml의 git push 스텝에 필수)
+gh api -X PUT repos/<owner>/<repo>/actions/permissions/workflow \
+  -f default_workflow_permissions=write \
+  -F can_approve_pull_request_reviews=false
+```
+
+몇 분 뒤 `https://<owner>.github.io/<repo>/feed.xml`이 응답합니다. 워크플로우 성공 여부는 `gh run list --repo <owner>/<repo>` 또는 `gh run watch`로 확인하세요.
+
+#### 5-B. GitHub 웹 UI로 수동 설정
+
+- Settings → **Pages** → Source를 **"GitHub Actions"**로 선택 (이 저장소는 `docs/` 폴더를 브랜치에서 직접 서빙하지 않고, `.github/workflows/update.yml`이 `docs/`를 artifact로 올려 배포합니다)
+- Settings → **Actions** → General → Workflow permissions → **"Read and write permissions"** 선택
 
 ### 6. 팟캐스트 앱에 등록
 
@@ -138,7 +168,8 @@ GitHub repo → Settings → Pages → Source를 **`main` 브랜치 / `docs/` �
 | 다운로드 버튼을 못 찾음 | NotebookLM UI 업데이트. `src/downloader.py` 셀렉터 수정 |
 | 로그인이 풀림 | `.auth/` 삭제 후 `--login` 다시 실행 |
 | RSS가 앱에서 인식 안 됨 | https://podba.se/validate 에서 검증 |
-| 새 에피소드가 추가 안 됨 | `episodes/` 파일명이 `YYYYMMDD-제목.mp3` 패턴인지 확인 |
+| 새 에피소드가 추가 안 됨 | `episodes/` 파일명이 `YYYYMMDD__노트북명__제목.mp3` 패턴인지 확인 (구분자는 언더바 2개) |
+| 팟캐스트 앱이 mp3 URL을 못 읽음 | 엔클로저 URL이 percent-encoding 됐는지 확인 — 한글 파일명이면 `rss_generator.py`의 `urllib.parse.quote`가 처리합니다 |
 
 ## 라이선스 / 주의
 
