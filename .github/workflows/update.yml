@@ -1,0 +1,66 @@
+# 매일 새 음성개요 체크 + GitHub Pages 배포 워크플로우
+#
+# ⚠️ 중요: NotebookLM은 Google 로그인이 필요하고, GitHub Actions에서 자동 로그인은
+#    2FA/캡챠로 막힙니다. 그래서 실제 다운로드는 두 가지 방법 중 하나로 처리하세요:
+#
+#  방법 A (추천 / 안전): 로컬 cron 으로 다운로드 → git push
+#       - 자동화된 부분: RSS 재생성 + Pages 배포
+#       - 사용자가 mp3 파일을 push하면 이 워크플로우가 트리거됨
+#
+#  방법 B (실험적): .auth/ 폴더를 암호화해서 GitHub Secrets로 동기화
+#       - 세션이 풀리면 다시 로컬에서 --login 후 secret 갱신
+#       - 보안상 추천하지 않음
+#
+# 아래 기본 설정은 방법 A입니다.
+
+name: Build podcast feed
+
+on:
+  push:
+    paths:
+      - 'episodes/**'
+      - 'config.yaml'
+      - 'src/rss_generator.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies (RSS only — Playwright 불필요)
+        run: |
+          pip install PyYAML mutagen
+
+      - name: Generate RSS feed
+        run: python src/rss_generator.py --config config.yaml
+
+      - name: Commit updated docs/
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "변경사항 없음"
+          else
+            git commit -m "chore: rebuild RSS feed [skip ci]"
+            git push
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

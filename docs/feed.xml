@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>내 NotebookLM 팟캐스트</title>
+    <link>https://your-username.github.io/notebooklm-podcast</link>
+    <atom:link href="https://your-username.github.io/notebooklm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>ko</language>
+    <description>NotebookLM에서 생성한 음성개요 모음</description>
+    <lastBuildDate>Fri, 24 Apr 2026 15:51:18 +0000</lastBuildDate>
+    <itunes:author>기욱</itunes:author>
+    <itunes:summary>NotebookLM에서 생성한 음성개요 모음</itunes:summary>
+    <itunes:owner>
+      <itunes:name>기욱</itunes:name>
+      <itunes:email>you@example.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://your-username.github.io/notebooklm-podcast/cover.jpg"/>
+    <itunes:category text="Education"/>
+    <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>[회사위키] 2026Q2 OKR</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 회사위키]]></description>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://your-username.github.io/notebooklm-podcast/episodes/20260423__회사위키__2026Q2-OKR.mp3" length="40586" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260423__회사위키__2026Q2-OKR.mp3</guid>
+      <itunes:duration>0:05</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AI 논문정리] Attention is all you need</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 논문정리]]></description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://your-username.github.io/notebooklm-podcast/episodes/20260420__AI-논문정리__Attention-is-all-you-need.mp3" length="24494" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260420__AI-논문정리__Attention-is-all-you-need.mp3</guid>
+      <itunes:duration>0:03</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

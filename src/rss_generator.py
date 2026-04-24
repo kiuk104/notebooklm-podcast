@@ -1,0 +1,177 @@
+"""
+episodes/ 폴더의 mp3들을 스캔해서 podcast-spec 호환 RSS 2.0 피드를 생성한다.
+파일명 규칙: <YYYYMMDD>__<노트북명>__<제목>.mp3
+"""
+from __future__ import annotations
+import html
+import mimetypes
+import re
+import shutil
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from email.utils import format_datetime
+from pathlib import Path
+from xml.sax.saxutils import escape
+
+import yaml
+from mutagen.mp3 import MP3
+
+FILENAME_RE = re.compile(r"^(\d{8})__(.+?)__(.+)\.mp3$")
+
+
+@dataclass
+class Episode:
+    path: Path
+    title: str
+    notebook: str
+    pub_date: datetime
+    duration_sec: int
+    size_bytes: int
+
+    @property
+    def guid(self) -> str:
+        return self.path.name
+
+    @property
+    def url(self) -> str:
+        return f"episodes/{self.path.name}"
+
+
+def parse_episode(path: Path) -> Episode:
+    m = FILENAME_RE.match(path.name)
+    if m:
+        date_str, notebook, title = m.group(1), m.group(2), m.group(3)
+        pub = datetime.strptime(date_str, "%Y%m%d").replace(tzinfo=timezone.utc)
+    else:
+        notebook = "기타"
+        title = path.stem
+        pub = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+    try:
+        duration = int(MP3(str(path)).info.length)
+    except Exception:
+        duration = 0
+    return Episode(
+        path=path,
+        title=title.replace("-", " "),
+        notebook=notebook.replace("-", " "),
+        pub_date=pub,
+        duration_sec=duration,
+        size_bytes=path.stat().st_size,
+    )
+
+
+def fmt_duration(sec: int) -> str:
+    h, rem = divmod(sec, 3600)
+    m, s = divmod(rem, 60)
+    return f"{h:d}:{m:02d}:{s:02d}" if h else f"{m:d}:{s:02d}"
+
+
+def build_rss(config: dict, episodes: list[Episode]) -> str:
+    pod = config["podcast"]
+    base_url = pod["base_url"].rstrip("/")
+    cover = pod.get("cover_image", "cover.jpg")
+    cover_url = cover if cover.startswith("http") else f"{base_url}/{cover}"
+    now = format_datetime(datetime.now(timezone.utc))
+
+    items = []
+    for ep in sorted(episodes, key=lambda e: e.pub_date, reverse=True):
+        ep_url = f"{base_url}/{ep.url}"
+        mime = mimetypes.guess_type(ep.path.name)[0] or "audio/mpeg"
+        item_title = escape(f"[{ep.notebook}] {ep.title}")
+        items.append(
+            "    <item>\n"
+            f"      <title>{item_title}</title>\n"
+            f"      <description><![CDATA[NotebookLM 음성개요 — 노트북: {html.escape(ep.notebook)}]]></description>\n"
+            f"      <pubDate>{format_datetime(ep.pub_date)}</pubDate>\n"
+            f'      <enclosure url="{escape(ep_url)}" length="{ep.size_bytes}" type="{mime}"/>\n'
+            f'      <guid isPermaLink="false">{escape(ep.guid)}</guid>\n'
+            f"      <itunes:duration>{fmt_duration(ep.duration_sec)}</itunes:duration>\n"
+            "      <itunes:explicit>false</itunes:explicit>\n"
+            "    </item>"
+        )
+
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0"\n'
+        '     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"\n'
+        '     xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "  <channel>\n"
+        f"    <title>{escape(pod['title'])}</title>\n"
+        f"    <link>{escape(base_url)}</link>\n"
+        f'    <atom:link href="{escape(base_url)}/feed.xml" rel="self" type="application/rss+xml"/>\n'
+        f"    <language>{pod.get('language', 'ko')}</language>\n"
+        f"    <description>{escape(pod['description'])}</description>\n"
+        f"    <lastBuildDate>{now}</lastBuildDate>\n"
+        f"    <itunes:author>{escape(pod['author'])}</itunes:author>\n"
+        f"    <itunes:summary>{escape(pod['description'])}</itunes:summary>\n"
+        "    <itunes:owner>\n"
+        f"      <itunes:name>{escape(pod['author'])}</itunes:name>\n"
+        f"      <itunes:email>{escape(pod.get('email', 'noreply@example.com'))}</itunes:email>\n"
+        "    </itunes:owner>\n"
+        f'    <itunes:image href="{escape(cover_url)}"/>\n'
+        f'    <itunes:category text="{escape(pod.get("category", "Education"))}"/>\n'
+        "    <itunes:explicit>false</itunes:explicit>\n"
+        + "\n".join(items) + "\n"
+        "  </channel>\n"
+        "</rss>\n"
+    )
+
+
+def build_index_html(config: dict, episodes: list[Episode]) -> str:
+    pod = config["podcast"]
+    title = html.escape(pod["title"])
+    base_url = pod["base_url"].rstrip("/")
+    rows = []
+    for ep in sorted(episodes, key=lambda e: e.pub_date, reverse=True):
+        rows.append(
+            "<tr>"
+            f"<td>{ep.pub_date.strftime('%Y-%m-%d')}</td>"
+            f"<td>{html.escape(ep.notebook)}</td>"
+            f'<td><a href="{html.escape(ep.url)}">{html.escape(ep.title)}</a></td>'
+            f"<td>{fmt_duration(ep.duration_sec)}</td>"
+            f"<td>{ep.size_bytes // 1024 // 1024} MB</td>"
+            "</tr>"
+        )
+    rows_html = "\n".join(rows) or "<tr><td colspan='5'>아직 에피소드가 없습니다.</td></tr>"
+    return (
+        "<!doctype html>\n<html lang=\"ko\"><head><meta charset=\"utf-8\">\n"
+        f"<title>{title}</title>\n"
+        "<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;color:#222}"
+        ".feed-url{background:#f4f4f4;padding:8px 12px;border-radius:6px;font-family:monospace;word-break:break-all}"
+        "table{width:100%;border-collapse:collapse;margin-top:24px}"
+        "th,td{padding:8px 6px;border-bottom:1px solid #eee;text-align:left;font-size:14px}"
+        "th{background:#fafafa}</style></head><body>\n"
+        f"<h1>{title}</h1>\n<p>아래 RSS 주소를 팟캐스트 앱에 등록하세요:</p>\n"
+        f'<p class="feed-url">{base_url}/feed.xml</p>\n'
+        "<table><thead><tr><th>날짜</th><th>노트북</th><th>제목</th><th>길이</th><th>크기</th></tr></thead>\n"
+        f"<tbody>\n{rows_html}\n</tbody></table>\n</body></html>\n"
+    )
+
+
+def generate(config_path: Path) -> None:
+    with open(config_path, "r", encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+    episodes_dir = Path(config.get("episodes_dir", "episodes"))
+    public_dir = Path(config.get("public_dir", "docs"))
+    public_episodes = public_dir / "episodes"
+    public_episodes.mkdir(parents=True, exist_ok=True)
+
+    episodes = [parse_episode(p) for p in sorted(episodes_dir.glob("*.mp3"))]
+    for ep in episodes:
+        target = public_episodes / ep.path.name
+        if not target.exists() or target.stat().st_size != ep.path.stat().st_size:
+            shutil.copy2(ep.path, target)
+
+    (public_dir / "feed.xml").write_text(build_rss(config, episodes), encoding="utf-8")
+    (public_dir / "index.html").write_text(build_index_html(config, episodes), encoding="utf-8")
+    print(f"[rss] {len(episodes)}개 에피소드로 feed.xml 생성 완료")
+    print(f"[rss] {public_dir / 'feed.xml'}")
+    print(f"[rss] {public_dir / 'index.html'}")
+
+
+if __name__ == "__main__":
+    import argparse
+    p = argparse.ArgumentParser()
+    p.add_argument("--config", default="config.yaml")
+    args = p.parse_args()
+    generate(Path(args.config))
