@@ -154,12 +154,53 @@ gh api -X PUT repos/<owner>/<repo>/actions/permissions/workflow \
 
 ## 자동화
 
-`.github/workflows/update.yml`이 매일 한 번 실행되면서 새 음성개요를 체크합니다. 
+자동화는 **두 계층**으로 나뉘어 있습니다:
 
-⚠️ 단, **GitHub Actions에서 Google 로그인을 자동화하는 건 위험**합니다(2FA, 캡챠, 보안 정책 위반). 추천 패턴은:
+| 계층 | 어디서 | 무엇을 |
+|---|---|---|
+| 다운로드 (로그인 필요) | 로컬 PC (Windows 작업 스케줄러) | `main.py`로 NotebookLM에서 mp3 다운 + `git push` |
+| RSS 재생성 + 배포 | GitHub Actions | `push` 트리거로 `docs/feed.xml` 갱신 + Pages 재배포 |
 
-1. **로컬 cron으로 실행** (가장 안정) → 결과만 git push
-2. 또는 **세션 쿠키를 GitHub Secrets에 저장** (만료되면 갱신 필요, 자세한 건 워크플로우 파일 주석 참조)
+⚠️ GitHub Actions에서 Google 로그인 자동화는 2FA/캡챠로 막히고 세션 저장은 보안상 비추천이므로, 다운로드는 로컬에서만 돌립니다.
+
+### Windows 작업 스케줄러 등록 (1회)
+
+```powershell
+# 프로젝트 루트에서 PowerShell로 (관리자 권한 불필요)
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\register-scheduled-task.ps1
+```
+
+기본값: **매일 09:00**에 [scripts/daily-update.ps1](scripts/daily-update.ps1)을 실행. 시간을 바꾸려면 [scripts/register-scheduled-task.ps1](scripts/register-scheduled-task.ps1)의 `-At 9am`을 수정 후 다시 실행하세요 (`-Force` 덕에 덮어씌워집니다).
+
+### daily-update.ps1이 하는 일
+
+1. `git pull --rebase origin main` — CI가 남긴 docs/ 자동 커밋을 당겨옴
+2. `python src/main.py` — NotebookLM 다운로드 + RSS 생성 (헤드리스 Chromium)
+3. 새 mp3가 없으면 바로 종료, 있으면 `git add/commit/push`
+4. 모든 출력은 `logs/daily-update-YYYYMMDD.log`에 기록
+
+### 동작 확인
+
+```powershell
+# 등록 확인
+Get-ScheduledTask -TaskName 'notebooklm-podcast-daily'
+
+# 스케줄 기다리지 않고 즉시 1회 실행
+Start-ScheduledTask -TaskName 'notebooklm-podcast-daily'
+
+# 해제
+Unregister-ScheduledTask -TaskName 'notebooklm-podcast-daily' -Confirm:$false
+```
+
+### Google 세션이 만료됐을 때
+
+`logs/daily-update-*.log`에 `main.py 실패` 경고가 뜨면 재로그인이 필요합니다:
+
+```powershell
+.\.venv\Scripts\python.exe src\downloader.py --login
+```
+
+브라우저 창에서 Google 로그인 후 창을 닫으면 `.auth/` 갱신됩니다.
 
 ## 트러블슈팅
 
