@@ -8,7 +8,7 @@
     <atom:link href="https://kiuk104.github.io/notebooklm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>ko</language>
     <description>NotebookLM에서 생성한 음성개요 모음</description>
-    <lastBuildDate>Fri, 24 Apr 2026 20:16:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 21:13:05 +0000</lastBuildDate>
     <itunes:author>기욱</itunes:author>
     <itunes:summary>NotebookLM에서 생성한 음성개요 모음</itunes:summary>
     <itunes:owner>
@@ -18,15 +18,6 @@
     <itunes:image href="https://kiuk104.github.io/notebooklm-podcast/cover.jpg"/>
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>[회사위키] 2026Q2 OKR</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 회사위키]]></description>
-      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260423__%ED%9A%8C%EC%82%AC%EC%9C%84%ED%82%A4__2026Q2-OKR.mp3" length="40586" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260423__회사위키__2026Q2-OKR.mp3</guid>
-      <itunes:duration>0:05</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
     <item>
       <title>[AI 논문정리] Attention is all you need</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 논문정리]]></description>
