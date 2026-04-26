@@ -24,3 +24,8 @@ episodes_dir: "episodes"
 public_dir: "docs"
 # Playwright 세션 저장 위치
 auth_dir: ".auth"
+
+# NotebookLM이 주는 m4a(256k stereo)를 mp3로 자동 재인코딩.
+# 음성용으로 64k mono면 충분하고 용량이 1/4로 줄어든다. ffmpeg 필요.
+transcode_to_mp3: true
+transcode_bitrate: "64k"

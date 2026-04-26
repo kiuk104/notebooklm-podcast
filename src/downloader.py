@@ -59,6 +59,8 @@ class DownloaderConfig:
     auto_discover: bool
     exclude_names: list
     notebooks: list
+    transcode_to_mp3: bool
+    transcode_bitrate: str
 
 
 def load_config(path: Path) -> DownloaderConfig:
@@ -79,6 +81,8 @@ def load_config(path: Path) -> DownloaderConfig:
         auto_discover=auto_discover,
         exclude_names=exclude_names,
         notebooks=notebooks,
+        transcode_to_mp3=bool(raw.get("transcode_to_mp3", True)),
+        transcode_bitrate=str(raw.get("transcode_bitrate", "64k")),
     )
 
 
@@ -170,7 +174,13 @@ async def discover_notebooks(page: Page, exclude_names: list) -> list:
     return discovered
 
 
-async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, episodes_dir: Path) -> list:
+async def download_audio_for_notebook(
+    page: Page,
+    notebook: NotebookConfig,
+    episodes_dir: Path,
+    transcode: bool = False,
+    transcode_bitrate: str = "64k",
+) -> list:
     saved = []
     url = NOTEBOOK_URL_TEMPLATE.format(id=notebook.id)
     print(f"[fetch] {notebook.name} → {url}")
@@ -253,8 +263,21 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
 
         target = episodes_dir / f"{date.today().strftime('%Y%m%d')}{suffix}"
         await download.save_as(str(target))
-        saved.append(target)
         print(f"[saved] {target.name}")
+
+        if transcode and target.suffix.lower() != ".mp3":
+            from audio_tools import transcode_to_mp3
+            mp3_target = target.with_suffix(".mp3")
+            old_size = target.stat().st_size
+            if transcode_to_mp3(target, mp3_target, bitrate=transcode_bitrate):
+                new_size = mp3_target.stat().st_size
+                target.unlink()
+                target = mp3_target
+                print(f"[transcode] {target.name} ({old_size//1024//1024}MB → {new_size//1024//1024}MB, {transcode_bitrate} mono)")
+            else:
+                print(f"[transcode] {target.name} 변환 실패, 원본 유지")
+
+        saved.append(target)
 
     return saved
 
@@ -330,7 +353,13 @@ async def cmd_run(config: DownloaderConfig) -> None:
         all_saved = []
         for nb in notebooks:
             try:
-                saved = await download_audio_for_notebook(page, nb, config.episodes_dir)
+                saved = await download_audio_for_notebook(
+                    page,
+                    nb,
+                    config.episodes_dir,
+                    transcode=config.transcode_to_mp3,
+                    transcode_bitrate=config.transcode_bitrate,
+                )
                 all_saved.extend(saved)
             except Exception as e:
                 print(f"[error] {nb.name}: {e}", file=sys.stderr)

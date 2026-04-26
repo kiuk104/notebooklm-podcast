@@ -5,7 +5,6 @@ episodes/ 폴더의 mp3/m4a들을 스캔해서 podcast-spec 호환 RSS 2.0 피�
 from __future__ import annotations
 import html
 import mimetypes
-import os
 import re
 import shutil
 import subprocess
@@ -19,31 +18,14 @@ from xml.sax.saxutils import escape
 import yaml
 import mutagen
 
+from audio_tools import find_bin
+
 FILENAME_RE = re.compile(r"^(\d{8})__(.+?)__(.+)\.(?:mp3|m4a)$", re.IGNORECASE)
 AUDIO_EXTS = ("*.mp3", "*.m4a")
 
-_FFPROBE_PATH: str | None = None
-
-
-def _find_ffprobe() -> str | None:
-    global _FFPROBE_PATH
-    if _FFPROBE_PATH is not None:
-        return _FFPROBE_PATH or None
-    found = shutil.which("ffprobe")
-    if found:
-        _FFPROBE_PATH = found
-        return found
-    if os.name == "nt":
-        winget_root = Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Packages"
-        for ffprobe in winget_root.glob("Gyan.FFmpeg_*/ffmpeg-*/bin/ffprobe.exe"):
-            _FFPROBE_PATH = str(ffprobe)
-            return _FFPROBE_PATH
-    _FFPROBE_PATH = ""
-    return None
-
 
 def _ffprobe_duration(path: Path) -> int:
-    bin_path = _find_ffprobe()
+    bin_path = find_bin("ffprobe")
     if not bin_path:
         return 0
     try:
