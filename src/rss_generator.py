@@ -5,8 +5,10 @@ episodes/ 폴더의 mp3/m4a들을 스캔해서 podcast-spec 호환 RSS 2.0 피�
 from __future__ import annotations
 import html
 import mimetypes
+import os
 import re
 import shutil
+import subprocess
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from email.utils import format_datetime
@@ -19,6 +21,42 @@ import mutagen
 
 FILENAME_RE = re.compile(r"^(\d{8})__(.+?)__(.+)\.(?:mp3|m4a)$", re.IGNORECASE)
 AUDIO_EXTS = ("*.mp3", "*.m4a")
+
+_FFPROBE_PATH: str | None = None
+
+
+def _find_ffprobe() -> str | None:
+    global _FFPROBE_PATH
+    if _FFPROBE_PATH is not None:
+        return _FFPROBE_PATH or None
+    found = shutil.which("ffprobe")
+    if found:
+        _FFPROBE_PATH = found
+        return found
+    if os.name == "nt":
+        winget_root = Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Packages"
+        for ffprobe in winget_root.glob("Gyan.FFmpeg_*/ffmpeg-*/bin/ffprobe.exe"):
+            _FFPROBE_PATH = str(ffprobe)
+            return _FFPROBE_PATH
+    _FFPROBE_PATH = ""
+    return None
+
+
+def _ffprobe_duration(path: Path) -> int:
+    bin_path = _find_ffprobe()
+    if not bin_path:
+        return 0
+    try:
+        r = subprocess.run(
+            [bin_path, "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+            capture_output=True, text=True, timeout=15,
+        )
+        if r.returncode == 0 and r.stdout.strip():
+            return int(float(r.stdout.strip()))
+    except (subprocess.TimeoutExpired, FileNotFoundError, ValueError, OSError):
+        pass
+    return 0
 
 
 @dataclass
@@ -48,11 +86,15 @@ def parse_episode(path: Path) -> Episode:
         notebook = "기타"
         title = path.stem
         pub = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+    duration = 0
     try:
         meta = mutagen.File(str(path))
-        duration = int(meta.info.length) if meta and meta.info else 0
+        if meta and meta.info and meta.info.length and meta.info.length > 0:
+            duration = int(meta.info.length)
     except Exception:
-        duration = 0
+        pass
+    if duration == 0:
+        duration = _ffprobe_duration(path)
     return Episode(
         path=path,
         title=title.replace("-", " "),
