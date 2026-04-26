@@ -202,10 +202,17 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
 
         suggested = download.suggested_filename or f"{notebook.name}-{i}.mp3"
         stem = Path(suggested).stem
-        suffix = f"__{slugify(notebook.name)}__{slugify(stem)}.mp3"
+        ext = Path(suggested).suffix.lower() or ".mp3"
+        if ext not in (".mp3", ".m4a"):
+            ext = ".mp3"
+        suffix = f"__{slugify(notebook.name)}__{slugify(stem)}{ext}"
 
         existing = next(
-            (p for p in episodes_dir.glob("*.mp3") if p.name.endswith(suffix)),
+            (
+                p
+                for p in episodes_dir.iterdir()
+                if p.suffix.lower() in (".mp3", ".m4a") and p.name.endswith(suffix)
+            ),
             None,
         )
         if existing is not None:

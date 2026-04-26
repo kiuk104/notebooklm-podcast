@@ -1,6 +1,6 @@
 """
-episodes/ 폴더의 mp3들을 스캔해서 podcast-spec 호환 RSS 2.0 피드를 생성한다.
-파일명 규칙: <YYYYMMDD>__<노트북명>__<제목>.mp3
+episodes/ 폴더의 mp3/m4a들을 스캔해서 podcast-spec 호환 RSS 2.0 피드를 생성한다.
+파일명 규칙: <YYYYMMDD>__<노트북명>__<제목>.<mp3|m4a>
 """
 from __future__ import annotations
 import html
@@ -15,9 +15,10 @@ from urllib.parse import quote
 from xml.sax.saxutils import escape
 
 import yaml
-from mutagen.mp3 import MP3
+import mutagen
 
-FILENAME_RE = re.compile(r"^(\d{8})__(.+?)__(.+)\.mp3$")
+FILENAME_RE = re.compile(r"^(\d{8})__(.+?)__(.+)\.(?:mp3|m4a)$", re.IGNORECASE)
+AUDIO_EXTS = ("*.mp3", "*.m4a")
 
 
 @dataclass
@@ -48,7 +49,8 @@ def parse_episode(path: Path) -> Episode:
         title = path.stem
         pub = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
     try:
-        duration = int(MP3(str(path)).info.length)
+        meta = mutagen.File(str(path))
+        duration = int(meta.info.length) if meta and meta.info else 0
     except Exception:
         duration = 0
     return Episode(
@@ -157,7 +159,10 @@ def generate(config_path: Path) -> None:
     public_episodes = public_dir / "episodes"
     public_episodes.mkdir(parents=True, exist_ok=True)
 
-    episodes = [parse_episode(p) for p in sorted(episodes_dir.glob("*.mp3"))]
+    audio_files = []
+    for ext in AUDIO_EXTS:
+        audio_files.extend(episodes_dir.glob(ext))
+    episodes = [parse_episode(p) for p in sorted(audio_files)]
     for ep in episodes:
         target = public_episodes / ep.path.name
         if not target.exists() or target.stat().st_size != ep.path.stat().st_size:

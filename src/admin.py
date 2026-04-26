@@ -20,7 +20,7 @@ from pathlib import Path
 
 from flask import Flask, flash, redirect, render_template, request, url_for
 
-from rss_generator import fmt_duration, generate, parse_episode
+from rss_generator import AUDIO_EXTS, fmt_duration, generate, parse_episode
 
 ROOT = Path(__file__).resolve().parent.parent
 EPISODES_DIR = ROOT / "episodes"
@@ -225,8 +225,11 @@ def _run_auto_download() -> None:
 
 @app.route("/", methods=["GET"])
 def index():
+    audio_files = []
+    for ext in AUDIO_EXTS:
+        audio_files.extend(EPISODES_DIR.glob(ext))
     episodes = sorted(
-        (parse_episode(p) for p in EPISODES_DIR.glob("*.mp3")),
+        (parse_episode(p) for p in audio_files),
         key=lambda e: e.pub_date,
         reverse=True,
     )
@@ -246,8 +249,8 @@ def delete():
     if "/" in filename or "\\" in filename or ".." in filename:
         flash(f"잘못된 파일명: {filename}", "error")
         return redirect(url_for("index"))
-    if not filename.endswith(".mp3"):
-        flash("mp3 파일만 삭제 가능합니다.", "error")
+    if not filename.lower().endswith((".mp3", ".m4a")):
+        flash("mp3/m4a 파일만 삭제 가능합니다.", "error")
         return redirect(url_for("index"))
 
     target = EPISODES_DIR / filename
@@ -339,11 +342,12 @@ def upload():
         flash(f"날짜 형식이 잘못됐습니다: {date_str}", "error")
         return redirect(url_for("index"))
 
-    if not file.filename.lower().endswith(".mp3"):
-        flash("mp3 파일만 업로드 가능합니다.", "error")
+    if not file.filename.lower().endswith((".mp3", ".m4a")):
+        flash("mp3/m4a 파일만 업로드 가능합니다.", "error")
         return redirect(url_for("index"))
 
-    filename = f"{date_str}__{notebook}__{title}.mp3"
+    ext = Path(file.filename).suffix.lower()
+    filename = f"{date_str}__{notebook}__{title}{ext}"
     target = EPISODES_DIR / filename
     EPISODES_DIR.mkdir(exist_ok=True)
 
