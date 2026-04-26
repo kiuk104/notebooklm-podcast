@@ -36,12 +36,30 @@ JOB: dict = {
     "returncode": None,
     "started_at": None,
     "finished_at": None,
+    "notebooks_found": None,
+    "episodes_added": None,
+    "session_expired": False,
 }
 JOB_LOCK = threading.Lock()
 MAX_LOG_LINES = 500
 
+LIST_JOB: dict = {
+    "running": False,
+    "log": [],
+    "returncode": None,
+    "started_at": None,
+    "finished_at": None,
+    "notebooks": [],
+    "session_expired": False,
+}
+LIST_JOB_LOCK = threading.Lock()
+
 
 _WIN_INVALID = re.compile(r'[\\/:*?"<>|]')
+_DISCOVER_COUNT_RE = re.compile(r"\[discover\] 노트북 (\d+)개 발견")
+_EPISODE_COUNT_RE = re.compile(r"\[done\] 새로 받은 에피소드: (\d+)개")
+_SESSION_EXPIRED_MARKER = "[discover] 세션 만료"
+_NOTEBOOK_LIST_RE = re.compile(r"^\s*•\s+(.+?)\s+\(([^)]+?)…?\)\s*$")
 
 
 def sanitize(s: str) -> str:
@@ -70,6 +88,60 @@ def _log(msg: str) -> None:
     JOB["log"].append(f"[{ts}] {msg}")
     if len(JOB["log"]) > MAX_LOG_LINES:
         del JOB["log"][: len(JOB["log"]) - MAX_LOG_LINES]
+
+    m = _DISCOVER_COUNT_RE.search(msg)
+    if m:
+        JOB["notebooks_found"] = int(m.group(1))
+    m = _EPISODE_COUNT_RE.search(msg)
+    if m:
+        JOB["episodes_added"] = int(m.group(1))
+    if _SESSION_EXPIRED_MARKER in msg:
+        JOB["session_expired"] = True
+
+
+def _list_log(msg: str) -> None:
+    ts = datetime.now().strftime("%H:%M:%S")
+    LIST_JOB["log"].append(f"[{ts}] {msg}")
+    if len(LIST_JOB["log"]) > MAX_LOG_LINES:
+        del LIST_JOB["log"][: len(LIST_JOB["log"]) - MAX_LOG_LINES]
+
+    m = _NOTEBOOK_LIST_RE.match(msg)
+    if m:
+        LIST_JOB["notebooks"].append({"name": m.group(1).strip(), "id": m.group(2).strip()})
+    if _SESSION_EXPIRED_MARKER in msg:
+        LIST_JOB["session_expired"] = True
+
+
+def _run_list_notebooks() -> None:
+    try:
+        _list_log(f"subprocess: {sys.executable} src/downloader.py --list")
+        env = {**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUNBUFFERED": "1"}
+        proc = subprocess.Popen(
+            [sys.executable, "src/downloader.py", "--config", "config.yaml", "--list"],
+            cwd=str(ROOT),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+            encoding="utf-8",
+            errors="replace",
+            env=env,
+        )
+        assert proc.stdout is not None
+        for line in proc.stdout:
+            line = line.rstrip()
+            if line:
+                _list_log(line)
+        proc.wait()
+        LIST_JOB["returncode"] = proc.returncode
+        if proc.returncode != 0:
+            _list_log(f"[FAIL] downloader.py --list exit code {proc.returncode}")
+    except Exception as e:
+        _list_log(f"[EXCEPTION] {type(e).__name__}: {e}")
+        LIST_JOB["returncode"] = -1
+    finally:
+        LIST_JOB["finished_at"] = time.time()
+        LIST_JOB["running"] = False
 
 
 def _run_auto_download() -> None:
@@ -162,6 +234,7 @@ def index():
         "admin.html",
         today=date.today().strftime("%Y-%m-%d"),
         job=JOB,
+        list_job=LIST_JOB,
         episodes=episodes,
         fmt_duration=fmt_duration,
     )
@@ -225,8 +298,29 @@ def auto_download():
         JOB["returncode"] = None
         JOB["started_at"] = time.time()
         JOB["finished_at"] = None
+        JOB["notebooks_found"] = None
+        JOB["episodes_added"] = None
+        JOB["session_expired"] = False
 
     threading.Thread(target=_run_auto_download, daemon=True).start()
+    return redirect(url_for("index"))
+
+
+@app.route("/list-notebooks", methods=["POST"])
+def list_notebooks():
+    with LIST_JOB_LOCK:
+        if LIST_JOB["running"]:
+            flash("이미 노트북 목록 조회가 실행 중입니다.", "error")
+            return redirect(url_for("index"))
+        LIST_JOB["running"] = True
+        LIST_JOB["log"] = []
+        LIST_JOB["returncode"] = None
+        LIST_JOB["started_at"] = time.time()
+        LIST_JOB["finished_at"] = None
+        LIST_JOB["notebooks"] = []
+        LIST_JOB["session_expired"] = False
+
+    threading.Thread(target=_run_list_notebooks, daemon=True).start()
     return redirect(url_for("index"))
 
 

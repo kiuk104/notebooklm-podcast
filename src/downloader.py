@@ -106,7 +106,23 @@ async def cmd_login(auth_dir: Path) -> None:
 async def discover_notebooks(page: Page, exclude_names: list) -> list:
     print(f"[discover] 홈 페이지에서 노트북 목록을 수집합니다…")
     await page.goto(HOME_URL, wait_until="networkidle")
-    await page.wait_for_timeout(2000)
+
+    final_url = page.url
+    if "accounts.google.com" in final_url or "/signin" in final_url or "ServiceLogin" in final_url:
+        print(
+            f"[discover] 세션 만료 — 로그인 페이지로 리다이렉트됨 ({final_url}). "
+            f"`python src/downloader.py --login`으로 다시 로그인하세요."
+        )
+        return []
+
+    try:
+        await page.wait_for_selector(SELECTOR_HOME_NOTEBOOK_LINK, timeout=8000)
+    except PWTimeoutError:
+        print(
+            "[discover] 세션 만료 가능성 — 노트북 링크를 찾지 못했습니다. "
+            "`python src/downloader.py --login`으로 다시 로그인하거나, NotebookLM 홈에 실제로 노트북이 있는지 확인하세요."
+        )
+        return []
 
     anchors = page.locator(SELECTOR_HOME_NOTEBOOK_LINK)
     count = await anchors.count()
