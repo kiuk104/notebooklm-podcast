@@ -139,10 +139,17 @@ async def discover_notebooks(page: Page, exclude_names: list) -> list:
         if nb_id in seen:
             continue
         seen.add(nb_id)
-        try:
-            name = (await a.inner_text(timeout=1000)).strip().split("\n")[0] or nb_id
-        except PWTimeoutError:
-            name = nb_id
+        name = ""
+        aria = await a.get_attribute("aria-label")
+        if aria and aria.strip():
+            name = aria.strip().split("\n")[0]
+        if not name:
+            try:
+                text = (await a.text_content(timeout=2000)) or ""
+                name = text.strip().split("\n")[0]
+            except PWTimeoutError:
+                name = ""
+        name = name or nb_id
         if any(ex.strip() and ex.strip() in name for ex in exclude_names):
             print(f"[discover] 제외: {name}")
             continue
@@ -158,12 +165,22 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
     saved = []
     url = NOTEBOOK_URL_TEMPLATE.format(id=notebook.id)
     print(f"[fetch] {notebook.name} → {url}")
-    await page.goto(url, wait_until="networkidle")
+    try:
+        await page.goto(url, wait_until="domcontentloaded", timeout=20_000)
+    except PWTimeoutError:
+        print(f"[fetch] {notebook.name}: 페이지 로드 타임아웃, 스킵")
+        return saved
 
     try:
-        await page.locator(SELECTOR_AUDIO_TAB).first.click(timeout=3000)
+        await page.locator(SELECTOR_AUDIO_TAB).first.click(timeout=5_000)
     except PWTimeoutError:
         pass
+
+    try:
+        await page.wait_for_selector(SELECTOR_AUDIO_CARD, timeout=6_000)
+    except PWTimeoutError:
+        print(f"[fetch] {notebook.name}: 음성개요 없음 (셀렉터 미스 가능)")
+        return saved
 
     cards = page.locator(SELECTOR_AUDIO_CARD)
     count = await cards.count()
