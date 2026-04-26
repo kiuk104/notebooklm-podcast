@@ -25,11 +25,16 @@ from playwright.async_api import (
 )
 
 SELECTOR_HOME_NOTEBOOK_LINK = 'a[href*="/notebook/"]'
-SELECTOR_AUDIO_TAB = 'button:has-text("음성 개요"), button:has-text("Audio Overview")'
-SELECTOR_AUDIO_CARD = '[data-testid*="audio"], [class*="audio-overview"]'
-SELECTOR_DOWNLOAD_BUTTON = (
-    'button[aria-label*="다운로드"], button[aria-label*="Download"], '
-    'button:has-text("다운로드"), button:has-text("Download")'
+# 노트북 페이지에서 이미 생성된 음성개요 카드의 재생 버튼 (audio 전용 액션)
+SELECTOR_AUDIO_PLAY = 'button[aria-label="재생"], button[aria-label="Play"]'
+# 같은 카드의 ⋮ (더보기) 메뉴 트리거 — audio/video/slides 모두 공통이므로 카드 ancestor로 한정해서 사용
+SELECTOR_ARTIFACT_MORE = 'button.artifact-more-button'
+# ⋮ 메뉴를 열었을 때 표시되는 "다운로드" 메뉴 항목
+SELECTOR_DOWNLOAD_MENUITEM = (
+    'button[mat-menu-item]:has-text("다운로드"), '
+    '[role="menuitem"]:has-text("다운로드"), '
+    'button[mat-menu-item]:has-text("Download"), '
+    '[role="menuitem"]:has-text("Download")'
 )
 
 HOME_URL = "https://notebooklm.google.com/"
@@ -172,32 +177,38 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
         return saved
 
     try:
-        await page.locator(SELECTOR_AUDIO_TAB).first.click(timeout=5_000)
+        await page.wait_for_selector(SELECTOR_AUDIO_PLAY, timeout=12_000)
     except PWTimeoutError:
-        pass
-
-    try:
-        await page.wait_for_selector(SELECTOR_AUDIO_CARD, timeout=6_000)
-    except PWTimeoutError:
-        print(f"[fetch] {notebook.name}: 음성개요 없음 (셀렉터 미스 가능)")
+        print(f"[fetch] {notebook.name}: 음성개요 없음")
         return saved
 
-    cards = page.locator(SELECTOR_AUDIO_CARD)
-    count = await cards.count()
-    if count == 0:
-        print(f"[fetch] {notebook.name}: 음성개요가 없습니다. (스튜디오에서 먼저 생성하세요)")
-        return saved
+    play_buttons = page.locator(SELECTOR_AUDIO_PLAY)
+    count = await play_buttons.count()
+    print(f"[fetch] {notebook.name}: 음성개요 {count}개 발견")
 
     for i in range(count):
-        card = cards.nth(i)
+        play = play_buttons.nth(i)
+        more = play.locator(
+            f'xpath=ancestor::*[.//button[contains(@class, "artifact-more-button")]][1]'
+            f'//button[contains(@class, "artifact-more-button")]'
+        ).first
         try:
-            dl_button = card.locator(SELECTOR_DOWNLOAD_BUTTON).first
-            await dl_button.scroll_into_view_if_needed()
+            await more.scroll_into_view_if_needed()
+            await more.click(timeout=5_000)
+        except PWTimeoutError:
+            print(f"[fetch] {notebook.name} #{i}: 더보기(⋮) 버튼을 못 찾음, 스킵")
+            continue
+
+        try:
             async with page.expect_download(timeout=60_000) as dl_info:
-                await dl_button.click()
+                await page.locator(SELECTOR_DOWNLOAD_MENUITEM).first.click(timeout=5_000)
             download: Download = await dl_info.value
         except PWTimeoutError:
-            print(f"[fetch] {notebook.name} #{i}: 다운로드 버튼을 못 찾음, 스킵")
+            print(f"[fetch] {notebook.name} #{i}: 다운로드 메뉴 항목 없음, 스킵")
+            try:
+                await page.keyboard.press("Escape")
+            except Exception:
+                pass
             continue
 
         suggested = download.suggested_filename or f"{notebook.name}-{i}.mp3"
@@ -247,14 +258,12 @@ async def cmd_debug(auth_dir: Path, notebook_id: str, headless: bool = False) ->
         except PWTimeoutError:
             print("[debug] domcontentloaded 타임아웃, 그래도 dump 시도")
 
-        await page.wait_for_timeout(5000)
-
         try:
-            await page.locator(SELECTOR_AUDIO_TAB).first.click(timeout=5_000)
-            print("[debug] 음성 개요 탭 클릭 성공")
-            await page.wait_for_timeout(2000)
+            await page.wait_for_selector(SELECTOR_AUDIO_PLAY, timeout=12_000)
+            print("[debug] 음성개요 카드 발견")
         except PWTimeoutError:
-            print("[debug] 음성 개요 탭 못 찾음 — 이미 보이는 상태이거나 다른 UI일 수 있음")
+            print("[debug] 음성개요 재생 버튼을 못 찾음 — 음성개요가 없거나 셀렉터가 또 바뀜")
+        await page.wait_for_timeout(2000)
 
         html = await page.content()
         (out_dir / "page.html").write_text(html, encoding="utf-8")
