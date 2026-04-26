@@ -8,7 +8,7 @@
     <atom:link href="https://kiuk104.github.io/notebooklm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>ko</language>
     <description>NotebookLM에서 생성한 음성개요 모음</description>
-    <lastBuildDate>Sun, 26 Apr 2026 19:48:19 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 20:45:04 +0000</lastBuildDate>
     <itunes:author>기욱</itunes:author>
     <itunes:summary>NotebookLM에서 생성한 음성개요 모음</itunes:summary>
     <itunes:owner>
@@ -18,285 +18,6 @@
     <itunes:image href="https://kiuk104.github.io/notebooklm-podcast/cover.jpg"/>
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>[06112025_MAZ Artikel] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 06112025_MAZ Artikel]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__06112025_MAZ-Artikel__audio-0.mp3" length="5621479" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__06112025_MAZ-Artikel__audio-0.mp3</guid>
-      <itunes:duration>11:42</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[06112025_MAZ Artikel] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 06112025_MAZ Artikel]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__06112025_MAZ-Artikel__audio-1.mp3" length="7104398" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__06112025_MAZ-Artikel__audio-1.mp3</guid>
-      <itunes:duration>14:48</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[17화 저출산은 사실 축복입니다  The Civilization 위대한 문명사 17화  서울대 김태유 명예교] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 17화 저출산은 사실 축복입니다  The Civilization 위대한 문명사 17화  서울대 김태유 명예교]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__17%ED%99%94-%EC%A0%80%EC%B6%9C%EC%82%B0%EC%9D%80-%EC%82%AC%EC%8B%A4-%EC%B6%95%EB%B3%B5%EC%9E%85%EB%8B%88%EB%8B%A4--The-Civilization-%EC%9C%84%EB%8C%80%ED%95%9C-%EB%AC%B8%EB%AA%85%EC%82%AC-17%ED%99%94--%EC%84%9C%EC%9A%B8%EB%8C%80-%EA%B9%80%ED%83%9C%EC%9C%A0-%EB%AA%85%EC%98%88%EA%B5%90__audio-0.mp3" length="8073854" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__17화-저출산은-사실-축복입니다--The-Civilization-위대한-문명사-17화--서울대-김태유-명예교__audio-0.mp3</guid>
-      <itunes:duration>16:49</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__2026-AI-%ED%8A%B9%EC%9D%B4%EC%A0%90%EA%B3%BC-%ED%8C%94%EB%9E%80%ED%8B%B0%EC%96%B4-%EC%A4%91%EC%8B%AC%EC%9D%98-%EB%94%A5-%EC%82%AC%EC%8A%A4-%EC%83%9D%ED%83%9C%EA%B3%84__audio-0.mp3" length="7696855" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__2026-AI-특이점과-팔란티어-중심의-딥-사스-생태계__audio-0.mp3</guid>
-      <itunes:duration>16:02</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__2026-AI-%ED%8A%B9%EC%9D%B4%EC%A0%90%EA%B3%BC-%ED%8C%94%EB%9E%80%ED%8B%B0%EC%96%B4-%EC%A4%91%EC%8B%AC%EC%9D%98-%EB%94%A5-%EC%82%AC%EC%8A%A4-%EC%83%9D%ED%83%9C%EA%B3%84__audio-1.mp3" length="6172349" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__2026-AI-특이점과-팔란티어-중심의-딥-사스-생태계__audio-1.mp3</guid>
-      <itunes:duration>12:51</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[4 풀 리퀘스트를 활용한 협업 왜 풀 리퀘스트를 사용할까요] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 4 풀 리퀘스트를 활용한 협업 왜 풀 리퀘스트를 사용할까요]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__4-%ED%92%80-%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%98%91%EC%97%85-%EC%99%9C-%ED%92%80-%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C%EC%9A%94__audio-0.mp3" length="6867624" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__4-풀-리퀘스트를-활용한-협업-왜-풀-리퀘스트를-사용할까요__audio-0.mp3</guid>
-      <itunes:duration>14:18</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[A Road Trip from Kandahar to Kabul on Highway 1 in Afghanist] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: A Road Trip from Kandahar to Kabul on Highway 1 in Afghanist]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__A-Road-Trip-from-Kandahar-to-Kabul-on-Highway-1-in-Afghanist__audio-0.mp3" length="7532179" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__A-Road-Trip-from-Kandahar-to-Kabul-on-Highway-1-in-Afghanist__audio-0.mp3</guid>
-      <itunes:duration>15:41</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[AI 대폭발 시대 지금 안 들으면 평생 후회합니다  장동선 최재붕 이정모 김상균 조용민 서용석  AI 기술 ] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 대폭발 시대 지금 안 들으면 평생 후회합니다  장동선 최재붕 이정모 김상균 조용민 서용석  AI 기술 ]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AI-%EB%8C%80%ED%8F%AD%EB%B0%9C-%EC%8B%9C%EB%8C%80-%EC%A7%80%EA%B8%88-%EC%95%88-%EB%93%A4%EC%9C%BC%EB%A9%B4-%ED%8F%89%EC%83%9D-%ED%9B%84%ED%9A%8C%ED%95%A9%EB%8B%88%EB%8B%A4--%EC%9E%A5%EB%8F%99%EC%84%A0-%EC%B5%9C%EC%9E%AC%EB%B6%95-%EC%9D%B4%EC%A0%95%EB%AA%A8-%EA%B9%80%EC%83%81%EA%B7%A0-%EC%A1%B0%EC%9A%A9%EB%AF%BC-%EC%84%9C%EC%9A%A9%EC%84%9D--AI-%EA%B8%B0%EC%88%A0-__audio-0.mp3" length="7341381" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AI-대폭발-시대-지금-안-들으면-평생-후회합니다--장동선-최재붕-이정모-김상균-조용민-서용석--AI-기술-__audio-0.mp3</guid>
-      <itunes:duration>15:17</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[AI 시대의 인간 고전이 던지는 미래의 질문] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 시대의 인간 고전이 던지는 미래의 질문]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AI-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%9D%B8%EA%B0%84-%EA%B3%A0%EC%A0%84%EC%9D%B4-%EB%8D%98%EC%A7%80%EB%8A%94-%EB%AF%B8%EB%9E%98%EC%9D%98-%EC%A7%88%EB%AC%B8__audio-0.mp3" length="6105475" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AI-시대의-인간-고전이-던지는-미래의-질문__audio-0.mp3</guid>
-      <itunes:duration>12:43</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[AI 시대의 인간 고전이 던지는 미래의 질문] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 시대의 인간 고전이 던지는 미래의 질문]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AI-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%9D%B8%EA%B0%84-%EA%B3%A0%EC%A0%84%EC%9D%B4-%EB%8D%98%EC%A7%80%EB%8A%94-%EB%AF%B8%EB%9E%98%EC%9D%98-%EC%A7%88%EB%AC%B8__audio-1.mp3" length="6600966" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AI-시대의-인간-고전이-던지는-미래의-질문__audio-1.mp3</guid>
-      <itunes:duration>13:45</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[AI팩토리 사업 2030년 500개 목표정부기업 협력 f 삼프로TV 권순우 취재팀장 뉴스3   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI팩토리 사업 2030년 500개 목표정부기업 협력 f 삼프로TV 권순우 취재팀장 뉴스3   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AI%ED%8C%A9%ED%86%A0%EB%A6%AC-%EC%82%AC%EC%97%85-2030%EB%85%84-500%EA%B0%9C-%EB%AA%A9%ED%91%9C%EC%A0%95%EB%B6%80%EA%B8%B0%EC%97%85-%ED%98%91%EB%A0%A5-f-%EC%82%BC%ED%94%84%EB%A1%9CTV-%EA%B6%8C%EC%88%9C%EC%9A%B0-%EC%B7%A8%EC%9E%AC%ED%8C%80%EC%9E%A5-%EB%89%B4%EC%8A%A43---YouTube__audio-0.mp3" length="9671085" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AI팩토리-사업-2030년-500개-목표정부기업-협력-f-삼프로TV-권순우-취재팀장-뉴스3---YouTube__audio-0.mp3</guid>
-      <itunes:duration>20:08</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[ALTE FEUERWACHE 학부모 브리핑] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: ALTE FEUERWACHE 학부모 브리핑]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__ALTE-FEUERWACHE-%ED%95%99%EB%B6%80%EB%AA%A8-%EB%B8%8C%EB%A6%AC%ED%95%91__audio-0.mp3" length="3176835" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__ALTE-FEUERWACHE-학부모-브리핑__audio-0.mp3</guid>
-      <itunes:duration>6:37</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[AMD AI 경쟁과 역전의 역사] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AMD AI 경쟁과 역전의 역사]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AMD-AI-%EA%B2%BD%EC%9F%81%EA%B3%BC-%EC%97%AD%EC%A0%84%EC%9D%98-%EC%97%AD%EC%82%AC__audio-0.mp3" length="3549237" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AMD-AI-경쟁과-역전의-역사__audio-0.mp3</guid>
-      <itunes:duration>7:23</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[AfD 당내 논란과 헌법수호청 보고서] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AfD 당내 논란과 헌법수호청 보고서]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AfD-%EB%8B%B9%EB%82%B4-%EB%85%BC%EB%9E%80%EA%B3%BC-%ED%97%8C%EB%B2%95%EC%88%98%ED%98%B8%EC%B2%AD-%EB%B3%B4%EA%B3%A0%EC%84%9C__audio-0.mp3" length="3149250" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AfD-당내-논란과-헌법수호청-보고서__audio-0.mp3</guid>
-      <itunes:duration>6:33</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[ChatGPT급 무료 AI의 등장 ChatGPT VS 제미나이Gemini 완벽 비교   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: ChatGPT급 무료 AI의 등장 ChatGPT VS 제미나이Gemini 완벽 비교   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__ChatGPT%EA%B8%89-%EB%AC%B4%EB%A3%8C-AI%EC%9D%98-%EB%93%B1%EC%9E%A5-ChatGPT-VS-%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4Gemini-%EC%99%84%EB%B2%BD-%EB%B9%84%EA%B5%90---YouTube__audio-0.mp3" length="3418834" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__ChatGPT급-무료-AI의-등장-ChatGPT-VS-제미나이Gemini-완벽-비교---YouTube__audio-0.mp3</guid>
-      <itunes:duration>7:07</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Cursor 각 모드의 상세 설명과 활용 예시] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Cursor 각 모드의 상세 설명과 활용 예시]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Cursor-%EA%B0%81-%EB%AA%A8%EB%93%9C%EC%9D%98-%EC%83%81%EC%84%B8-%EC%84%A4%EB%AA%85%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EC%98%88%EC%8B%9C__audio-0.mp3" length="6932199" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Cursor-각-모드의-상세-설명과-활용-예시__audio-0.mp3</guid>
-      <itunes:duration>14:26</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Cursor 각 모드의 상세 설명과 활용 예시] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Cursor 각 모드의 상세 설명과 활용 예시]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Cursor-%EA%B0%81-%EB%AA%A8%EB%93%9C%EC%9D%98-%EC%83%81%EC%84%B8-%EC%84%A4%EB%AA%85%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EC%98%88%EC%8B%9C__audio-1.mp3" length="6481430" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Cursor-각-모드의-상세-설명과-활용-예시__audio-1.mp3</guid>
-      <itunes:duration>13:30</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers Advance to NLCS on Walk Off Error vs Phillies  MLB o] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Advance to NLCS on Walk Off Error vs Phillies  MLB o]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-Advance-to-NLCS-on-Walk-Off-Error-vs-Phillies--MLB-o__audio-0.mp3" length="5636943" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-Advance-to-NLCS-on-Walk-Off-Error-vs-Phillies--MLB-o__audio-0.mp3</guid>
-      <itunes:duration>11:44</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers Come Back to Win Game 1 vs Phillies in NLDS  2025 ML] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Come Back to Win Game 1 vs Phillies in NLDS  2025 ML]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-Come-Back-to-Win-Game-1-vs-Phillies-in-NLDS--2025-ML__audio-0.mp3" length="6383209" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-Come-Back-to-Win-Game-1-vs-Phillies-in-NLDS--2025-ML__audio-0.mp3</guid>
-      <itunes:duration>13:17</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers Hold Off Phillies Comeback in Game 2 of NLDS  MLB on] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Hold Off Phillies Comeback in Game 2 of NLDS  MLB on]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-Hold-Off-Phillies-Comeback-in-Game-2-of-NLDS--MLB-on__audio-0.mp3" length="7737397" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-Hold-Off-Phillies-Comeback-in-Game-2-of-NLDS--MLB-on__audio-0.mp3</guid>
-      <itunes:duration>16:07</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers Postseason Dave Roberts on Game 3 Loss Yamamotos Str] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Postseason Dave Roberts on Game 3 Loss Yamamotos Str]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-Postseason-Dave-Roberts-on-Game-3-Loss-Yamamotos-Str__audio-0.mp3" length="7568959" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-Postseason-Dave-Roberts-on-Game-3-Loss-Yamamotos-Str__audio-0.mp3</guid>
-      <itunes:duration>15:46</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers Take 2 0 NLCS Lead vs Brewers Behind Yamamotos Compl] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Take 2 0 NLCS Lead vs Brewers Behind Yamamotos Compl]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-Take-2-0-NLCS-Lead-vs-Brewers-Behind-Yamamotos-Compl__audio-0.mp3" length="7232502" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-Take-2-0-NLCS-Lead-vs-Brewers-Behind-Yamamotos-Compl__audio-0.mp3</guid>
-      <itunes:duration>15:04</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers advance to NLDS big wins by Guardians Padres Yankees] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers advance to NLDS big wins by Guardians Padres Yankees]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3" length="6864071" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3</guid>
-      <itunes:duration>14:17</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Dodgers vs Blue Jays is Goliath vs Goliath  Big Papi Jeter  ] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers vs Blue Jays is Goliath vs Goliath  Big Papi Jeter  ]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-vs-Blue-Jays-is-Goliath-vs-Goliath--Big-Papi-Jeter--__audio-0.mp3" length="6102341" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-vs-Blue-Jays-is-Goliath-vs-Goliath--Big-Papi-Jeter--__audio-0.mp3</guid>
-      <itunes:duration>12:42</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-0.mp3" length="27276705" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-0.mp3</guid>
-      <itunes:duration>10:16</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-1.mp3" length="18856773" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-1.mp3</guid>
-      <itunes:duration>7:36</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 2</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-2.mp3" length="9973897" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-2.mp3</guid>
-      <itunes:duration>20:46</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 3</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-3.mp3" length="8063614" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-3.mp3</guid>
-      <itunes:duration>16:47</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Interview 호소다 다카히로 TBWA 수석 크리에이티브 책임자 AI가 모든 답 제시하는 시대 답은 센스] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Interview 호소다 다카히로 TBWA 수석 크리에이티브 책임자 AI가 모든 답 제시하는 시대 답은 센스]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Interview-%ED%98%B8%EC%86%8C%EB%8B%A4-%EB%8B%A4%EC%B9%B4%ED%9E%88%EB%A1%9C-TBWA-%EC%88%98%EC%84%9D-%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%B1%85%EC%9E%84%EC%9E%90-AI%EA%B0%80-%EB%AA%A8%EB%93%A0-%EB%8B%B5-%EC%A0%9C%EC%8B%9C%ED%95%98%EB%8A%94-%EC%8B%9C%EB%8C%80-%EB%8B%B5%EC%9D%80-%EC%84%BC%EC%8A%A4__audio-0.mp3" length="7026448" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Interview-호소다-다카히로-TBWA-수석-크리에이티브-책임자-AI가-모든-답-제시하는-시대-답은-센스__audio-0.mp3</guid>
-      <itunes:duration>14:38</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__KF-21-%EB%B8%94%EB%A1%9D2-%EC%8B%A4%EC%A0%84-%EB%B0%B0%EC%B9%98-%EC%9E%84%EB%B0%95%EB%AC%B4%EC%9E%A5-%EA%B5%AD%EC%82%B0%ED%99%94-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EC%99%94%EC%9D%84%EA%B9%8C--%EA%B9%80%EB%AF%BC%EC%84%9D-%ED%8A%B9%ED%8C%8C%EC%9B%90-1%EB%B6%80---YouTube__audio-0.mp3" length="11082115" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__KF-21-블록2-실전-배치-임박무장-국산화-어디까지-왔을까--김민석-특파원-1부---YouTube__audio-0.mp3</guid>
-      <itunes:duration>23:05</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__KF-21-%EB%B8%94%EB%A1%9D2-%EC%8B%A4%EC%A0%84-%EB%B0%B0%EC%B9%98-%EC%9E%84%EB%B0%95%EB%AC%B4%EC%9E%A5-%EA%B5%AD%EC%82%B0%ED%99%94-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EC%99%94%EC%9D%84%EA%B9%8C--%EA%B9%80%EB%AF%BC%EC%84%9D-%ED%8A%B9%ED%8C%8C%EC%9B%90-1%EB%B6%80---YouTube__audio-1.mp3" length="9714344" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__KF-21-블록2-실전-배치-임박무장-국산화-어디까지-왔을까--김민석-특파원-1부---YouTube__audio-1.mp3</guid>
-      <itunes:duration>20:14</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
     <item>
       <title>[Loading Notebook] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: Loading Notebook]]></description>
@@ -316,732 +37,1011 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>[Nach Schusswaffenangriff Trump Untersttzer Charlie Kirk ist ] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Nach Schusswaffenangriff Trump Untersttzer Charlie Kirk ist ]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Nach-Schusswaffenangriff-Trump-Untersttzer-Charlie-Kirk-ist-__audio-0.mp3" length="6253224" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Nach-Schusswaffenangriff-Trump-Untersttzer-Charlie-Kirk-ist-__audio-0.mp3</guid>
-      <itunes:duration>13:01</itunes:duration>
+      <title>[앤스로픽 클로드 코드 공식 교육 과정 및 수료 가이드] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 앤스로픽 클로드 코드 공식 교육 과정 및 수료 가이드]]></description>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260223__%EC%95%A4%EC%8A%A4%EB%A1%9C%ED%94%BD-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%8B%9D-%EA%B5%90%EC%9C%A1-%EA%B3%BC%EC%A0%95-%EB%B0%8F-%EC%88%98%EB%A3%8C-%EA%B0%80%EC%9D%B4%EB%93%9C__audio-0.mp3" length="7430197" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260223__앤스로픽-클로드-코드-공식-교육-과정-및-수료-가이드__audio-0.mp3</guid>
+      <itunes:duration>15:28</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>[Now the pressure is on the Phillies  Derek Jeter after the D] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Now the pressure is on the Phillies  Derek Jeter after the D]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-0.mp3" length="6051350" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-0.mp3</guid>
-      <itunes:duration>12:36</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Now the pressure is on the Phillies  Derek Jeter after the D] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Now the pressure is on the Phillies  Derek Jeter after the D]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-1.mp3" length="6903777" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-1.mp3</guid>
-      <itunes:duration>14:22</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Protokolle Elternbrief Erinnerung Ganztag   kiuk104gmailcom ] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Protokolle Elternbrief Erinnerung Ganztag   kiuk104gmailcom ]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Protokolle-Elternbrief-Erinnerung-Ganztag---kiuk104gmailcom-__audio-0.mp3" length="7931121" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Protokolle-Elternbrief-Erinnerung-Ganztag---kiuk104gmailcom-__audio-0.mp3</guid>
-      <itunes:duration>16:31</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Rubio erwartet von Russland in Krze Vorlage von ungefhrem Wa] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Rubio erwartet von Russland in Krze Vorlage von ungefhrem Wa]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Rubio-erwartet-von-Russland-in-Krze-Vorlage-von-ungefhrem-Wa__audio-0.mp3" length="2236218" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Rubio-erwartet-von-Russland-in-Krze-Vorlage-von-ungefhrem-Wa__audio-0.mp3</guid>
-      <itunes:duration>4:39</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Shohei Ohtani Has All Time Performance Dodgers Sweep Brewers] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Shohei Ohtani Has All Time Performance Dodgers Sweep Brewers]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Shohei-Ohtani-Has-All-Time-Performance-Dodgers-Sweep-Brewers__audio-0.mp3" length="5821890" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Shohei-Ohtani-Has-All-Time-Performance-Dodgers-Sweep-Brewers__audio-0.mp3</guid>
-      <itunes:duration>12:07</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Should You Switch To Godot UNITY vs GODOT vs UNREAL   YouTub] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Should You Switch To Godot UNITY vs GODOT vs UNREAL   YouTub]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Should-You-Switch-To-Godot-UNITY-vs-GODOT-vs-UNREAL---YouTub__audio-0.mp3" length="7518804" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Should-You-Switch-To-Godot-UNITY-vs-GODOT-vs-UNREAL---YouTub__audio-0.mp3</guid>
-      <itunes:duration>15:39</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Sonys Decline and Resurgence A Corporate Saga] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Sonys Decline and Resurgence A Corporate Saga]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Sonys-Decline-and-Resurgence-A-Corporate-Saga__audio-0.mp3" length="6738057" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Sonys-Decline-and-Resurgence-A-Corporate-Saga__audio-0.mp3</guid>
-      <itunes:duration>14:02</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[South Korea wants to be Canadas new military supplier   YouT] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: South Korea wants to be Canadas new military supplier   YouT]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__South-Korea-wants-to-be-Canadas-new-military-supplier---YouT__audio-0.mp3" length="2932329" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__South-Korea-wants-to-be-Canadas-new-military-supplier---YouT__audio-0.mp3</guid>
-      <itunes:duration>6:06</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[The Dodgers Total Domination Led by Snell and Yamamoto Steve] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: The Dodgers Total Domination Led by Snell and Yamamoto Steve]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3" length="6433991" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3</guid>
-      <itunes:duration>13:24</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[The best team in baseball  Alex Rodriguez MLB on FOX crew re] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: The best team in baseball  Alex Rodriguez MLB on FOX crew re]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__The-best-team-in-baseball--Alex-Rodriguez-MLB-on-FOX-crew-re__audio-0.mp3" length="7505639" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__The-best-team-in-baseball--Alex-Rodriguez-MLB-on-FOX-crew-re__audio-0.mp3</guid>
-      <itunes:duration>15:38</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[Vinod Khosla MBA 80 Failure does not matter Success matters ] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Vinod Khosla MBA 80 Failure does not matter Success matters ]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Vinod-Khosla-MBA-80-Failure-does-not-matter-Success-matters-__audio-0.mp3" length="6797198" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Vinod-Khosla-MBA-80-Failure-does-not-matter-Success-matters-__audio-0.mp3</guid>
-      <itunes:duration>14:09</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3" length="5642794" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3</guid>
-      <itunes:duration>11:45</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[관세 두고 또 어긋나는 미중 관계 APEC 방한 전 정상회담은 물거품 되나 f 연세대학교 봉영식 객원교수 인] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 관세 두고 또 어긋나는 미중 관계 APEC 방한 전 정상회담은 물거품 되나 f 연세대학교 봉영식 객원교수 인]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EA%B4%80%EC%84%B8-%EB%91%90%EA%B3%A0-%EB%98%90-%EC%96%B4%EA%B8%8B%EB%82%98%EB%8A%94-%EB%AF%B8%EC%A4%91-%EA%B4%80%EA%B3%84-APEC-%EB%B0%A9%ED%95%9C-%EC%A0%84-%EC%A0%95%EC%83%81%ED%9A%8C%EB%8B%B4%EC%9D%80-%EB%AC%BC%EA%B1%B0%ED%92%88-%EB%90%98%EB%82%98-f-%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90-%EB%B4%89%EC%98%81%EC%8B%9D-%EA%B0%9D%EC%9B%90%EA%B5%90%EC%88%98-%EC%9D%B8__audio-0.mp3" length="8248143" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__관세-두고-또-어긋나는-미중-관계-APEC-방한-전-정상회담은-물거품-되나-f-연세대학교-봉영식-객원교수-인__audio-0.mp3</guid>
-      <itunes:duration>17:10</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[그록의 일일 뉴스 요약] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 그록의 일일 뉴스 요약]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EA%B7%B8%EB%A1%9D%EC%9D%98-%EC%9D%BC%EC%9D%BC-%EB%89%B4%EC%8A%A4-%EC%9A%94%EC%95%BD__audio-0.mp3" length="6115715" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__그록의-일일-뉴스-요약__audio-0.mp3</guid>
-      <itunes:duration>12:44</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[근지구력 젖산역치 향상 마라톤훈련   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 근지구력 젖산역치 향상 마라톤훈련   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EA%B7%BC%EC%A7%80%EA%B5%AC%EB%A0%A5-%EC%A0%96%EC%82%B0%EC%97%AD%EC%B9%98-%ED%96%A5%EC%83%81-%EB%A7%88%EB%9D%BC%ED%86%A4%ED%9B%88%EB%A0%A8---YouTube__audio-0.mp3" length="5688143" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__근지구력-젖산역치-향상-마라톤훈련---YouTube__audio-0.mp3</guid>
-      <itunes:duration>11:50</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[근지구력 젖산역치 향상 마라톤훈련   YouTube] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 근지구력 젖산역치 향상 마라톤훈련   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EA%B7%BC%EC%A7%80%EA%B5%AC%EB%A0%A5-%EC%A0%96%EC%82%B0%EC%97%AD%EC%B9%98-%ED%96%A5%EC%83%81-%EB%A7%88%EB%9D%BC%ED%86%A4%ED%9B%88%EB%A0%A8---YouTube__audio-1.mp3" length="5872045" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__근지구력-젖산역치-향상-마라톤훈련---YouTube__audio-1.mp3</guid>
-      <itunes:duration>12:13</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[글로벌리포트 네팔 반정부 시위  선진국 복지 부담  일본 최저임금 경쟁   한경제 기자한국경제신문   You] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 글로벌리포트 네팔 반정부 시위  선진국 복지 부담  일본 최저임금 경쟁   한경제 기자한국경제신문   You]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%A6%AC%ED%8F%AC%ED%8A%B8-%EB%84%A4%ED%8C%94-%EB%B0%98%EC%A0%95%EB%B6%80-%EC%8B%9C%EC%9C%84--%EC%84%A0%EC%A7%84%EA%B5%AD-%EB%B3%B5%EC%A7%80-%EB%B6%80%EB%8B%B4--%EC%9D%BC%EB%B3%B8-%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88-%EA%B2%BD%EC%9F%81---%ED%95%9C%EA%B2%BD%EC%A0%9C-%EA%B8%B0%EC%9E%90%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%EC%8B%A0%EB%AC%B8---You__audio-0.mp3" length="8948016" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__글로벌리포트-네팔-반정부-시위--선진국-복지-부담--일본-최저임금-경쟁---한경제-기자한국경제신문---You__audio-0.mp3</guid>
-      <itunes:duration>18:38</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[깐부회동 나비 효과 한국경제 태풍될까 박종훈의 지식한방   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 깐부회동 나비 효과 한국경제 태풍될까 박종훈의 지식한방   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EA%B9%90%EB%B6%80%ED%9A%8C%EB%8F%99-%EB%82%98%EB%B9%84-%ED%9A%A8%EA%B3%BC-%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C-%ED%83%9C%ED%92%8D%EB%90%A0%EA%B9%8C-%EB%B0%95%EC%A2%85%ED%9B%88%EC%9D%98-%EC%A7%80%EC%8B%9D%ED%95%9C%EB%B0%A9---YouTube__audio-0.mp3" length="10486941" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__깐부회동-나비-효과-한국경제-태풍될까-박종훈의-지식한방---YouTube__audio-0.mp3</guid>
-      <itunes:duration>21:50</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[뉴스브리핑 이스라엘의 이란 공습 이 시점에서 타격한 이유는   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 뉴스브리핑 이스라엘의 이란 공습 이 시점에서 타격한 이유는   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91-%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98%EC%9D%98-%EC%9D%B4%EB%9E%80-%EA%B3%B5%EC%8A%B5-%EC%9D%B4-%EC%8B%9C%EC%A0%90%EC%97%90%EC%84%9C-%ED%83%80%EA%B2%A9%ED%95%9C-%EC%9D%B4%EC%9C%A0%EB%8A%94---YouTube__audio-0.mp3" length="3019474" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__뉴스브리핑-이스라엘의-이란-공습-이-시점에서-타격한-이유는---YouTube__audio-0.mp3</guid>
-      <itunes:duration>6:17</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[다저스 심층 분석 쇼헤이 오타니와 슈퍼스타의 미래] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 다저스 심층 분석 쇼헤이 오타니와 슈퍼스타의 미래]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8B%A4%EC%A0%80%EC%8A%A4-%EC%8B%AC%EC%B8%B5-%EB%B6%84%EC%84%9D-%EC%87%BC%ED%97%A4%EC%9D%B4-%EC%98%A4%ED%83%80%EB%8B%88%EC%99%80-%EC%8A%88%ED%8D%BC%EC%8A%A4%ED%83%80%EC%9D%98-%EB%AF%B8%EB%9E%98__audio-0.mp3" length="3479229" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__다저스-심층-분석-쇼헤이-오타니와-슈퍼스타의-미래__audio-0.mp3</guid>
-      <itunes:duration>7:14</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[대출 상담 체류 허가와 대출 조건] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 대출 상담 체류 허가와 대출 조건]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8C%80%EC%B6%9C-%EC%83%81%EB%8B%B4-%EC%B2%B4%EB%A5%98-%ED%97%88%EA%B0%80%EC%99%80-%EB%8C%80%EC%B6%9C-%EC%A1%B0%EA%B1%B4__audio-0.mp3" length="2732127" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__대출-상담-체류-허가와-대출-조건__audio-0.mp3</guid>
-      <itunes:duration>5:41</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[대한민국 AI 국가대표팀의 독자 모델 개발 현황과 과제] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 대한민국 AI 국가대표팀의 독자 모델 개발 현황과 과제]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-AI-%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80%EC%9D%98-%EB%8F%85%EC%9E%90-%EB%AA%A8%EB%8D%B8-%EA%B0%9C%EB%B0%9C-%ED%98%84%ED%99%A9%EA%B3%BC-%EA%B3%BC%EC%A0%9C__audio-0.mp3" length="6426050" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__대한민국-AI-국가대표팀의-독자-모델-개발-현황과-과제__audio-0.mp3</guid>
-      <itunes:duration>13:23</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8D%94-%ED%81%B0-VRAM--RTX-5080-Super%EC%99%80-RTX-5070-Super%EA%B0%80-%EC%B6%9C%EC%8B%9C%EB%90%A9%EB%8B%88%EB%8B%A4---YouTube__audio-0.mp3" length="9424280" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__더-큰-VRAM--RTX-5080-Super와-RTX-5070-Super가-출시됩니다---YouTube__audio-0.mp3</guid>
-      <itunes:duration>19:37</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8D%94-%ED%81%B0-VRAM--RTX-5080-Super%EC%99%80-RTX-5070-Super%EA%B0%80-%EC%B6%9C%EC%8B%9C%EB%90%A9%EB%8B%88%EB%8B%A4---YouTube__audio-1.mp3" length="10201475" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__더-큰-VRAM--RTX-5080-Super와-RTX-5070-Super가-출시됩니다---YouTube__audio-1.mp3</guid>
-      <itunes:duration>21:15</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[독일 김나지움 학사 회의] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 독일 김나지움 학사 회의]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8F%85%EC%9D%BC-%EA%B9%80%EB%82%98%EC%A7%80%EC%9B%80-%ED%95%99%EC%82%AC-%ED%9A%8C%EC%9D%98__audio-0.mp3" length="3070465" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__독일-김나지움-학사-회의__audio-0.mp3</guid>
-      <itunes:duration>6:23</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[독일뉴스] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 독일뉴스]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%8F%85%EC%9D%BC%EB%89%B4%EC%8A%A4__audio-0.mp3" length="3074853" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__독일뉴스__audio-0.mp3</guid>
-      <itunes:duration>6:24</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[러우 종전 협상과 광물 협정의 이면] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 러우 종전 협상과 광물 협정의 이면]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%9F%AC%EC%9A%B0-%EC%A2%85%EC%A0%84-%ED%98%91%EC%83%81%EA%B3%BC-%EA%B4%91%EB%AC%BC-%ED%98%91%EC%A0%95%EC%9D%98-%EC%9D%B4%EB%A9%B4__audio-0.mp3" length="4078164" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__러우-종전-협상과-광물-협정의-이면__audio-0.mp3</guid>
-      <itunes:duration>8:29</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[레베 배송팀 오전 브리핑 0522] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 레베 배송팀 오전 브리핑 0522]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%A0%88%EB%B2%A0-%EB%B0%B0%EC%86%A1%ED%8C%80-%EC%98%A4%EC%A0%84-%EB%B8%8C%EB%A6%AC%ED%95%91-0522__audio-0.mp3" length="2718961" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__레베-배송팀-오전-브리핑-0522__audio-0.mp3</guid>
-      <itunes:duration>5:39</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[로스앤젤레스 시위와 트럼프의 외교 정책 좌절] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 로스앤젤레스 시위와 트럼프의 외교 정책 좌절]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%A1%9C%EC%8A%A4%EC%95%A4%EC%A0%A4%EB%A0%88%EC%8A%A4-%EC%8B%9C%EC%9C%84%EC%99%80-%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EC%99%B8%EA%B5%90-%EC%A0%95%EC%B1%85-%EC%A2%8C%EC%A0%88__audio-0.mp3" length="3227199" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__로스앤젤레스-시위와-트럼프의-외교-정책-좌절__audio-0.mp3</guid>
-      <itunes:duration>6:43</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[물류 창고 작업 지침] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 물류 창고 작업 지침]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%AC%BC%EB%A5%98-%EC%B0%BD%EA%B3%A0-%EC%9E%91%EC%97%85-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="2537776" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__물류-창고-작업-지침__audio-0.mp3</guid>
-      <itunes:duration>5:17</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[미국 중국 무한 경쟁 AI 거품 없습니다 한동대학교 김학주 교수   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 미국 중국 무한 경쟁 AI 거품 없습니다 한동대학교 김학주 교수   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%AF%B8%EA%B5%AD-%EC%A4%91%EA%B5%AD-%EB%AC%B4%ED%95%9C-%EA%B2%BD%EC%9F%81-AI-%EA%B1%B0%ED%92%88-%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4-%ED%95%9C%EB%8F%99%EB%8C%80%ED%95%99%EA%B5%90-%EA%B9%80%ED%95%99%EC%A3%BC-%EA%B5%90%EC%88%98---YouTube__audio-0.mp3" length="7707722" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__미국-중국-무한-경쟁-AI-거품-없습니다-한동대학교-김학주-교수---YouTube__audio-0.mp3</guid>
-      <itunes:duration>16:03</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%B3%B4%EC%8A%A4%ED%84%B4%EB%8B%A4%EC%9D%B4%EB%82%B4%EB%AF%B9%EC%8A%A4-IPO%EC%99%80-%ED%98%84%EB%8C%80%EC%B0%A8%EA%B7%B8%EB%A3%B9-%ED%94%BC%EC%A7%80%EC%BB%AC-AI-%EB%B9%84%EC%A0%84__audio-0.mp3" length="42219619" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__보스턴다이내믹스-IPO와-현대차그룹-피지컬-AI-비전__audio-0.mp3</guid>
-      <itunes:duration>6:58</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EB%B3%B4%EC%8A%A4%ED%84%B4%EB%8B%A4%EC%9D%B4%EB%82%B4%EB%AF%B9%EC%8A%A4-IPO%EC%99%80-%ED%98%84%EB%8C%80%EC%B0%A8%EA%B7%B8%EB%A3%B9-%ED%94%BC%EC%A7%80%EC%BB%AC-AI-%EB%B9%84%EC%A0%84__audio-1.mp3" length="6650076" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__보스턴다이내믹스-IPO와-현대차그룹-피지컬-AI-비전__audio-1.mp3</guid>
-      <itunes:duration>13:51</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[새로운 녹음을 위한 부서 소개 및 업무 지침] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 새로운 녹음을 위한 부서 소개 및 업무 지침]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%85%B9%EC%9D%8C%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B6%80%EC%84%9C-%EC%86%8C%EA%B0%9C-%EB%B0%8F-%EC%97%85%EB%AC%B4-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="8112306" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__새로운-녹음을-위한-부서-소개-및-업무-지침__audio-0.mp3</guid>
-      <itunes:duration>16:53</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[새로운 시작 훔볼트 김나지움 2m4a 환영회] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 새로운 시작 훔볼트 김나지움 2m4a 환영회]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%8B%9C%EC%9E%91-%ED%9B%94%EB%B3%BC%ED%8A%B8-%EA%B9%80%EB%82%98%EC%A7%80%EC%9B%80-2m4a-%ED%99%98%EC%98%81%ED%9A%8C__audio-0.mp3" length="2941524" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__새로운-시작-훔볼트-김나지움-2m4a-환영회__audio-0.mp3</guid>
-      <itunes:duration>6:07</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[새로운 학교생활 기대와 조언] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 새로운 학교생활 기대와 조언]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%83%88%EB%A1%9C%EC%9A%B4-%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C-%EA%B8%B0%EB%8C%80%EC%99%80-%EC%A1%B0%EC%96%B8__audio-0.mp3" length="2817599" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__새로운-학교생활-기대와-조언__audio-0.mp3</guid>
-      <itunes:duration>5:52</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[샌델의 민주주의 위기와 한국의 교집합] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 샌델의 민주주의 위기와 한국의 교집합]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%83%8C%EB%8D%B8%EC%9D%98-%EB%AF%BC%EC%A3%BC%EC%A3%BC%EC%9D%98-%EC%9C%84%EA%B8%B0%EC%99%80-%ED%95%9C%EA%B5%AD%EC%9D%98-%EA%B5%90%EC%A7%91%ED%95%A9__audio-0.mp3" length="7582752" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__샌델의-민주주의-위기와-한국의-교집합__audio-0.mp3</guid>
-      <itunes:duration>15:47</itunes:duration>
+      <title>[트럼프의 관세 도박 사법부 제동에도 강행되는 무역 공세] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 트럼프의 관세 도박 사법부 제동에도 강행되는 무역 공세]]></description>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260223__%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EA%B4%80%EC%84%B8-%EB%8F%84%EB%B0%95-%EC%82%AC%EB%B2%95%EB%B6%80-%EC%A0%9C%EB%8F%99%EC%97%90%EB%8F%84-%EA%B0%95%ED%96%89%EB%90%98%EB%8A%94-%EB%AC%B4%EC%97%AD-%EA%B3%B5%EC%84%B8__audio-0.mp3" length="5183248" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260223__트럼프의-관세-도박-사법부-제동에도-강행되는-무역-공세__audio-0.mp3</guid>
+      <itunes:duration>10:47</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
       <title>[슈피겔 전기 안젤라 메르켈의 시대와 유산] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: 슈피겔 전기 안젤라 메르켈의 시대와 유산]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%8A%88%ED%94%BC%EA%B2%94-%EC%A0%84%EA%B8%B0-%EC%95%88%EC%A0%A4%EB%9D%BC-%EB%A9%94%EB%A5%B4%EC%BC%88%EC%9D%98-%EC%8B%9C%EB%8C%80%EC%99%80-%EC%9C%A0%EC%82%B0__audio-0.mp3" length="5782602" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__슈피겔-전기-안젤라-메르켈의-시대와-유산__audio-0.mp3</guid>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260222__%EC%8A%88%ED%94%BC%EA%B2%94-%EC%A0%84%EA%B8%B0-%EC%95%88%EC%A0%A4%EB%9D%BC-%EB%A9%94%EB%A5%B4%EC%BC%88%EC%9D%98-%EC%8B%9C%EB%8C%80%EC%99%80-%EC%9C%A0%EC%82%B0__audio-0.mp3" length="5782602" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260222__슈피겔-전기-안젤라-메르켈의-시대와-유산__audio-0.mp3</guid>
       <itunes:duration>12:02</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
       <title>[슈피겔 전기 안젤라 메르켈의 시대와 유산] audio 1</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: 슈피겔 전기 안젤라 메르켈의 시대와 유산]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%8A%88%ED%94%BC%EA%B2%94-%EC%A0%84%EA%B8%B0-%EC%95%88%EC%A0%A4%EB%9D%BC-%EB%A9%94%EB%A5%B4%EC%BC%88%EC%9D%98-%EC%8B%9C%EB%8C%80%EC%99%80-%EC%9C%A0%EC%82%B0__audio-1.mp3" length="6853413" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__슈피겔-전기-안젤라-메르켈의-시대와-유산__audio-1.mp3</guid>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260222__%EC%8A%88%ED%94%BC%EA%B2%94-%EC%A0%84%EA%B8%B0-%EC%95%88%EC%A0%A4%EB%9D%BC-%EB%A9%94%EB%A5%B4%EC%BC%88%EC%9D%98-%EC%8B%9C%EB%8C%80%EC%99%80-%EC%9C%A0%EC%82%B0__audio-1.mp3" length="6853413" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260222__슈피겔-전기-안젤라-메르켈의-시대와-유산__audio-1.mp3</guid>
       <itunes:duration>14:16</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[스넬의 압도적 투구와 NLCS 1차전 승리] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 스넬의 압도적 투구와 NLCS 1차전 승리]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%8A%A4%EB%84%AC%EC%9D%98-%EC%95%95%EB%8F%84%EC%A0%81-%ED%88%AC%EA%B5%AC%EC%99%80-NLCS-1%EC%B0%A8%EC%A0%84-%EC%8A%B9%EB%A6%AC__audio-0.mp3" length="7655895" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__스넬의-압도적-투구와-NLCS-1차전-승리__audio-0.mp3</guid>
-      <itunes:duration>15:56</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[스웨덴과 러시아 에스토니아인의 선호도] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 스웨덴과 러시아 에스토니아인의 선호도]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%8A%A4%EC%9B%A8%EB%8D%B4%EA%B3%BC-%EB%9F%AC%EC%8B%9C%EC%95%84-%EC%97%90%EC%8A%A4%ED%86%A0%EB%8B%88%EC%95%84%EC%9D%B8%EC%9D%98-%EC%84%A0%ED%98%B8%EB%8F%84__audio-0.mp3" length="2341126" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__스웨덴과-러시아-에스토니아인의-선호도__audio-0.mp3</guid>
-      <itunes:duration>4:52</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[시진핑 북한이 아닌 왜 한국을 선택했나 안유화  인포맥스라이브 250929   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 시진핑 북한이 아닌 왜 한국을 선택했나 안유화  인포맥스라이브 250929   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%8B%9C%EC%A7%84%ED%95%91-%EB%B6%81%ED%95%9C%EC%9D%B4-%EC%95%84%EB%8B%8C-%EC%99%9C-%ED%95%9C%EA%B5%AD%EC%9D%84-%EC%84%A0%ED%83%9D%ED%96%88%EB%82%98-%EC%95%88%EC%9C%A0%ED%99%94--%EC%9D%B8%ED%8F%AC%EB%A7%A5%EC%8A%A4%EB%9D%BC%EC%9D%B4%EB%B8%8C-250929---YouTube__audio-0.mp3" length="8241038" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__시진핑-북한이-아닌-왜-한국을-선택했나-안유화--인포맥스라이브-250929---YouTube__audio-0.mp3</guid>
-      <itunes:duration>17:10</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[싸다싸 4500억 DS 진출을 이끈 다저스의 가을 에이스  김형준 야구야구   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 싸다싸 4500억 DS 진출을 이끈 다저스의 가을 에이스  김형준 야구야구   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%8B%B8%EB%8B%A4%EC%8B%B8-4500%EC%96%B5-DS-%EC%A7%84%EC%B6%9C%EC%9D%84-%EC%9D%B4%EB%81%88-%EB%8B%A4%EC%A0%80%EC%8A%A4%EC%9D%98-%EA%B0%80%EC%9D%84-%EC%97%90%EC%9D%B4%EC%8A%A4--%EA%B9%80%ED%98%95%EC%A4%80-%EC%95%BC%EA%B5%AC%EC%95%BC%EA%B5%AC---YouTube__audio-0.mp3" length="8018474" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__싸다싸-4500억-DS-진출을-이끈-다저스의-가을-에이스--김형준-야구야구---YouTube__audio-0.mp3</guid>
-      <itunes:duration>16:42</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%95%8C%EB%9E%80-%ED%8C%8C%EC%8A%A8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EB%A6%AC%EC%9D%98-%EC%97%B0%EA%B8%88%EC%88%A0%EC%82%AC%EC%99%80-%EA%B7%B8%EB%93%A4%EC%9D%98-%EC%9C%A0%EC%82%B0__audio-0.mp3" length="6315291" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__알란-파슨스-프로젝트-소리의-연금술사와-그들의-유산__audio-0.mp3</guid>
-      <itunes:duration>13:09</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%95%8C%EB%9E%80-%ED%8C%8C%EC%8A%A8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EB%A6%AC%EC%9D%98-%EC%97%B0%EA%B8%88%EC%88%A0%EC%82%AC%EC%99%80-%EA%B7%B8%EB%93%A4%EC%9D%98-%EC%9C%A0%EC%82%B0__audio-1.mp3" length="5683963" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__알란-파슨스-프로젝트-소리의-연금술사와-그들의-유산__audio-1.mp3</guid>
-      <itunes:duration>11:50</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[앙겔라 메르켈 평전] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 앙겔라 메르켈 평전]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%95%99%EA%B2%94%EB%9D%BC-%EB%A9%94%EB%A5%B4%EC%BC%88-%ED%8F%89%EC%A0%84__audio-0.mp3" length="2755950" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__앙겔라-메르켈-평전__audio-0.mp3</guid>
-      <itunes:duration>5:44</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[앤스로픽 클로드 코드 공식 교육 과정 및 수료 가이드] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 앤스로픽 클로드 코드 공식 교육 과정 및 수료 가이드]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%95%A4%EC%8A%A4%EB%A1%9C%ED%94%BD-%ED%81%B4%EB%A1%9C%EB%93%9C-%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%8B%9D-%EA%B5%90%EC%9C%A1-%EA%B3%BC%EC%A0%95-%EB%B0%8F-%EC%88%98%EB%A3%8C-%EA%B0%80%EC%9D%B4%EB%93%9C__audio-0.mp3" length="7430197" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__앤스로픽-클로드-코드-공식-교육-과정-및-수료-가이드__audio-0.mp3</guid>
-      <itunes:duration>15:28</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[에릭 토폴 건강 수명 연장 과학] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 에릭 토폴 건강 수명 연장 과학]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%97%90%EB%A6%AD-%ED%86%A0%ED%8F%B4-%EA%B1%B4%EA%B0%95-%EC%88%98%EB%AA%85-%EC%97%B0%EC%9E%A5-%EA%B3%BC%ED%95%99__audio-0.mp3" length="8148251" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__에릭-토폴-건강-수명-연장-과학__audio-0.mp3</guid>
-      <itunes:duration>16:58</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[연동교회 120년사] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 연동교회 120년사]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%97%B0%EB%8F%99%EA%B5%90%ED%9A%8C-120%EB%85%84%EC%82%AC__audio-0.mp3" length="3103483" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__연동교회-120년사__audio-0.mp3</guid>
-      <itunes:duration>6:27</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[연봉 10억 파격 이유 있었다삼성 드디어 독립선언  한국경제] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 연봉 10억 파격 이유 있었다삼성 드디어 독립선언  한국경제]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%97%B0%EB%B4%89-10%EC%96%B5-%ED%8C%8C%EA%B2%A9-%EC%9D%B4%EC%9C%A0-%EC%9E%88%EC%97%88%EB%8B%A4%EC%82%BC%EC%84%B1-%EB%93%9C%EB%94%94%EC%96%B4-%EB%8F%85%EB%A6%BD%EC%84%A0%EC%96%B8--%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C__audio-0.mp3" length="6154168" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__연봉-10억-파격-이유-있었다삼성-드디어-독립선언--한국경제__audio-0.mp3</guid>
-      <itunes:duration>12:49</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[오타니 투타 겸업의 귀환] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 오타니 투타 겸업의 귀환]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%98%A4%ED%83%80%EB%8B%88-%ED%88%AC%ED%83%80-%EA%B2%B8%EC%97%85%EC%9D%98-%EA%B7%80%ED%99%98__audio-0.mp3" length="3238693" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__오타니-투타-겸업의-귀환__audio-0.mp3</guid>
-      <itunes:duration>6:44</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[오히려 러시아가 종전을 원한다고 왜  이문영 서울대학교 통일평화연구원 교수 신과대화   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 오히려 러시아가 종전을 원한다고 왜  이문영 서울대학교 통일평화연구원 교수 신과대화   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%98%A4%ED%9E%88%EB%A0%A4-%EB%9F%AC%EC%8B%9C%EC%95%84%EA%B0%80-%EC%A2%85%EC%A0%84%EC%9D%84-%EC%9B%90%ED%95%9C%EB%8B%A4%EA%B3%A0-%EC%99%9C--%EC%9D%B4%EB%AC%B8%EC%98%81-%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90-%ED%86%B5%EC%9D%BC%ED%8F%89%ED%99%94%EC%97%B0%EA%B5%AC%EC%9B%90-%EA%B5%90%EC%88%98-%EC%8B%A0%EA%B3%BC%EB%8C%80%ED%99%94---YouTube__audio-0.mp3" length="9848091" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__오히려-러시아가-종전을-원한다고-왜--이문영-서울대학교-통일평화연구원-교수-신과대화---YouTube__audio-0.mp3</guid>
-      <itunes:duration>20:30</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%99%80-GPT-52-%EA%B8%B0%EC%8A%B5-%EC%B6%9C%EC%8B%9C-%EA%B5%AC%EA%B8%80%EA%B3%BC-%EB%B9%84%EA%B5%90--%EC%84%B1%EB%8A%A5%EB%8F%84-%EC%A2%8B%EC%9D%80%EB%8D%B0-%ED%97%9B%EC%86%8C%EB%A6%AC-%EC%A7%84%EC%A7%9C-%EC%A4%84%EC%97%88%EB%8B%A4--%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%B2%95-%EC%A0%81%EC%9A%A9---YouTu__audio-0.mp3" length="8474050" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__와-GPT-52-기습-출시-구글과-비교--성능도-좋은데-헛소리-진짜-줄었다--새로운-기법-적용---YouTu__audio-0.mp3</guid>
-      <itunes:duration>17:39</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%99%80-GPT-52-%EA%B8%B0%EC%8A%B5-%EC%B6%9C%EC%8B%9C-%EA%B5%AC%EA%B8%80%EA%B3%BC-%EB%B9%84%EA%B5%90--%EC%84%B1%EB%8A%A5%EB%8F%84-%EC%A2%8B%EC%9D%80%EB%8D%B0-%ED%97%9B%EC%86%8C%EB%A6%AC-%EC%A7%84%EC%A7%9C-%EC%A4%84%EC%97%88%EB%8B%A4--%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%B2%95-%EC%A0%81%EC%9A%A9---YouTu__audio-1.mp3" length="7134491" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__와-GPT-52-기습-출시-구글과-비교--성능도-좋은데-헛소리-진짜-줄었다--새로운-기법-적용---YouTu__audio-1.mp3</guid>
-      <itunes:duration>14:51</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[왜 우크라이나가 전쟁에서 이기고 있는가유발하라리 분석   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 왜 우크라이나가 전쟁에서 이기고 있는가유발하라리 분석   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%99%9C-%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EA%B0%80-%EC%A0%84%EC%9F%81%EC%97%90%EC%84%9C-%EC%9D%B4%EA%B8%B0%EA%B3%A0-%EC%9E%88%EB%8A%94%EA%B0%80%EC%9C%A0%EB%B0%9C%ED%95%98%EB%9D%BC%EB%A6%AC-%EB%B6%84%EC%84%9D---YouTube__audio-0.mp3" length="6507970" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__왜-우크라이나가-전쟁에서-이기고-있는가유발하라리-분석---YouTube__audio-0.mp3</guid>
-      <itunes:duration>13:33</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[우크라이나 휴전관련] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 우크라이나 휴전관련]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98-%ED%9C%B4%EC%A0%84%EA%B4%80%EB%A0%A8__audio-0.mp3" length="3935849" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__우크라이나-휴전관련__audio-0.mp3</guid>
-      <itunes:duration>8:11</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[우크라이나는 어떻게 방위 산업의 실리콘밸리가 되었나   조선비즈] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 우크라이나는 어떻게 방위 산업의 실리콘밸리가 되었나   조선비즈]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B0%A9%EC%9C%84-%EC%82%B0%EC%97%85%EC%9D%98-%EC%8B%A4%EB%A6%AC%EC%BD%98%EB%B0%B8%EB%A6%AC%EA%B0%80-%EB%90%98%EC%97%88%EB%82%98---%EC%A1%B0%EC%84%A0%EB%B9%84%EC%A6%88__audio-0.mp3" length="8226618" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__우크라이나는-어떻게-방위-산업의-실리콘밸리가-되었나---조선비즈__audio-0.mp3</guid>
-      <itunes:duration>17:08</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[운송 및 물류 절차 변경 사항] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 운송 및 물류 절차 변경 사항]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9A%B4%EC%86%A1-%EB%B0%8F-%EB%AC%BC%EB%A5%98-%EC%A0%88%EC%B0%A8-%EB%B3%80%EA%B2%BD-%EC%82%AC%ED%95%AD__audio-0.mp3" length="6586755" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__운송-및-물류-절차-변경-사항__audio-0.mp3</guid>
-      <itunes:duration>13:43</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[이건 다저스에게 엄청난 움직임이에요   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 이건 다저스에게 엄청난 움직임이에요   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9D%B4%EA%B1%B4-%EB%8B%A4%EC%A0%80%EC%8A%A4%EC%97%90%EA%B2%8C-%EC%97%84%EC%B2%AD%EB%82%9C-%EC%9B%80%EC%A7%81%EC%9E%84%EC%9D%B4%EC%97%90%EC%9A%94---YouTube__audio-0.mp3" length="3455614" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__이건-다저스에게-엄청난-움직임이에요---YouTube__audio-0.mp3</guid>
-      <itunes:duration>7:11</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[인구절벽] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 인구절벽]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9D%B8%EA%B5%AC%EC%A0%88%EB%B2%BD__audio-0.mp3" length="3454778" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__인구절벽__audio-0.mp3</guid>
-      <itunes:duration>7:11</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[인텔의 1000억 달러 도박 처참히 실패하다   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 인텔의 1000억 달러 도박 처참히 실패하다   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9D%B8%ED%85%94%EC%9D%98-1000%EC%96%B5-%EB%8B%AC%EB%9F%AC-%EB%8F%84%EB%B0%95-%EC%B2%98%EC%B0%B8%ED%9E%88-%EC%8B%A4%ED%8C%A8%ED%95%98%EB%8B%A4---YouTube__audio-0.mp3" length="8255875" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__인텔의-1000억-달러-도박-처참히-실패하다---YouTube__audio-0.mp3</guid>
-      <itunes:duration>17:11</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[일본 언론의 이재명 보도와 한일 관계] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 일본 언론의 이재명 보도와 한일 관계]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9D%BC%EB%B3%B8-%EC%96%B8%EB%A1%A0%EC%9D%98-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%B3%B4%EB%8F%84%EC%99%80-%ED%95%9C%EC%9D%BC-%EA%B4%80%EA%B3%84__audio-0.mp3" length="10421949" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__일본-언론의-이재명-보도와-한일-관계__audio-0.mp3</guid>
-      <itunes:duration>21:42</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[일본 언론의 이재명 보도와 한일 관계] audio 1</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 일본 언론의 이재명 보도와 한일 관계]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9D%BC%EB%B3%B8-%EC%96%B8%EB%A1%A0%EC%9D%98-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%B3%B4%EB%8F%84%EC%99%80-%ED%95%9C%EC%9D%BC-%EA%B4%80%EA%B3%84__audio-1.mp3" length="9507036" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__일본-언론의-이재명-보도와-한일-관계__audio-1.mp3</guid>
-      <itunes:duration>19:48</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[일본 언론의 이재명 보도와 한일 관계] audio 2</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 일본 언론의 이재명 보도와 한일 관계]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%9D%BC%EB%B3%B8-%EC%96%B8%EB%A1%A0%EC%9D%98-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%B3%B4%EB%8F%84%EC%99%80-%ED%95%9C%EC%9D%BC-%EA%B4%80%EA%B3%84__audio-2.mp3" length="6248417" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__일본-언론의-이재명-보도와-한일-관계__audio-2.mp3</guid>
-      <itunes:duration>13:01</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[적재물 고정 및 안전 규정] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 적재물 고정 및 안전 규정]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%A0%81%EC%9E%AC%EB%AC%BC-%EA%B3%A0%EC%A0%95-%EB%B0%8F-%EC%95%88%EC%A0%84-%EA%B7%9C%EC%A0%95__audio-0.mp3" length="6074128" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__적재물-고정-및-안전-규정__audio-0.mp3</guid>
-      <itunes:duration>12:39</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[젓가락도 안쓰는 인도 불닭은 어쩌다 터진걸까 f인도환타 인도와 한류 2부   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 젓가락도 안쓰는 인도 불닭은 어쩌다 터진걸까 f인도환타 인도와 한류 2부   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%A0%93%EA%B0%80%EB%9D%BD%EB%8F%84-%EC%95%88%EC%93%B0%EB%8A%94-%EC%9D%B8%EB%8F%84-%EB%B6%88%EB%8B%AD%EC%9D%80-%EC%96%B4%EC%A9%8C%EB%8B%A4-%ED%84%B0%EC%A7%84%EA%B1%B8%EA%B9%8C-f%EC%9D%B8%EB%8F%84%ED%99%98%ED%83%80-%EC%9D%B8%EB%8F%84%EC%99%80-%ED%95%9C%EB%A5%98-2%EB%B6%80---YouTube__audio-0.mp3" length="10821936" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__젓가락도-안쓰는-인도-불닭은-어쩌다-터진걸까-f인도환타-인도와-한류-2부---YouTube__audio-0.mp3</guid>
-      <itunes:duration>22:32</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[직원 공지 및 행동 지침] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 직원 공지 및 행동 지침]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%A7%81%EC%9B%90-%EA%B3%B5%EC%A7%80-%EB%B0%8F-%ED%96%89%EB%8F%99-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="7049645" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__직원-공지-및-행동-지침__audio-0.mp3</guid>
-      <itunes:duration>14:41</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[직원 교육 및 업무 지침] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 직원 교육 및 업무 지침]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%A7%81%EC%9B%90-%EA%B5%90%EC%9C%A1-%EB%B0%8F-%EC%97%85%EB%AC%B4-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="6830426" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__직원-교육-및-업무-지침__audio-0.mp3</guid>
-      <itunes:duration>14:13</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[진격의 거인 세계관에 빠진 교수님   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 진격의 거인 세계관에 빠진 교수님   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%A7%84%EA%B2%A9%EC%9D%98-%EA%B1%B0%EC%9D%B8-%EC%84%B8%EA%B3%84%EA%B4%80%EC%97%90-%EB%B9%A0%EC%A7%84-%EA%B5%90%EC%88%98%EB%8B%98---YouTube__audio-0.mp3" length="2788342" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__진격의-거인-세계관에-빠진-교수님---YouTube__audio-0.mp3</guid>
-      <itunes:duration>5:48</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[창고 및 배달 지침] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 창고 및 배달 지침]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%EC%B0%BD%EA%B3%A0-%EB%B0%8F-%EB%B0%B0%EB%8B%AC-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="5451996" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__창고-및-배달-지침__audio-0.mp3</guid>
-      <itunes:duration>11:21</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[트럼프 중동 순방과 이스라엘의 고립] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 트럼프 중동 순방과 이스라엘의 고립]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%8A%B8%EB%9F%BC%ED%94%84-%EC%A4%91%EB%8F%99-%EC%88%9C%EB%B0%A9%EA%B3%BC-%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98%EC%9D%98-%EA%B3%A0%EB%A6%BD__audio-0.mp3" length="3326883" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__트럼프-중동-순방과-이스라엘의-고립__audio-0.mp3</guid>
-      <itunes:duration>6:55</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[트럼프의 관세 도박 사법부 제동에도 강행되는 무역 공세] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 트럼프의 관세 도박 사법부 제동에도 강행되는 무역 공세]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EA%B4%80%EC%84%B8-%EB%8F%84%EB%B0%95-%EC%82%AC%EB%B2%95%EB%B6%80-%EC%A0%9C%EB%8F%99%EC%97%90%EB%8F%84-%EA%B0%95%ED%96%89%EB%90%98%EB%8A%94-%EB%AC%B4%EC%97%AD-%EA%B3%B5%EC%84%B8__audio-0.mp3" length="5183248" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__트럼프의-관세-도박-사법부-제동에도-강행되는-무역-공세__audio-0.mp3</guid>
-      <itunes:duration>10:47</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[트럼프의 관세 정책과 팍스 아메리카나의 종말] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 트럼프의 관세 정책과 팍스 아메리카나의 종말]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EA%B4%80%EC%84%B8-%EC%A0%95%EC%B1%85%EA%B3%BC-%ED%8C%8D%EC%8A%A4-%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%82%98%EC%9D%98-%EC%A2%85%EB%A7%90__audio-0.mp3" length="8262772" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__트럼프의-관세-정책과-팍스-아메리카나의-종말__audio-0.mp3</guid>
-      <itunes:duration>17:12</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[폭스바겐 앱 550 전기 모터 분석] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 폭스바겐 앱 550 전기 모터 분석]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%8F%AD%EC%8A%A4%EB%B0%94%EA%B2%90-%EC%95%B1-550-%EC%A0%84%EA%B8%B0-%EB%AA%A8%ED%84%B0-%EB%B6%84%EC%84%9D__audio-0.mp3" length="3611513" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__폭스바겐-앱-550-전기-모터-분석__audio-0.mp3</guid>
-      <itunes:duration>7:31</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[학부모 회의] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 학부모 회의]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98__audio-0.mp3" length="2908923" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__학부모-회의__audio-0.mp3</guid>
-      <itunes:duration>6:03</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[한국 좌파 자유주의자 이재명 대선 승리] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 한국 좌파 자유주의자 이재명 대선 승리]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%95%9C%EA%B5%AD-%EC%A2%8C%ED%8C%8C-%EC%9E%90%EC%9C%A0%EC%A3%BC%EC%9D%98%EC%9E%90-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%8C%80%EC%84%A0-%EC%8A%B9%EB%A6%AC__audio-0.mp3" length="3673162" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__한국-좌파-자유주의자-이재명-대선-승리__audio-0.mp3</guid>
-      <itunes:duration>7:39</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
-      <title>[핵심은 베이스 다이 마이크론 HBM4 세계 최고 속도 11Gbps 달성의 진짜 의미   YouTube] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 핵심은 베이스 다이 마이크론 HBM4 세계 최고 속도 11Gbps 달성의 진짜 의미   YouTube]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%95%B5%EC%8B%AC%EC%9D%80-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%8B%A4%EC%9D%B4-%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0-HBM4-%EC%84%B8%EA%B3%84-%EC%B5%9C%EA%B3%A0-%EC%86%8D%EB%8F%84-11Gbps-%EB%8B%AC%EC%84%B1%EC%9D%98-%EC%A7%84%EC%A7%9C-%EC%9D%98%EB%AF%B8---YouTube__audio-0.mp3" length="8283043" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__핵심은-베이스-다이-마이크론-HBM4-세계-최고-속도-11Gbps-달성의-진짜-의미---YouTube__audio-0.mp3</guid>
-      <itunes:duration>17:15</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
       <title>[행복의 기원 고대 철학과 현대 과학의 지혜 통합] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: 행복의 기원 고대 철학과 현대 과학의 지혜 통합]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%96%89%EB%B3%B5%EC%9D%98-%EA%B8%B0%EC%9B%90-%EA%B3%A0%EB%8C%80-%EC%B2%A0%ED%95%99%EA%B3%BC-%ED%98%84%EB%8C%80-%EA%B3%BC%ED%95%99%EC%9D%98-%EC%A7%80%ED%98%9C-%ED%86%B5%ED%95%A9__audio-0.mp3" length="9382693" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__행복의-기원-고대-철학과-현대-과학의-지혜-통합__audio-0.mp3</guid>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260220__%ED%96%89%EB%B3%B5%EC%9D%98-%EA%B8%B0%EC%9B%90-%EA%B3%A0%EB%8C%80-%EC%B2%A0%ED%95%99%EA%B3%BC-%ED%98%84%EB%8C%80-%EA%B3%BC%ED%95%99%EC%9D%98-%EC%A7%80%ED%98%9C-%ED%86%B5%ED%95%A9__audio-0.mp3" length="9382693" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260220__행복의-기원-고대-철학과-현대-과학의-지혜-통합__audio-0.mp3</guid>
       <itunes:duration>19:32</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[A Road Trip from Kandahar to Kabul on Highway 1 in Afghanist] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: A Road Trip from Kandahar to Kabul on Highway 1 in Afghanist]]></description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260219__A-Road-Trip-from-Kandahar-to-Kabul-on-Highway-1-in-Afghanist__audio-0.mp3" length="7532179" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260219__A-Road-Trip-from-Kandahar-to-Kabul-on-Highway-1-in-Afghanist__audio-0.mp3</guid>
+      <itunes:duration>15:41</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계]]></description>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260211__2026-AI-%ED%8A%B9%EC%9D%B4%EC%A0%90%EA%B3%BC-%ED%8C%94%EB%9E%80%ED%8B%B0%EC%96%B4-%EC%A4%91%EC%8B%AC%EC%9D%98-%EB%94%A5-%EC%82%AC%EC%8A%A4-%EC%83%9D%ED%83%9C%EA%B3%84__audio-0.mp3" length="7696855" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260211__2026-AI-특이점과-팔란티어-중심의-딥-사스-생태계__audio-0.mp3</guid>
+      <itunes:duration>16:02</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 2026 AI 특이점과 팔란티어 중심의 딥 사스 생태계]]></description>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260211__2026-AI-%ED%8A%B9%EC%9D%B4%EC%A0%90%EA%B3%BC-%ED%8C%94%EB%9E%80%ED%8B%B0%EC%96%B4-%EC%A4%91%EC%8B%AC%EC%9D%98-%EB%94%A5-%EC%82%AC%EC%8A%A4-%EC%83%9D%ED%83%9C%EA%B3%84__audio-1.mp3" length="6172349" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260211__2026-AI-특이점과-팔란티어-중심의-딥-사스-생태계__audio-1.mp3</guid>
+      <itunes:duration>12:51</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[대한민국 AI 국가대표팀의 독자 모델 개발 현황과 과제] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 대한민국 AI 국가대표팀의 독자 모델 개발 현황과 과제]]></description>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260211__%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-AI-%EA%B5%AD%EA%B0%80%EB%8C%80%ED%91%9C%ED%8C%80%EC%9D%98-%EB%8F%85%EC%9E%90-%EB%AA%A8%EB%8D%B8-%EA%B0%9C%EB%B0%9C-%ED%98%84%ED%99%A9%EA%B3%BC-%EA%B3%BC%EC%A0%9C__audio-0.mp3" length="6426050" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260211__대한민국-AI-국가대표팀의-독자-모델-개발-현황과-과제__audio-0.mp3</guid>
+      <itunes:duration>13:23</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전]]></description>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260129__%EB%B3%B4%EC%8A%A4%ED%84%B4%EB%8B%A4%EC%9D%B4%EB%82%B4%EB%AF%B9%EC%8A%A4-IPO%EC%99%80-%ED%98%84%EB%8C%80%EC%B0%A8%EA%B7%B8%EB%A3%B9-%ED%94%BC%EC%A7%80%EC%BB%AC-AI-%EB%B9%84%EC%A0%84__audio-0.mp3" length="42219619" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260129__보스턴다이내믹스-IPO와-현대차그룹-피지컬-AI-비전__audio-0.mp3</guid>
+      <itunes:duration>6:58</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 보스턴다이내믹스 IPO와 현대차그룹 피지컬 AI 비전]]></description>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260129__%EB%B3%B4%EC%8A%A4%ED%84%B4%EB%8B%A4%EC%9D%B4%EB%82%B4%EB%AF%B9%EC%8A%A4-IPO%EC%99%80-%ED%98%84%EB%8C%80%EC%B0%A8%EA%B7%B8%EB%A3%B9-%ED%94%BC%EC%A7%80%EC%BB%AC-AI-%EB%B9%84%EC%A0%84__audio-1.mp3" length="6650076" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260129__보스턴다이내믹스-IPO와-현대차그룹-피지컬-AI-비전__audio-1.mp3</guid>
+      <itunes:duration>13:51</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[06112025_MAZ Artikel] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 06112025_MAZ Artikel]]></description>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260128__06112025_MAZ-Artikel__audio-0.mp3" length="5621479" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260128__06112025_MAZ-Artikel__audio-0.mp3</guid>
+      <itunes:duration>11:42</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[06112025_MAZ Artikel] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 06112025_MAZ Artikel]]></description>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260128__06112025_MAZ-Artikel__audio-1.mp3" length="7104398" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260128__06112025_MAZ-Artikel__audio-1.mp3</guid>
+      <itunes:duration>14:48</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
       <title>[히든 챔피언도 23분마다 폐업  한국경제] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: 히든 챔피언도 23분마다 폐업  한국경제]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%9E%88%EB%93%A0-%EC%B1%94%ED%94%BC%EC%96%B8%EB%8F%84-23%EB%B6%84%EB%A7%88%EB%8B%A4-%ED%8F%90%EC%97%85--%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C__audio-0.mp3" length="7897057" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__히든-챔피언도-23분마다-폐업--한국경제__audio-0.mp3</guid>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260125__%ED%9E%88%EB%93%A0-%EC%B1%94%ED%94%BC%EC%96%B8%EB%8F%84-23%EB%B6%84%EB%A7%88%EB%8B%A4-%ED%8F%90%EC%97%85--%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C__audio-0.mp3" length="7897057" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260125__히든-챔피언도-23분마다-폐업--한국경제__audio-0.mp3</guid>
       <itunes:duration>16:27</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
       <title>[히든 챔피언도 23분마다 폐업  한국경제] audio 1</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: 히든 챔피언도 23분마다 폐업  한국경제]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__%ED%9E%88%EB%93%A0-%EC%B1%94%ED%94%BC%EC%96%B8%EB%8F%84-23%EB%B6%84%EB%A7%88%EB%8B%A4-%ED%8F%90%EC%97%85--%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C__audio-1.mp3" length="5707369" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__히든-챔피언도-23분마다-폐업--한국경제__audio-1.mp3</guid>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260125__%ED%9E%88%EB%93%A0-%EC%B1%94%ED%94%BC%EC%96%B8%EB%8F%84-23%EB%B6%84%EB%A7%88%EB%8B%A4-%ED%8F%90%EC%97%85--%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C__audio-1.mp3" length="5707369" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260125__히든-챔피언도-23분마다-폐업--한국경제__audio-1.mp3</guid>
       <itunes:duration>11:53</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[4 풀 리퀘스트를 활용한 협업 왜 풀 리퀘스트를 사용할까요] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 4 풀 리퀘스트를 활용한 협업 왜 풀 리퀘스트를 사용할까요]]></description>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251231__4-%ED%92%80-%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%98%91%EC%97%85-%EC%99%9C-%ED%92%80-%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C%EC%9A%94__audio-0.mp3" length="6867624" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251231__4-풀-리퀘스트를-활용한-협업-왜-풀-리퀘스트를-사용할까요__audio-0.mp3</guid>
+      <itunes:duration>14:18</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AI 시대의 인간 고전이 던지는 미래의 질문] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 시대의 인간 고전이 던지는 미래의 질문]]></description>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251228__AI-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%9D%B8%EA%B0%84-%EA%B3%A0%EC%A0%84%EC%9D%B4-%EB%8D%98%EC%A7%80%EB%8A%94-%EB%AF%B8%EB%9E%98%EC%9D%98-%EC%A7%88%EB%AC%B8__audio-0.mp3" length="6105475" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251228__AI-시대의-인간-고전이-던지는-미래의-질문__audio-0.mp3</guid>
+      <itunes:duration>12:43</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AI 시대의 인간 고전이 던지는 미래의 질문] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 시대의 인간 고전이 던지는 미래의 질문]]></description>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251228__AI-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%9D%B8%EA%B0%84-%EA%B3%A0%EC%A0%84%EC%9D%B4-%EB%8D%98%EC%A7%80%EB%8A%94-%EB%AF%B8%EB%9E%98%EC%9D%98-%EC%A7%88%EB%AC%B8__audio-1.mp3" length="6600966" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251228__AI-시대의-인간-고전이-던지는-미래의-질문__audio-1.mp3</guid>
+      <itunes:duration>13:45</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Interview 호소다 다카히로 TBWA 수석 크리에이티브 책임자 AI가 모든 답 제시하는 시대 답은 센스] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Interview 호소다 다카히로 TBWA 수석 크리에이티브 책임자 AI가 모든 답 제시하는 시대 답은 센스]]></description>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251226__Interview-%ED%98%B8%EC%86%8C%EB%8B%A4-%EB%8B%A4%EC%B9%B4%ED%9E%88%EB%A1%9C-TBWA-%EC%88%98%EC%84%9D-%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%B1%85%EC%9E%84%EC%9E%90-AI%EA%B0%80-%EB%AA%A8%EB%93%A0-%EB%8B%B5-%EC%A0%9C%EC%8B%9C%ED%95%98%EB%8A%94-%EC%8B%9C%EB%8C%80-%EB%8B%B5%EC%9D%80-%EC%84%BC%EC%8A%A4__audio-0.mp3" length="7026448" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251226__Interview-호소다-다카히로-TBWA-수석-크리에이티브-책임자-AI가-모든-답-제시하는-시대-답은-센스__audio-0.mp3</guid>
+      <itunes:duration>14:38</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산]]></description>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251226__%EC%95%8C%EB%9E%80-%ED%8C%8C%EC%8A%A8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EB%A6%AC%EC%9D%98-%EC%97%B0%EA%B8%88%EC%88%A0%EC%82%AC%EC%99%80-%EA%B7%B8%EB%93%A4%EC%9D%98-%EC%9C%A0%EC%82%B0__audio-0.mp3" length="6315291" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251226__알란-파슨스-프로젝트-소리의-연금술사와-그들의-유산__audio-0.mp3</guid>
+      <itunes:duration>13:09</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 알란 파슨스 프로젝트 소리의 연금술사와 그들의 유산]]></description>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251226__%EC%95%8C%EB%9E%80-%ED%8C%8C%EC%8A%A8%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EB%A6%AC%EC%9D%98-%EC%97%B0%EA%B8%88%EC%88%A0%EC%82%AC%EC%99%80-%EA%B7%B8%EB%93%A4%EC%9D%98-%EC%9C%A0%EC%82%B0__audio-1.mp3" length="5683963" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251226__알란-파슨스-프로젝트-소리의-연금술사와-그들의-유산__audio-1.mp3</guid>
+      <itunes:duration>11:50</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[연봉 10억 파격 이유 있었다삼성 드디어 독립선언  한국경제] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 연봉 10억 파격 이유 있었다삼성 드디어 독립선언  한국경제]]></description>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251226__%EC%97%B0%EB%B4%89-10%EC%96%B5-%ED%8C%8C%EA%B2%A9-%EC%9D%B4%EC%9C%A0-%EC%9E%88%EC%97%88%EB%8B%A4%EC%82%BC%EC%84%B1-%EB%93%9C%EB%94%94%EC%96%B4-%EB%8F%85%EB%A6%BD%EC%84%A0%EC%96%B8--%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C__audio-0.mp3" length="6154168" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251226__연봉-10억-파격-이유-있었다삼성-드디어-독립선언--한국경제__audio-0.mp3</guid>
+      <itunes:duration>12:49</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[우크라이나는 어떻게 방위 산업의 실리콘밸리가 되었나   조선비즈] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 우크라이나는 어떻게 방위 산업의 실리콘밸리가 되었나   조선비즈]]></description>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251226__%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%B0%A9%EC%9C%84-%EC%82%B0%EC%97%85%EC%9D%98-%EC%8B%A4%EB%A6%AC%EC%BD%98%EB%B0%B8%EB%A6%AC%EA%B0%80-%EB%90%98%EC%97%88%EB%82%98---%EC%A1%B0%EC%84%A0%EB%B9%84%EC%A6%88__audio-0.mp3" length="8226618" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251226__우크라이나는-어떻게-방위-산업의-실리콘밸리가-되었나---조선비즈__audio-0.mp3</guid>
+      <itunes:duration>17:08</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Cursor 각 모드의 상세 설명과 활용 예시] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Cursor 각 모드의 상세 설명과 활용 예시]]></description>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251224__Cursor-%EA%B0%81-%EB%AA%A8%EB%93%9C%EC%9D%98-%EC%83%81%EC%84%B8-%EC%84%A4%EB%AA%85%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EC%98%88%EC%8B%9C__audio-0.mp3" length="6932199" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251224__Cursor-각-모드의-상세-설명과-활용-예시__audio-0.mp3</guid>
+      <itunes:duration>14:26</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Cursor 각 모드의 상세 설명과 활용 예시] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Cursor 각 모드의 상세 설명과 활용 예시]]></description>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251224__Cursor-%EA%B0%81-%EB%AA%A8%EB%93%9C%EC%9D%98-%EC%83%81%EC%84%B8-%EC%84%A4%EB%AA%85%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EC%98%88%EC%8B%9C__audio-1.mp3" length="6481430" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251224__Cursor-각-모드의-상세-설명과-활용-예시__audio-1.mp3</guid>
+      <itunes:duration>13:30</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu]]></description>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251212__%EC%99%80-GPT-52-%EA%B8%B0%EC%8A%B5-%EC%B6%9C%EC%8B%9C-%EA%B5%AC%EA%B8%80%EA%B3%BC-%EB%B9%84%EA%B5%90--%EC%84%B1%EB%8A%A5%EB%8F%84-%EC%A2%8B%EC%9D%80%EB%8D%B0-%ED%97%9B%EC%86%8C%EB%A6%AC-%EC%A7%84%EC%A7%9C-%EC%A4%84%EC%97%88%EB%8B%A4--%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%B2%95-%EC%A0%81%EC%9A%A9---YouTu__audio-0.mp3" length="8474050" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251212__와-GPT-52-기습-출시-구글과-비교--성능도-좋은데-헛소리-진짜-줄었다--새로운-기법-적용---YouTu__audio-0.mp3</guid>
+      <itunes:duration>17:39</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 와 GPT 52 기습 출시 구글과 비교  성능도 좋은데 헛소리 진짜 줄었다  새로운 기법 적용   YouTu]]></description>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251212__%EC%99%80-GPT-52-%EA%B8%B0%EC%8A%B5-%EC%B6%9C%EC%8B%9C-%EA%B5%AC%EA%B8%80%EA%B3%BC-%EB%B9%84%EA%B5%90--%EC%84%B1%EB%8A%A5%EB%8F%84-%EC%A2%8B%EC%9D%80%EB%8D%B0-%ED%97%9B%EC%86%8C%EB%A6%AC-%EC%A7%84%EC%A7%9C-%EC%A4%84%EC%97%88%EB%8B%A4--%EC%83%88%EB%A1%9C%EC%9A%B4-%EA%B8%B0%EB%B2%95-%EC%A0%81%EC%9A%A9---YouTu__audio-1.mp3" length="7134491" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251212__와-GPT-52-기습-출시-구글과-비교--성능도-좋은데-헛소리-진짜-줄었다--새로운-기법-적용---YouTu__audio-1.mp3</guid>
+      <itunes:duration>14:51</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Should You Switch To Godot UNITY vs GODOT vs UNREAL   YouTub] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Should You Switch To Godot UNITY vs GODOT vs UNREAL   YouTub]]></description>
+      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251207__Should-You-Switch-To-Godot-UNITY-vs-GODOT-vs-UNREAL---YouTub__audio-0.mp3" length="7518804" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251207__Should-You-Switch-To-Godot-UNITY-vs-GODOT-vs-UNREAL---YouTub__audio-0.mp3</guid>
+      <itunes:duration>15:39</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[에릭 토폴 건강 수명 연장 과학] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 에릭 토폴 건강 수명 연장 과학]]></description>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251205__%EC%97%90%EB%A6%AD-%ED%86%A0%ED%8F%B4-%EA%B1%B4%EA%B0%95-%EC%88%98%EB%AA%85-%EC%97%B0%EC%9E%A5-%EA%B3%BC%ED%95%99__audio-0.mp3" length="8148251" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251205__에릭-토폴-건강-수명-연장-과학__audio-0.mp3</guid>
+      <itunes:duration>16:58</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[깐부회동 나비 효과 한국경제 태풍될까 박종훈의 지식한방   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 깐부회동 나비 효과 한국경제 태풍될까 박종훈의 지식한방   YouTube]]></description>
+      <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251102__%EA%B9%90%EB%B6%80%ED%9A%8C%EB%8F%99-%EB%82%98%EB%B9%84-%ED%9A%A8%EA%B3%BC-%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C-%ED%83%9C%ED%92%8D%EB%90%A0%EA%B9%8C-%EB%B0%95%EC%A2%85%ED%9B%88%EC%9D%98-%EC%A7%80%EC%8B%9D%ED%95%9C%EB%B0%A9---YouTube__audio-0.mp3" length="10486941" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251102__깐부회동-나비-효과-한국경제-태풍될까-박종훈의-지식한방---YouTube__audio-0.mp3</guid>
+      <itunes:duration>21:50</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers vs Blue Jays is Goliath vs Goliath  Big Papi Jeter  ] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers vs Blue Jays is Goliath vs Goliath  Big Papi Jeter  ]]></description>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251022__Dodgers-vs-Blue-Jays-is-Goliath-vs-Goliath--Big-Papi-Jeter--__audio-0.mp3" length="6102341" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251022__Dodgers-vs-Blue-Jays-is-Goliath-vs-Goliath--Big-Papi-Jeter--__audio-0.mp3</guid>
+      <itunes:duration>12:42</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Shohei Ohtani Has All Time Performance Dodgers Sweep Brewers] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Shohei Ohtani Has All Time Performance Dodgers Sweep Brewers]]></description>
+      <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251018__Shohei-Ohtani-Has-All-Time-Performance-Dodgers-Sweep-Brewers__audio-0.mp3" length="5821890" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251018__Shohei-Ohtani-Has-All-Time-Performance-Dodgers-Sweep-Brewers__audio-0.mp3</guid>
+      <itunes:duration>12:07</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[직원 공지 및 행동 지침] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 직원 공지 및 행동 지침]]></description>
+      <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251018__%EC%A7%81%EC%9B%90-%EA%B3%B5%EC%A7%80-%EB%B0%8F-%ED%96%89%EB%8F%99-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="7049645" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251018__직원-공지-및-행동-지침__audio-0.mp3</guid>
+      <itunes:duration>14:41</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[The Dodgers Total Domination Led by Snell and Yamamoto Steve] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: The Dodgers Total Domination Led by Snell and Yamamoto Steve]]></description>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251016__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3" length="6433991" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251016__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3</guid>
+      <itunes:duration>13:24</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers Take 2 0 NLCS Lead vs Brewers Behind Yamamotos Compl] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Take 2 0 NLCS Lead vs Brewers Behind Yamamotos Compl]]></description>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251015__Dodgers-Take-2-0-NLCS-Lead-vs-Brewers-Behind-Yamamotos-Compl__audio-0.mp3" length="7232502" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251015__Dodgers-Take-2-0-NLCS-Lead-vs-Brewers-Behind-Yamamotos-Compl__audio-0.mp3</guid>
+      <itunes:duration>15:04</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[스넬의 압도적 투구와 NLCS 1차전 승리] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 스넬의 압도적 투구와 NLCS 1차전 승리]]></description>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251014__%EC%8A%A4%EB%84%AC%EC%9D%98-%EC%95%95%EB%8F%84%EC%A0%81-%ED%88%AC%EA%B5%AC%EC%99%80-NLCS-1%EC%B0%A8%EC%A0%84-%EC%8A%B9%EB%A6%AC__audio-0.mp3" length="7655895" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251014__스넬의-압도적-투구와-NLCS-1차전-승리__audio-0.mp3</guid>
+      <itunes:duration>15:56</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[창고 및 배달 지침] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 창고 및 배달 지침]]></description>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251014__%EC%B0%BD%EA%B3%A0-%EB%B0%8F-%EB%B0%B0%EB%8B%AC-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="5451996" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251014__창고-및-배달-지침__audio-0.mp3</guid>
+      <itunes:duration>11:21</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[The best team in baseball  Alex Rodriguez MLB on FOX crew re] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: The best team in baseball  Alex Rodriguez MLB on FOX crew re]]></description>
+      <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251011__The-best-team-in-baseball--Alex-Rodriguez-MLB-on-FOX-crew-re__audio-0.mp3" length="7505639" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251011__The-best-team-in-baseball--Alex-Rodriguez-MLB-on-FOX-crew-re__audio-0.mp3</guid>
+      <itunes:duration>15:38</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers Advance to NLCS on Walk Off Error vs Phillies  MLB o] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Advance to NLCS on Walk Off Error vs Phillies  MLB o]]></description>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251010__Dodgers-Advance-to-NLCS-on-Walk-Off-Error-vs-Phillies--MLB-o__audio-0.mp3" length="5636943" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251010__Dodgers-Advance-to-NLCS-on-Walk-Off-Error-vs-Phillies--MLB-o__audio-0.mp3</guid>
+      <itunes:duration>11:44</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AI 대폭발 시대 지금 안 들으면 평생 후회합니다  장동선 최재붕 이정모 김상균 조용민 서용석  AI 기술 ] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 대폭발 시대 지금 안 들으면 평생 후회합니다  장동선 최재붕 이정모 김상균 조용민 서용석  AI 기술 ]]></description>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251009__AI-%EB%8C%80%ED%8F%AD%EB%B0%9C-%EC%8B%9C%EB%8C%80-%EC%A7%80%EA%B8%88-%EC%95%88-%EB%93%A4%EC%9C%BC%EB%A9%B4-%ED%8F%89%EC%83%9D-%ED%9B%84%ED%9A%8C%ED%95%A9%EB%8B%88%EB%8B%A4--%EC%9E%A5%EB%8F%99%EC%84%A0-%EC%B5%9C%EC%9E%AC%EB%B6%95-%EC%9D%B4%EC%A0%95%EB%AA%A8-%EA%B9%80%EC%83%81%EA%B7%A0-%EC%A1%B0%EC%9A%A9%EB%AF%BC-%EC%84%9C%EC%9A%A9%EC%84%9D--AI-%EA%B8%B0%EC%88%A0-__audio-0.mp3" length="7341381" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251009__AI-대폭발-시대-지금-안-들으면-평생-후회합니다--장동선-최재붕-이정모-김상균-조용민-서용석--AI-기술-__audio-0.mp3</guid>
+      <itunes:duration>15:17</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers Postseason Dave Roberts on Game 3 Loss Yamamotos Str] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Postseason Dave Roberts on Game 3 Loss Yamamotos Str]]></description>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251009__Dodgers-Postseason-Dave-Roberts-on-Game-3-Loss-Yamamotos-Str__audio-0.mp3" length="7568959" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251009__Dodgers-Postseason-Dave-Roberts-on-Game-3-Loss-Yamamotos-Str__audio-0.mp3</guid>
+      <itunes:duration>15:46</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube]]></description>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251009__KF-21-%EB%B8%94%EB%A1%9D2-%EC%8B%A4%EC%A0%84-%EB%B0%B0%EC%B9%98-%EC%9E%84%EB%B0%95%EB%AC%B4%EC%9E%A5-%EA%B5%AD%EC%82%B0%ED%99%94-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EC%99%94%EC%9D%84%EA%B9%8C--%EA%B9%80%EB%AF%BC%EC%84%9D-%ED%8A%B9%ED%8C%8C%EC%9B%90-1%EB%B6%80---YouTube__audio-0.mp3" length="11082115" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251009__KF-21-블록2-실전-배치-임박무장-국산화-어디까지-왔을까--김민석-특파원-1부---YouTube__audio-0.mp3</guid>
+      <itunes:duration>23:05</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: KF 21 블록2 실전 배치 임박무장 국산화 어디까지 왔을까  김민석 특파원 1부   YouTube]]></description>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251009__KF-21-%EB%B8%94%EB%A1%9D2-%EC%8B%A4%EC%A0%84-%EB%B0%B0%EC%B9%98-%EC%9E%84%EB%B0%95%EB%AC%B4%EC%9E%A5-%EA%B5%AD%EC%82%B0%ED%99%94-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EC%99%94%EC%9D%84%EA%B9%8C--%EA%B9%80%EB%AF%BC%EC%84%9D-%ED%8A%B9%ED%8C%8C%EC%9B%90-1%EB%B6%80---YouTube__audio-1.mp3" length="9714344" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251009__KF-21-블록2-실전-배치-임박무장-국산화-어디까지-왔을까--김민석-특파원-1부---YouTube__audio-1.mp3</guid>
+      <itunes:duration>20:14</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch]]></description>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251009__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3" length="5642794" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251009__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3</guid>
+      <itunes:duration>11:45</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[샌델의 민주주의 위기와 한국의 교집합] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 샌델의 민주주의 위기와 한국의 교집합]]></description>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251009__%EC%83%8C%EB%8D%B8%EC%9D%98-%EB%AF%BC%EC%A3%BC%EC%A3%BC%EC%9D%98-%EC%9C%84%EA%B8%B0%EC%99%80-%ED%95%9C%EA%B5%AD%EC%9D%98-%EA%B5%90%EC%A7%91%ED%95%A9__audio-0.mp3" length="7582752" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251009__샌델의-민주주의-위기와-한국의-교집합__audio-0.mp3</guid>
+      <itunes:duration>15:47</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers Hold Off Phillies Comeback in Game 2 of NLDS  MLB on] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Hold Off Phillies Comeback in Game 2 of NLDS  MLB on]]></description>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251007__Dodgers-Hold-Off-Phillies-Comeback-in-Game-2-of-NLDS--MLB-on__audio-0.mp3" length="7737397" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251007__Dodgers-Hold-Off-Phillies-Comeback-in-Game-2-of-NLDS--MLB-on__audio-0.mp3</guid>
+      <itunes:duration>16:07</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[새로운 녹음을 위한 부서 소개 및 업무 지침] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 새로운 녹음을 위한 부서 소개 및 업무 지침]]></description>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251007__%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%85%B9%EC%9D%8C%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B6%80%EC%84%9C-%EC%86%8C%EA%B0%9C-%EB%B0%8F-%EC%97%85%EB%AC%B4-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="8112306" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251007__새로운-녹음을-위한-부서-소개-및-업무-지침__audio-0.mp3</guid>
+      <itunes:duration>16:53</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[시진핑 북한이 아닌 왜 한국을 선택했나 안유화  인포맥스라이브 250929   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 시진핑 북한이 아닌 왜 한국을 선택했나 안유화  인포맥스라이브 250929   YouTube]]></description>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251006__%EC%8B%9C%EC%A7%84%ED%95%91-%EB%B6%81%ED%95%9C%EC%9D%B4-%EC%95%84%EB%8B%8C-%EC%99%9C-%ED%95%9C%EA%B5%AD%EC%9D%84-%EC%84%A0%ED%83%9D%ED%96%88%EB%82%98-%EC%95%88%EC%9C%A0%ED%99%94--%EC%9D%B8%ED%8F%AC%EB%A7%A5%EC%8A%A4%EB%9D%BC%EC%9D%B4%EB%B8%8C-250929---YouTube__audio-0.mp3" length="8241038" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251006__시진핑-북한이-아닌-왜-한국을-선택했나-안유화--인포맥스라이브-250929---YouTube__audio-0.mp3</guid>
+      <itunes:duration>17:10</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers Come Back to Win Game 1 vs Phillies in NLDS  2025 ML] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Come Back to Win Game 1 vs Phillies in NLDS  2025 ML]]></description>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251005__Dodgers-Come-Back-to-Win-Game-1-vs-Phillies-in-NLDS--2025-ML__audio-0.mp3" length="6383209" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251005__Dodgers-Come-Back-to-Win-Game-1-vs-Phillies-in-NLDS--2025-ML__audio-0.mp3</guid>
+      <itunes:duration>13:17</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Now the pressure is on the Phillies  Derek Jeter after the D] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Now the pressure is on the Phillies  Derek Jeter after the D]]></description>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251005__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-0.mp3" length="6051350" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251005__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-0.mp3</guid>
+      <itunes:duration>12:36</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Now the pressure is on the Phillies  Derek Jeter after the D] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Now the pressure is on the Phillies  Derek Jeter after the D]]></description>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251005__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-1.mp3" length="6903777" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251005__Now-the-pressure-is-on-the-Phillies--Derek-Jeter-after-the-D__audio-1.mp3</guid>
+      <itunes:duration>14:22</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers advance to NLDS big wins by Guardians Padres Yankees] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers advance to NLDS big wins by Guardians Padres Yankees]]></description>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251003__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3" length="6864071" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251003__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3</guid>
+      <itunes:duration>14:17</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[핵심은 베이스 다이 마이크론 HBM4 세계 최고 속도 11Gbps 달성의 진짜 의미   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 핵심은 베이스 다이 마이크론 HBM4 세계 최고 속도 11Gbps 달성의 진짜 의미   YouTube]]></description>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251003__%ED%95%B5%EC%8B%AC%EC%9D%80-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%8B%A4%EC%9D%B4-%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0-HBM4-%EC%84%B8%EA%B3%84-%EC%B5%9C%EA%B3%A0-%EC%86%8D%EB%8F%84-11Gbps-%EB%8B%AC%EC%84%B1%EC%9D%98-%EC%A7%84%EC%A7%9C-%EC%9D%98%EB%AF%B8---YouTube__audio-0.mp3" length="8283043" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251003__핵심은-베이스-다이-마이크론-HBM4-세계-최고-속도-11Gbps-달성의-진짜-의미---YouTube__audio-0.mp3</guid>
+      <itunes:duration>17:15</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AI팩토리 사업 2030년 500개 목표정부기업 협력 f 삼프로TV 권순우 취재팀장 뉴스3   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AI팩토리 사업 2030년 500개 목표정부기업 협력 f 삼프로TV 권순우 취재팀장 뉴스3   YouTube]]></description>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251002__AI%ED%8C%A9%ED%86%A0%EB%A6%AC-%EC%82%AC%EC%97%85-2030%EB%85%84-500%EA%B0%9C-%EB%AA%A9%ED%91%9C%EC%A0%95%EB%B6%80%EA%B8%B0%EC%97%85-%ED%98%91%EB%A0%A5-f-%EC%82%BC%ED%94%84%EB%A1%9CTV-%EA%B6%8C%EC%88%9C%EC%9A%B0-%EC%B7%A8%EC%9E%AC%ED%8C%80%EC%9E%A5-%EB%89%B4%EC%8A%A43---YouTube__audio-0.mp3" length="9671085" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251002__AI팩토리-사업-2030년-500개-목표정부기업-협력-f-삼프로TV-권순우-취재팀장-뉴스3---YouTube__audio-0.mp3</guid>
+      <itunes:duration>20:08</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[싸다싸 4500억 DS 진출을 이끈 다저스의 가을 에이스  김형준 야구야구   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 싸다싸 4500억 DS 진출을 이끈 다저스의 가을 에이스  김형준 야구야구   YouTube]]></description>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20251002__%EC%8B%B8%EB%8B%A4%EC%8B%B8-4500%EC%96%B5-DS-%EC%A7%84%EC%B6%9C%EC%9D%84-%EC%9D%B4%EB%81%88-%EB%8B%A4%EC%A0%80%EC%8A%A4%EC%9D%98-%EA%B0%80%EC%9D%84-%EC%97%90%EC%9D%B4%EC%8A%A4--%EA%B9%80%ED%98%95%EC%A4%80-%EC%95%BC%EA%B5%AC%EC%95%BC%EA%B5%AC---YouTube__audio-0.mp3" length="8018474" type="audio/mpeg"/>
+      <guid isPermaLink="false">20251002__싸다싸-4500억-DS-진출을-이끈-다저스의-가을-에이스--김형준-야구야구---YouTube__audio-0.mp3</guid>
+      <itunes:duration>16:42</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[왜 우크라이나가 전쟁에서 이기고 있는가유발하라리 분석   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 왜 우크라이나가 전쟁에서 이기고 있는가유발하라리 분석   YouTube]]></description>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250930__%EC%99%9C-%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EA%B0%80-%EC%A0%84%EC%9F%81%EC%97%90%EC%84%9C-%EC%9D%B4%EA%B8%B0%EA%B3%A0-%EC%9E%88%EB%8A%94%EA%B0%80%EC%9C%A0%EB%B0%9C%ED%95%98%EB%9D%BC%EB%A6%AC-%EB%B6%84%EC%84%9D---YouTube__audio-0.mp3" length="6507970" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250930__왜-우크라이나가-전쟁에서-이기고-있는가유발하라리-분석---YouTube__audio-0.mp3</guid>
+      <itunes:duration>13:33</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[인텔의 1000억 달러 도박 처참히 실패하다   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 인텔의 1000억 달러 도박 처참히 실패하다   YouTube]]></description>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250930__%EC%9D%B8%ED%85%94%EC%9D%98-1000%EC%96%B5-%EB%8B%AC%EB%9F%AC-%EB%8F%84%EB%B0%95-%EC%B2%98%EC%B0%B8%ED%9E%88-%EC%8B%A4%ED%8C%A8%ED%95%98%EB%8B%A4---YouTube__audio-0.mp3" length="8255875" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250930__인텔의-1000억-달러-도박-처참히-실패하다---YouTube__audio-0.mp3</guid>
+      <itunes:duration>17:11</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[미국 중국 무한 경쟁 AI 거품 없습니다 한동대학교 김학주 교수   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 미국 중국 무한 경쟁 AI 거품 없습니다 한동대학교 김학주 교수   YouTube]]></description>
+      <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250929__%EB%AF%B8%EA%B5%AD-%EC%A4%91%EA%B5%AD-%EB%AC%B4%ED%95%9C-%EA%B2%BD%EC%9F%81-AI-%EA%B1%B0%ED%92%88-%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4-%ED%95%9C%EB%8F%99%EB%8C%80%ED%95%99%EA%B5%90-%EA%B9%80%ED%95%99%EC%A3%BC-%EA%B5%90%EC%88%98---YouTube__audio-0.mp3" length="7707722" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250929__미국-중국-무한-경쟁-AI-거품-없습니다-한동대학교-김학주-교수---YouTube__audio-0.mp3</guid>
+      <itunes:duration>16:03</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[직원 교육 및 업무 지침] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 직원 교육 및 업무 지침]]></description>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250928__%EC%A7%81%EC%9B%90-%EA%B5%90%EC%9C%A1-%EB%B0%8F-%EC%97%85%EB%AC%B4-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="6830426" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250928__직원-교육-및-업무-지침__audio-0.mp3</guid>
+      <itunes:duration>14:13</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[운송 및 물류 절차 변경 사항] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 운송 및 물류 절차 변경 사항]]></description>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250924__%EC%9A%B4%EC%86%A1-%EB%B0%8F-%EB%AC%BC%EB%A5%98-%EC%A0%88%EC%B0%A8-%EB%B3%80%EA%B2%BD-%EC%82%AC%ED%95%AD__audio-0.mp3" length="6586755" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250924__운송-및-물류-절차-변경-사항__audio-0.mp3</guid>
+      <itunes:duration>13:43</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[근지구력 젖산역치 향상 마라톤훈련   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 근지구력 젖산역치 향상 마라톤훈련   YouTube]]></description>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250923__%EA%B7%BC%EC%A7%80%EA%B5%AC%EB%A0%A5-%EC%A0%96%EC%82%B0%EC%97%AD%EC%B9%98-%ED%96%A5%EC%83%81-%EB%A7%88%EB%9D%BC%ED%86%A4%ED%9B%88%EB%A0%A8---YouTube__audio-0.mp3" length="5688143" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250923__근지구력-젖산역치-향상-마라톤훈련---YouTube__audio-0.mp3</guid>
+      <itunes:duration>11:50</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[근지구력 젖산역치 향상 마라톤훈련   YouTube] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 근지구력 젖산역치 향상 마라톤훈련   YouTube]]></description>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250923__%EA%B7%BC%EC%A7%80%EA%B5%AC%EB%A0%A5-%EC%A0%96%EC%82%B0%EC%97%AD%EC%B9%98-%ED%96%A5%EC%83%81-%EB%A7%88%EB%9D%BC%ED%86%A4%ED%9B%88%EB%A0%A8---YouTube__audio-1.mp3" length="5872045" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250923__근지구력-젖산역치-향상-마라톤훈련---YouTube__audio-1.mp3</guid>
+      <itunes:duration>12:13</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Protokolle Elternbrief Erinnerung Ganztag   kiuk104gmailcom ] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Protokolle Elternbrief Erinnerung Ganztag   kiuk104gmailcom ]]></description>
+      <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250922__Protokolle-Elternbrief-Erinnerung-Ganztag---kiuk104gmailcom-__audio-0.mp3" length="7931121" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250922__Protokolle-Elternbrief-Erinnerung-Ganztag---kiuk104gmailcom-__audio-0.mp3</guid>
+      <itunes:duration>16:31</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Vinod Khosla MBA 80 Failure does not matter Success matters ] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Vinod Khosla MBA 80 Failure does not matter Success matters ]]></description>
+      <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250922__Vinod-Khosla-MBA-80-Failure-does-not-matter-Success-matters-__audio-0.mp3" length="6797198" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250922__Vinod-Khosla-MBA-80-Failure-does-not-matter-Success-matters-__audio-0.mp3</guid>
+      <itunes:duration>14:09</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[트럼프의 관세 정책과 팍스 아메리카나의 종말] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 트럼프의 관세 정책과 팍스 아메리카나의 종말]]></description>
+      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250920__%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EA%B4%80%EC%84%B8-%EC%A0%95%EC%B1%85%EA%B3%BC-%ED%8C%8D%EC%8A%A4-%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%82%98%EC%9D%98-%EC%A2%85%EB%A7%90__audio-0.mp3" length="8262772" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250920__트럼프의-관세-정책과-팍스-아메리카나의-종말__audio-0.mp3</guid>
+      <itunes:duration>17:12</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[적재물 고정 및 안전 규정] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 적재물 고정 및 안전 규정]]></description>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250919__%EC%A0%81%EC%9E%AC%EB%AC%BC-%EA%B3%A0%EC%A0%95-%EB%B0%8F-%EC%95%88%EC%A0%84-%EA%B7%9C%EC%A0%95__audio-0.mp3" length="6074128" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250919__적재물-고정-및-안전-규정__audio-0.mp3</guid>
+      <itunes:duration>12:39</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250917__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-0.mp3" length="27276705" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250917__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-0.mp3</guid>
+      <itunes:duration>10:16</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250917__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-1.mp3" length="18856773" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250917__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-1.mp3</guid>
+      <itunes:duration>7:36</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 2</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250917__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-2.mp3" length="9973897" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250917__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-2.mp3</guid>
+      <itunes:duration>20:46</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Humboldt Gymnasium 학부모 회의 주요 안건] audio 3</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Humboldt Gymnasium 학부모 회의 주요 안건]]></description>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250917__Humboldt-Gymnasium-%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%95%88%EA%B1%B4__audio-3.mp3" length="8063614" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250917__Humboldt-Gymnasium-학부모-회의-주요-안건__audio-3.mp3</guid>
+      <itunes:duration>16:47</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[관세 두고 또 어긋나는 미중 관계 APEC 방한 전 정상회담은 물거품 되나 f 연세대학교 봉영식 객원교수 인] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 관세 두고 또 어긋나는 미중 관계 APEC 방한 전 정상회담은 물거품 되나 f 연세대학교 봉영식 객원교수 인]]></description>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250915__%EA%B4%80%EC%84%B8-%EB%91%90%EA%B3%A0-%EB%98%90-%EC%96%B4%EA%B8%8B%EB%82%98%EB%8A%94-%EB%AF%B8%EC%A4%91-%EA%B4%80%EA%B3%84-APEC-%EB%B0%A9%ED%95%9C-%EC%A0%84-%EC%A0%95%EC%83%81%ED%9A%8C%EB%8B%B4%EC%9D%80-%EB%AC%BC%EA%B1%B0%ED%92%88-%EB%90%98%EB%82%98-f-%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90-%EB%B4%89%EC%98%81%EC%8B%9D-%EA%B0%9D%EC%9B%90%EA%B5%90%EC%88%98-%EC%9D%B8__audio-0.mp3" length="8248143" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250915__관세-두고-또-어긋나는-미중-관계-APEC-방한-전-정상회담은-물거품-되나-f-연세대학교-봉영식-객원교수-인__audio-0.mp3</guid>
+      <itunes:duration>17:10</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[글로벌리포트 네팔 반정부 시위  선진국 복지 부담  일본 최저임금 경쟁   한경제 기자한국경제신문   You] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 글로벌리포트 네팔 반정부 시위  선진국 복지 부담  일본 최저임금 경쟁   한경제 기자한국경제신문   You]]></description>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250915__%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%A6%AC%ED%8F%AC%ED%8A%B8-%EB%84%A4%ED%8C%94-%EB%B0%98%EC%A0%95%EB%B6%80-%EC%8B%9C%EC%9C%84--%EC%84%A0%EC%A7%84%EA%B5%AD-%EB%B3%B5%EC%A7%80-%EB%B6%80%EB%8B%B4--%EC%9D%BC%EB%B3%B8-%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88-%EA%B2%BD%EC%9F%81---%ED%95%9C%EA%B2%BD%EC%A0%9C-%EA%B8%B0%EC%9E%90%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%EC%8B%A0%EB%AC%B8---You__audio-0.mp3" length="8948016" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250915__글로벌리포트-네팔-반정부-시위--선진국-복지-부담--일본-최저임금-경쟁---한경제-기자한국경제신문---You__audio-0.mp3</guid>
+      <itunes:duration>18:38</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube]]></description>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250915__%EB%8D%94-%ED%81%B0-VRAM--RTX-5080-Super%EC%99%80-RTX-5070-Super%EA%B0%80-%EC%B6%9C%EC%8B%9C%EB%90%A9%EB%8B%88%EB%8B%A4---YouTube__audio-0.mp3" length="9424280" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250915__더-큰-VRAM--RTX-5080-Super와-RTX-5070-Super가-출시됩니다---YouTube__audio-0.mp3</guid>
+      <itunes:duration>19:37</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 더 큰 VRAM  RTX 5080 Super와 RTX 5070 Super가 출시됩니다   YouTube]]></description>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250915__%EB%8D%94-%ED%81%B0-VRAM--RTX-5080-Super%EC%99%80-RTX-5070-Super%EA%B0%80-%EC%B6%9C%EC%8B%9C%EB%90%A9%EB%8B%88%EB%8B%A4---YouTube__audio-1.mp3" length="10201475" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250915__더-큰-VRAM--RTX-5080-Super와-RTX-5070-Super가-출시됩니다---YouTube__audio-1.mp3</guid>
+      <itunes:duration>21:15</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[젓가락도 안쓰는 인도 불닭은 어쩌다 터진걸까 f인도환타 인도와 한류 2부   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 젓가락도 안쓰는 인도 불닭은 어쩌다 터진걸까 f인도환타 인도와 한류 2부   YouTube]]></description>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250915__%EC%A0%93%EA%B0%80%EB%9D%BD%EB%8F%84-%EC%95%88%EC%93%B0%EB%8A%94-%EC%9D%B8%EB%8F%84-%EB%B6%88%EB%8B%AD%EC%9D%80-%EC%96%B4%EC%A9%8C%EB%8B%A4-%ED%84%B0%EC%A7%84%EA%B1%B8%EA%B9%8C-f%EC%9D%B8%EB%8F%84%ED%99%98%ED%83%80-%EC%9D%B8%EB%8F%84%EC%99%80-%ED%95%9C%EB%A5%98-2%EB%B6%80---YouTube__audio-0.mp3" length="10821936" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250915__젓가락도-안쓰는-인도-불닭은-어쩌다-터진걸까-f인도환타-인도와-한류-2부---YouTube__audio-0.mp3</guid>
+      <itunes:duration>22:32</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Nach Schusswaffenangriff Trump Untersttzer Charlie Kirk ist ] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Nach Schusswaffenangriff Trump Untersttzer Charlie Kirk ist ]]></description>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250911__Nach-Schusswaffenangriff-Trump-Untersttzer-Charlie-Kirk-ist-__audio-0.mp3" length="6253224" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250911__Nach-Schusswaffenangriff-Trump-Untersttzer-Charlie-Kirk-ist-__audio-0.mp3</guid>
+      <itunes:duration>13:01</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[17화 저출산은 사실 축복입니다  The Civilization 위대한 문명사 17화  서울대 김태유 명예교] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 17화 저출산은 사실 축복입니다  The Civilization 위대한 문명사 17화  서울대 김태유 명예교]]></description>
+      <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250827__17%ED%99%94-%EC%A0%80%EC%B6%9C%EC%82%B0%EC%9D%80-%EC%82%AC%EC%8B%A4-%EC%B6%95%EB%B3%B5%EC%9E%85%EB%8B%88%EB%8B%A4--The-Civilization-%EC%9C%84%EB%8C%80%ED%95%9C-%EB%AC%B8%EB%AA%85%EC%82%AC-17%ED%99%94--%EC%84%9C%EC%9A%B8%EB%8C%80-%EA%B9%80%ED%83%9C%EC%9C%A0-%EB%AA%85%EC%98%88%EA%B5%90__audio-0.mp3" length="8073854" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250827__17화-저출산은-사실-축복입니다--The-Civilization-위대한-문명사-17화--서울대-김태유-명예교__audio-0.mp3</guid>
+      <itunes:duration>16:49</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[그록의 일일 뉴스 요약] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 그록의 일일 뉴스 요약]]></description>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250824__%EA%B7%B8%EB%A1%9D%EC%9D%98-%EC%9D%BC%EC%9D%BC-%EB%89%B4%EC%8A%A4-%EC%9A%94%EC%95%BD__audio-0.mp3" length="6115715" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250824__그록의-일일-뉴스-요약__audio-0.mp3</guid>
+      <itunes:duration>12:44</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[일본 언론의 이재명 보도와 한일 관계] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 일본 언론의 이재명 보도와 한일 관계]]></description>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250824__%EC%9D%BC%EB%B3%B8-%EC%96%B8%EB%A1%A0%EC%9D%98-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%B3%B4%EB%8F%84%EC%99%80-%ED%95%9C%EC%9D%BC-%EA%B4%80%EA%B3%84__audio-0.mp3" length="10421949" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250824__일본-언론의-이재명-보도와-한일-관계__audio-0.mp3</guid>
+      <itunes:duration>21:42</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[일본 언론의 이재명 보도와 한일 관계] audio 1</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 일본 언론의 이재명 보도와 한일 관계]]></description>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250824__%EC%9D%BC%EB%B3%B8-%EC%96%B8%EB%A1%A0%EC%9D%98-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%B3%B4%EB%8F%84%EC%99%80-%ED%95%9C%EC%9D%BC-%EA%B4%80%EA%B3%84__audio-1.mp3" length="9507036" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250824__일본-언론의-이재명-보도와-한일-관계__audio-1.mp3</guid>
+      <itunes:duration>19:48</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[일본 언론의 이재명 보도와 한일 관계] audio 2</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 일본 언론의 이재명 보도와 한일 관계]]></description>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250824__%EC%9D%BC%EB%B3%B8-%EC%96%B8%EB%A1%A0%EC%9D%98-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%B3%B4%EB%8F%84%EC%99%80-%ED%95%9C%EC%9D%BC-%EA%B4%80%EA%B3%84__audio-2.mp3" length="6248417" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250824__일본-언론의-이재명-보도와-한일-관계__audio-2.mp3</guid>
+      <itunes:duration>13:01</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[오히려 러시아가 종전을 원한다고 왜  이문영 서울대학교 통일평화연구원 교수 신과대화   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 오히려 러시아가 종전을 원한다고 왜  이문영 서울대학교 통일평화연구원 교수 신과대화   YouTube]]></description>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250821__%EC%98%A4%ED%9E%88%EB%A0%A4-%EB%9F%AC%EC%8B%9C%EC%95%84%EA%B0%80-%EC%A2%85%EC%A0%84%EC%9D%84-%EC%9B%90%ED%95%9C%EB%8B%A4%EA%B3%A0-%EC%99%9C--%EC%9D%B4%EB%AC%B8%EC%98%81-%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90-%ED%86%B5%EC%9D%BC%ED%8F%89%ED%99%94%EC%97%B0%EA%B5%AC%EC%9B%90-%EA%B5%90%EC%88%98-%EC%8B%A0%EA%B3%BC%EB%8C%80%ED%99%94---YouTube__audio-0.mp3" length="9848091" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250821__오히려-러시아가-종전을-원한다고-왜--이문영-서울대학교-통일평화연구원-교수-신과대화---YouTube__audio-0.mp3</guid>
+      <itunes:duration>20:30</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[우크라이나 휴전관련] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 우크라이나 휴전관련]]></description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250813__%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98-%ED%9C%B4%EC%A0%84%EA%B4%80%EB%A0%A8__audio-0.mp3" length="3935849" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250813__우크라이나-휴전관련__audio-0.mp3</guid>
+      <itunes:duration>8:11</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[인구절벽] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 인구절벽]]></description>
+      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250727__%EC%9D%B8%EA%B5%AC%EC%A0%88%EB%B2%BD__audio-0.mp3" length="3454778" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250727__인구절벽__audio-0.mp3</guid>
+      <itunes:duration>7:11</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Sonys Decline and Resurgence A Corporate Saga] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Sonys Decline and Resurgence A Corporate Saga]]></description>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250724__Sonys-Decline-and-Resurgence-A-Corporate-Saga__audio-0.mp3" length="6738057" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250724__Sonys-Decline-and-Resurgence-A-Corporate-Saga__audio-0.mp3</guid>
+      <itunes:duration>14:02</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[새로운 시작 훔볼트 김나지움 2m4a 환영회] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 새로운 시작 훔볼트 김나지움 2m4a 환영회]]></description>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250717__%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%8B%9C%EC%9E%91-%ED%9B%94%EB%B3%BC%ED%8A%B8-%EA%B9%80%EB%82%98%EC%A7%80%EC%9B%80-2m4a-%ED%99%98%EC%98%81%ED%9A%8C__audio-0.mp3" length="2941524" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250717__새로운-시작-훔볼트-김나지움-2m4a-환영회__audio-0.mp3</guid>
+      <itunes:duration>6:07</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[새로운 학교생활 기대와 조언] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 새로운 학교생활 기대와 조언]]></description>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250717__%EC%83%88%EB%A1%9C%EC%9A%B4-%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C-%EA%B8%B0%EB%8C%80%EC%99%80-%EC%A1%B0%EC%96%B8__audio-0.mp3" length="2817599" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250717__새로운-학교생활-기대와-조언__audio-0.mp3</guid>
+      <itunes:duration>5:52</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AMD AI 경쟁과 역전의 역사] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AMD AI 경쟁과 역전의 역사]]></description>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250714__AMD-AI-%EA%B2%BD%EC%9F%81%EA%B3%BC-%EC%97%AD%EC%A0%84%EC%9D%98-%EC%97%AD%EC%82%AC__audio-0.mp3" length="3549237" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250714__AMD-AI-경쟁과-역전의-역사__audio-0.mp3</guid>
+      <itunes:duration>7:23</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[다저스 심층 분석 쇼헤이 오타니와 슈퍼스타의 미래] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 다저스 심층 분석 쇼헤이 오타니와 슈퍼스타의 미래]]></description>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250630__%EB%8B%A4%EC%A0%80%EC%8A%A4-%EC%8B%AC%EC%B8%B5-%EB%B6%84%EC%84%9D-%EC%87%BC%ED%97%A4%EC%9D%B4-%EC%98%A4%ED%83%80%EB%8B%88%EC%99%80-%EC%8A%88%ED%8D%BC%EC%8A%A4%ED%83%80%EC%9D%98-%EB%AF%B8%EB%9E%98__audio-0.mp3" length="3479229" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250630__다저스-심층-분석-쇼헤이-오타니와-슈퍼스타의-미래__audio-0.mp3</guid>
+      <itunes:duration>7:14</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[이건 다저스에게 엄청난 움직임이에요   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 이건 다저스에게 엄청난 움직임이에요   YouTube]]></description>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250627__%EC%9D%B4%EA%B1%B4-%EB%8B%A4%EC%A0%80%EC%8A%A4%EC%97%90%EA%B2%8C-%EC%97%84%EC%B2%AD%EB%82%9C-%EC%9B%80%EC%A7%81%EC%9E%84%EC%9D%B4%EC%97%90%EC%9A%94---YouTube__audio-0.mp3" length="3455614" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250627__이건-다저스에게-엄청난-움직임이에요---YouTube__audio-0.mp3</guid>
+      <itunes:duration>7:11</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[오타니 투타 겸업의 귀환] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 오타니 투타 겸업의 귀환]]></description>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250618__%EC%98%A4%ED%83%80%EB%8B%88-%ED%88%AC%ED%83%80-%EA%B2%B8%EC%97%85%EC%9D%98-%EA%B7%80%ED%99%98__audio-0.mp3" length="3238693" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250618__오타니-투타-겸업의-귀환__audio-0.mp3</guid>
+      <itunes:duration>6:44</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[뉴스브리핑 이스라엘의 이란 공습 이 시점에서 타격한 이유는   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 뉴스브리핑 이스라엘의 이란 공습 이 시점에서 타격한 이유는   YouTube]]></description>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250615__%EB%89%B4%EC%8A%A4%EB%B8%8C%EB%A6%AC%ED%95%91-%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98%EC%9D%98-%EC%9D%B4%EB%9E%80-%EA%B3%B5%EC%8A%B5-%EC%9D%B4-%EC%8B%9C%EC%A0%90%EC%97%90%EC%84%9C-%ED%83%80%EA%B2%A9%ED%95%9C-%EC%9D%B4%EC%9C%A0%EB%8A%94---YouTube__audio-0.mp3" length="3019474" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250615__뉴스브리핑-이스라엘의-이란-공습-이-시점에서-타격한-이유는---YouTube__audio-0.mp3</guid>
+      <itunes:duration>6:17</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[대출 상담 체류 허가와 대출 조건] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 대출 상담 체류 허가와 대출 조건]]></description>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250612__%EB%8C%80%EC%B6%9C-%EC%83%81%EB%8B%B4-%EC%B2%B4%EB%A5%98-%ED%97%88%EA%B0%80%EC%99%80-%EB%8C%80%EC%B6%9C-%EC%A1%B0%EA%B1%B4__audio-0.mp3" length="2732127" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250612__대출-상담-체류-허가와-대출-조건__audio-0.mp3</guid>
+      <itunes:duration>5:41</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[로스앤젤레스 시위와 트럼프의 외교 정책 좌절] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 로스앤젤레스 시위와 트럼프의 외교 정책 좌절]]></description>
+      <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250609__%EB%A1%9C%EC%8A%A4%EC%95%A4%EC%A0%A4%EB%A0%88%EC%8A%A4-%EC%8B%9C%EC%9C%84%EC%99%80-%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EC%99%B8%EA%B5%90-%EC%A0%95%EC%B1%85-%EC%A2%8C%EC%A0%88__audio-0.mp3" length="3227199" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250609__로스앤젤레스-시위와-트럼프의-외교-정책-좌절__audio-0.mp3</guid>
+      <itunes:duration>6:43</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[진격의 거인 세계관에 빠진 교수님   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 진격의 거인 세계관에 빠진 교수님   YouTube]]></description>
+      <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250609__%EC%A7%84%EA%B2%A9%EC%9D%98-%EA%B1%B0%EC%9D%B8-%EC%84%B8%EA%B3%84%EA%B4%80%EC%97%90-%EB%B9%A0%EC%A7%84-%EA%B5%90%EC%88%98%EB%8B%98---YouTube__audio-0.mp3" length="2788342" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250609__진격의-거인-세계관에-빠진-교수님---YouTube__audio-0.mp3</guid>
+      <itunes:duration>5:48</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[한국 좌파 자유주의자 이재명 대선 승리] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 한국 좌파 자유주의자 이재명 대선 승리]]></description>
+      <pubDate>Mon, 09 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250609__%ED%95%9C%EA%B5%AD-%EC%A2%8C%ED%8C%8C-%EC%9E%90%EC%9C%A0%EC%A3%BC%EC%9D%98%EC%9E%90-%EC%9D%B4%EC%9E%AC%EB%AA%85-%EB%8C%80%EC%84%A0-%EC%8A%B9%EB%A6%AC__audio-0.mp3" length="3673162" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250609__한국-좌파-자유주의자-이재명-대선-승리__audio-0.mp3</guid>
+      <itunes:duration>7:39</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[앙겔라 메르켈 평전] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 앙겔라 메르켈 평전]]></description>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250608__%EC%95%99%EA%B2%94%EB%9D%BC-%EB%A9%94%EB%A5%B4%EC%BC%88-%ED%8F%89%EC%A0%84__audio-0.mp3" length="2755950" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250608__앙겔라-메르켈-평전__audio-0.mp3</guid>
+      <itunes:duration>5:44</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[연동교회 120년사] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 연동교회 120년사]]></description>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250608__%EC%97%B0%EB%8F%99%EA%B5%90%ED%9A%8C-120%EB%85%84%EC%82%AC__audio-0.mp3" length="3103483" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250608__연동교회-120년사__audio-0.mp3</guid>
+      <itunes:duration>6:27</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[물류 창고 작업 지침] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 물류 창고 작업 지침]]></description>
+      <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250523__%EB%AC%BC%EB%A5%98-%EC%B0%BD%EA%B3%A0-%EC%9E%91%EC%97%85-%EC%A7%80%EC%B9%A8__audio-0.mp3" length="2537776" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250523__물류-창고-작업-지침__audio-0.mp3</guid>
+      <itunes:duration>5:17</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[독일 김나지움 학사 회의] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 독일 김나지움 학사 회의]]></description>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250522__%EB%8F%85%EC%9D%BC-%EA%B9%80%EB%82%98%EC%A7%80%EC%9B%80-%ED%95%99%EC%82%AC-%ED%9A%8C%EC%9D%98__audio-0.mp3" length="3070465" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250522__독일-김나지움-학사-회의__audio-0.mp3</guid>
+      <itunes:duration>6:23</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[레베 배송팀 오전 브리핑 0522] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 레베 배송팀 오전 브리핑 0522]]></description>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250522__%EB%A0%88%EB%B2%A0-%EB%B0%B0%EC%86%A1%ED%8C%80-%EC%98%A4%EC%A0%84-%EB%B8%8C%EB%A6%AC%ED%95%91-0522__audio-0.mp3" length="2718961" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250522__레베-배송팀-오전-브리핑-0522__audio-0.mp3</guid>
+      <itunes:duration>5:39</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[AfD 당내 논란과 헌법수호청 보고서] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AfD 당내 논란과 헌법수호청 보고서]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__AfD-%EB%8B%B9%EB%82%B4-%EB%85%BC%EB%9E%80%EA%B3%BC-%ED%97%8C%EB%B2%95%EC%88%98%ED%98%B8%EC%B2%AD-%EB%B3%B4%EA%B3%A0%EC%84%9C__audio-0.mp3" length="3149250" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__AfD-당내-논란과-헌법수호청-보고서__audio-0.mp3</guid>
+      <itunes:duration>6:33</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[ALTE FEUERWACHE 학부모 브리핑] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: ALTE FEUERWACHE 학부모 브리핑]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__ALTE-FEUERWACHE-%ED%95%99%EB%B6%80%EB%AA%A8-%EB%B8%8C%EB%A6%AC%ED%95%91__audio-0.mp3" length="3176835" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__ALTE-FEUERWACHE-학부모-브리핑__audio-0.mp3</guid>
+      <itunes:duration>6:37</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[ChatGPT급 무료 AI의 등장 ChatGPT VS 제미나이Gemini 완벽 비교   YouTube] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: ChatGPT급 무료 AI의 등장 ChatGPT VS 제미나이Gemini 완벽 비교   YouTube]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__ChatGPT%EA%B8%89-%EB%AC%B4%EB%A3%8C-AI%EC%9D%98-%EB%93%B1%EC%9E%A5-ChatGPT-VS-%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4Gemini-%EC%99%84%EB%B2%BD-%EB%B9%84%EA%B5%90---YouTube__audio-0.mp3" length="3418834" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__ChatGPT급-무료-AI의-등장-ChatGPT-VS-제미나이Gemini-완벽-비교---YouTube__audio-0.mp3</guid>
+      <itunes:duration>7:07</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Rubio erwartet von Russland in Krze Vorlage von ungefhrem Wa] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Rubio erwartet von Russland in Krze Vorlage von ungefhrem Wa]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__Rubio-erwartet-von-Russland-in-Krze-Vorlage-von-ungefhrem-Wa__audio-0.mp3" length="2236218" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__Rubio-erwartet-von-Russland-in-Krze-Vorlage-von-ungefhrem-Wa__audio-0.mp3</guid>
+      <itunes:duration>4:39</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[South Korea wants to be Canadas new military supplier   YouT] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: South Korea wants to be Canadas new military supplier   YouT]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__South-Korea-wants-to-be-Canadas-new-military-supplier---YouT__audio-0.mp3" length="2932329" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__South-Korea-wants-to-be-Canadas-new-military-supplier---YouT__audio-0.mp3</guid>
+      <itunes:duration>6:06</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[독일뉴스] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 독일뉴스]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__%EB%8F%85%EC%9D%BC%EB%89%B4%EC%8A%A4__audio-0.mp3" length="3074853" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__독일뉴스__audio-0.mp3</guid>
+      <itunes:duration>6:24</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[러우 종전 협상과 광물 협정의 이면] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 러우 종전 협상과 광물 협정의 이면]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__%EB%9F%AC%EC%9A%B0-%EC%A2%85%EC%A0%84-%ED%98%91%EC%83%81%EA%B3%BC-%EA%B4%91%EB%AC%BC-%ED%98%91%EC%A0%95%EC%9D%98-%EC%9D%B4%EB%A9%B4__audio-0.mp3" length="4078164" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__러우-종전-협상과-광물-협정의-이면__audio-0.mp3</guid>
+      <itunes:duration>8:29</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[스웨덴과 러시아 에스토니아인의 선호도] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 스웨덴과 러시아 에스토니아인의 선호도]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__%EC%8A%A4%EC%9B%A8%EB%8D%B4%EA%B3%BC-%EB%9F%AC%EC%8B%9C%EC%95%84-%EC%97%90%EC%8A%A4%ED%86%A0%EB%8B%88%EC%95%84%EC%9D%B8%EC%9D%98-%EC%84%A0%ED%98%B8%EB%8F%84__audio-0.mp3" length="2341126" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__스웨덴과-러시아-에스토니아인의-선호도__audio-0.mp3</guid>
+      <itunes:duration>4:52</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[트럼프 중동 순방과 이스라엘의 고립] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 트럼프 중동 순방과 이스라엘의 고립]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__%ED%8A%B8%EB%9F%BC%ED%94%84-%EC%A4%91%EB%8F%99-%EC%88%9C%EB%B0%A9%EA%B3%BC-%EC%9D%B4%EC%8A%A4%EB%9D%BC%EC%97%98%EC%9D%98-%EA%B3%A0%EB%A6%BD__audio-0.mp3" length="3326883" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__트럼프-중동-순방과-이스라엘의-고립__audio-0.mp3</guid>
+      <itunes:duration>6:55</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[폭스바겐 앱 550 전기 모터 분석] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 폭스바겐 앱 550 전기 모터 분석]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__%ED%8F%AD%EC%8A%A4%EB%B0%94%EA%B2%90-%EC%95%B1-550-%EC%A0%84%EA%B8%B0-%EB%AA%A8%ED%84%B0-%EB%B6%84%EC%84%9D__audio-0.mp3" length="3611513" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__폭스바겐-앱-550-전기-모터-분석__audio-0.mp3</guid>
+      <itunes:duration>7:31</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[학부모 회의] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: 학부모 회의]]></description>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20250521__%ED%95%99%EB%B6%80%EB%AA%A8-%ED%9A%8C%EC%9D%98__audio-0.mp3" length="2908923" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__학부모-회의__audio-0.mp3</guid>
+      <itunes:duration>6:03</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
   </channel>
