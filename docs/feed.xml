@@ -8,7 +8,7 @@
     <atom:link href="https://kiuk104.github.io/notebooklm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>ko</language>
     <description>NotebookLM에서 생성한 음성개요 모음</description>
-    <lastBuildDate>Sun, 26 Apr 2026 18:58:45 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 18:58:47 +0000</lastBuildDate>
     <itunes:author>기욱</itunes:author>
     <itunes:summary>NotebookLM에서 생성한 음성개요 모음</itunes:summary>
     <itunes:owner>
@@ -18,14 +18,6 @@
     <itunes:image href="https://kiuk104.github.io/notebooklm-podcast/cover.jpg"/>
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>[81088494 748a 4535 b68d 0b6b24d47140] M3AEFBH6URYVY</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: 81088494 748a 4535 b68d 0b6b24d47140]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__81088494-748a-4535-b68d-0b6b24d47140__M3AEFBH6URYVY.m4a" length="9416936" type="audio/mp4"/>
-      <guid isPermaLink="false">20260426__81088494-748a-4535-b68d-0b6b24d47140__M3AEFBH6URYVY.m4a</guid>
-      <itunes:duration>0:00</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
+
   </channel>
 </rss>
