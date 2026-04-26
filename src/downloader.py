@@ -15,7 +15,7 @@ import asyncio
 import re
 import sys
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 import yaml
@@ -27,6 +27,8 @@ from playwright.async_api import (
 SELECTOR_HOME_NOTEBOOK_LINK = 'a[href*="/notebook/"]'
 # 노트북 페이지의 노트북 제목 (chat 패널 헤더의 cover-title)
 SELECTOR_NOTEBOOK_TITLE = '.cover-title'
+# 노트북 cover 의 생성일 (title 속성에 ISO datetime: "Wed May 21 2025 11:10:26 GMT+0200")
+SELECTOR_COVER_DATE = '.cover-subtitle-date'
 # audio 카드 안의 제목 텍스트
 SELECTOR_ARTIFACT_TITLE = '.artifact-title'
 # 노트북 페이지에서 이미 생성된 음성개요 카드의 재생 버튼 (audio 전용 액션)
@@ -44,6 +46,28 @@ SELECTOR_DOWNLOAD_MENUITEM = (
 HOME_URL = "https://notebooklm.google.com/"
 NOTEBOOK_URL_TEMPLATE = "https://notebooklm.google.com/notebook/{id}"
 NOTEBOOK_ID_RE = re.compile(r"/notebook/([^/?#]+)")
+
+_MONTHS = {
+    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
+    "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12,
+}
+_DATE_TITLE_RE = re.compile(
+    r"^[A-Z][a-z]{2} ([A-Z][a-z]{2}) (\d+) (\d{4}) (\d{2}):(\d{2}):(\d{2})"
+)
+
+
+def parse_cover_date(title_attr: str) -> datetime | None:
+    """JS Date.toString() 형식 ('Wed May 21 2025 11:10:26 GMT+0200 …') 파싱."""
+    m = _DATE_TITLE_RE.match(title_attr or "")
+    if not m:
+        return None
+    month = _MONTHS.get(m.group(1))
+    if month is None:
+        return None
+    return datetime(
+        int(m.group(3)), month, int(m.group(2)),
+        int(m.group(4)), int(m.group(5)), int(m.group(6)),
+    )
 
 
 @dataclass
@@ -205,6 +229,15 @@ async def download_audio_for_notebook(
     except PWTimeoutError:
         pass
 
+    cover_date: datetime | None = None
+    try:
+        attr = await page.locator(SELECTOR_COVER_DATE).first.get_attribute(
+            "title", timeout=2_000
+        )
+        cover_date = parse_cover_date(attr or "")
+    except PWTimeoutError:
+        pass
+
     play_buttons = page.locator(SELECTOR_AUDIO_PLAY)
     count = await play_buttons.count()
     print(f"[fetch] {notebook_title}: 음성개요 {count}개 발견")
@@ -261,9 +294,10 @@ async def download_audio_for_notebook(
             print(f"[skip] 이미 존재 (날짜 무시): {existing.name}")
             continue
 
-        target = episodes_dir / f"{date.today().strftime('%Y%m%d')}{suffix}"
+        date_str = (cover_date or datetime.now()).strftime("%Y%m%d")
+        target = episodes_dir / f"{date_str}{suffix}"
         await download.save_as(str(target))
-        print(f"[saved] {target.name}")
+        print(f"[saved] {target.name}" + (" (cover-date 적용)" if cover_date else " (오늘 날짜 fallback)"))
 
         if transcode and target.suffix.lower() != ".mp3":
             from audio_tools import transcode_to_mp3
