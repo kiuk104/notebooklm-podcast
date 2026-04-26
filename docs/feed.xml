@@ -8,7 +8,7 @@
     <atom:link href="https://kiuk104.github.io/notebooklm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>ko</language>
     <description>NotebookLM에서 생성한 음성개요 모음</description>
-    <lastBuildDate>Sun, 26 Apr 2026 19:40:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 19:48:19 +0000</lastBuildDate>
     <itunes:author>기욱</itunes:author>
     <itunes:summary>NotebookLM에서 생성한 음성개요 모음</itunes:summary>
     <itunes:owner>
@@ -82,15 +82,6 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>[AfD 당내 논란과 헌법수호청 보고서] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: AfD 당내 논란과 헌법수호청 보고서]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AfD-%EB%8B%B9%EB%82%B4-%EB%85%BC%EB%9E%80%EA%B3%BC-%ED%97%8C%EB%B2%95%EC%88%98%ED%98%B8%EC%B2%AD-%EB%B3%B4%EA%B3%A0%EC%84%9C__audio-0.mp3" length="3149250" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__AfD-당내-논란과-헌법수호청-보고서__audio-0.mp3</guid>
-      <itunes:duration>6:33</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
       <title>[AI 대폭발 시대 지금 안 들으면 평생 후회합니다  장동선 최재붕 이정모 김상균 조용민 서용석  AI 기술 ] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: AI 대폭발 시대 지금 안 들으면 평생 후회합니다  장동선 최재붕 이정모 김상균 조용민 서용석  AI 기술 ]]></description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
@@ -145,6 +136,15 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
+      <title>[AfD 당내 논란과 헌법수호청 보고서] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: AfD 당내 논란과 헌법수호청 보고서]]></description>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__AfD-%EB%8B%B9%EB%82%B4-%EB%85%BC%EB%9E%80%EA%B3%BC-%ED%97%8C%EB%B2%95%EC%88%98%ED%98%B8%EC%B2%AD-%EB%B3%B4%EA%B3%A0%EC%84%9C__audio-0.mp3" length="3149250" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260426__AfD-당내-논란과-헌법수호청-보고서__audio-0.mp3</guid>
+      <itunes:duration>6:33</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>[ChatGPT급 무료 AI의 등장 ChatGPT VS 제미나이Gemini 완벽 비교   YouTube] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: ChatGPT급 무료 AI의 등장 ChatGPT VS 제미나이Gemini 완벽 비교   YouTube]]></description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
@@ -181,15 +181,6 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>[Dodgers advance to NLDS big wins by Guardians Padres Yankees] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers advance to NLDS big wins by Guardians Padres Yankees]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3" length="6864071" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3</guid>
-      <itunes:duration>14:17</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
       <title>[Dodgers Come Back to Win Game 1 vs Phillies in NLDS  2025 ML] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers Come Back to Win Game 1 vs Phillies in NLDS  2025 ML]]></description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
@@ -223,6 +214,15 @@
       <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-Take-2-0-NLCS-Lead-vs-Brewers-Behind-Yamamotos-Compl__audio-0.mp3" length="7232502" type="audio/mpeg"/>
       <guid isPermaLink="false">20260426__Dodgers-Take-2-0-NLCS-Lead-vs-Brewers-Behind-Yamamotos-Compl__audio-0.mp3</guid>
       <itunes:duration>15:04</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[Dodgers advance to NLDS big wins by Guardians Padres Yankees] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: Dodgers advance to NLDS big wins by Guardians Padres Yankees]]></description>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3" length="6864071" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260426__Dodgers-advance-to-NLDS-big-wins-by-Guardians-Padres-Yankees__audio-0.mp3</guid>
+      <itunes:duration>14:17</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
@@ -397,12 +397,12 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>[tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch]]></description>
+      <title>[The Dodgers Total Domination Led by Snell and Yamamoto Steve] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: The Dodgers Total Domination Led by Snell and Yamamoto Steve]]></description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3" length="5642794" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3</guid>
-      <itunes:duration>11:45</itunes:duration>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3" length="6433991" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260426__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3</guid>
+      <itunes:duration>13:24</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
@@ -415,21 +415,21 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>[The Dodgers Total Domination Led by Snell and Yamamoto Steve] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: The Dodgers Total Domination Led by Snell and Yamamoto Steve]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3" length="6433991" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__The-Dodgers-Total-Domination-Led-by-Snell-and-Yamamoto-Steve__audio-0.mp3</guid>
-      <itunes:duration>13:24</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
-    <item>
       <title>[Vinod Khosla MBA 80 Failure does not matter Success matters ] audio 0</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: Vinod Khosla MBA 80 Failure does not matter Success matters ]]></description>
       <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
       <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Vinod-Khosla-MBA-80-Failure-does-not-matter-Success-matters-__audio-0.mp3" length="6797198" type="audio/mpeg"/>
       <guid isPermaLink="false">20260426__Vinod-Khosla-MBA-80-Failure-does-not-matter-Success-matters-__audio-0.mp3</guid>
       <itunes:duration>14:09</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>[tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch] audio 0</title>
+      <description><![CDATA[NotebookLM 음성개요 — 노트북: tagesschau24 Livestream Trump gibt Einigung bei Gaza Gesprch]]></description>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3" length="5642794" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260426__tagesschau24-Livestream-Trump-gibt-Einigung-bei-Gaza-Gesprch__audio-0.mp3</guid>
+      <itunes:duration>11:45</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
