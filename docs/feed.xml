@@ -8,7 +8,7 @@
     <atom:link href="https://kiuk104.github.io/notebooklm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>ko</language>
     <description>NotebookLM에서 생성한 음성개요 모음</description>
-    <lastBuildDate>Sun, 26 Apr 2026 20:45:04 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 20:53:43 +0000</lastBuildDate>
     <itunes:author>기욱</itunes:author>
     <itunes:summary>NotebookLM에서 생성한 음성개요 모음</itunes:summary>
     <itunes:owner>
@@ -18,15 +18,6 @@
     <itunes:image href="https://kiuk104.github.io/notebooklm-podcast/cover.jpg"/>
     <itunes:category text="Education"/>
     <itunes:explicit>false</itunes:explicit>
-    <item>
-      <title>[Loading Notebook] audio 0</title>
-      <description><![CDATA[NotebookLM 음성개요 — 노트북: Loading Notebook]]></description>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-      <enclosure url="https://kiuk104.github.io/notebooklm-podcast/episodes/20260426__Loading-Notebook__audio-0.mp3" length="9113110" type="audio/mpeg"/>
-      <guid isPermaLink="false">20260426__Loading-Notebook__audio-0.mp3</guid>
-      <itunes:duration>18:59</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-    </item>
     <item>
       <title>[Loading Notebook] audio 1</title>
       <description><![CDATA[NotebookLM 음성개요 — 노트북: Loading Notebook]]></description>
