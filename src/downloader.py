@@ -25,6 +25,10 @@ from playwright.async_api import (
 )
 
 SELECTOR_HOME_NOTEBOOK_LINK = 'a[href*="/notebook/"]'
+# 노트북 페이지의 노트북 제목 (chat 패널 헤더의 cover-title)
+SELECTOR_NOTEBOOK_TITLE = '.cover-title'
+# audio 카드 안의 제목 텍스트
+SELECTOR_ARTIFACT_TITLE = '.artifact-title'
 # 노트북 페이지에서 이미 생성된 음성개요 카드의 재생 버튼 (audio 전용 액션)
 SELECTOR_AUDIO_PLAY = 'button[aria-label="재생"], button[aria-label="Play"]'
 # 같은 카드의 ⋮ (더보기) 메뉴 트리거 — audio/video/slides 모두 공통이므로 카드 ancestor로 한정해서 사용
@@ -182,21 +186,39 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
         print(f"[fetch] {notebook.name}: 음성개요 없음")
         return saved
 
+    notebook_title = notebook.name
+    try:
+        cover = page.locator(SELECTOR_NOTEBOOK_TITLE).first
+        text = ((await cover.text_content(timeout=3_000)) or "").strip()
+        if text:
+            notebook_title = text
+    except PWTimeoutError:
+        pass
+
     play_buttons = page.locator(SELECTOR_AUDIO_PLAY)
     count = await play_buttons.count()
-    print(f"[fetch] {notebook.name}: 음성개요 {count}개 발견")
+    print(f"[fetch] {notebook_title}: 음성개요 {count}개 발견")
 
     for i in range(count):
         play = play_buttons.nth(i)
-        more = play.locator(
-            f'xpath=ancestor::*[.//button[contains(@class, "artifact-more-button")]][1]'
-            f'//button[contains(@class, "artifact-more-button")]'
+        card = play.locator(
+            'xpath=ancestor::*[.//button[contains(@class, "artifact-more-button")]][1]'
         ).first
+
+        episode_title = f"audio-{i}"
+        try:
+            t = ((await card.locator(SELECTOR_ARTIFACT_TITLE).first.text_content(timeout=2_000)) or "").strip()
+            if t:
+                episode_title = t
+        except PWTimeoutError:
+            pass
+
+        more = card.locator('button.artifact-more-button').first
         try:
             await more.scroll_into_view_if_needed()
             await more.click(timeout=5_000)
         except PWTimeoutError:
-            print(f"[fetch] {notebook.name} #{i}: 더보기(⋮) 버튼을 못 찾음, 스킵")
+            print(f"[fetch] {notebook_title} #{i}: 더보기(⋮) 버튼을 못 찾음, 스킵")
             continue
 
         try:
@@ -204,19 +226,18 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
                 await page.locator(SELECTOR_DOWNLOAD_MENUITEM).first.click(timeout=5_000)
             download: Download = await dl_info.value
         except PWTimeoutError:
-            print(f"[fetch] {notebook.name} #{i}: 다운로드 메뉴 항목 없음, 스킵")
+            print(f"[fetch] {notebook_title} #{i}: 다운로드 메뉴 항목 없음, 스킵")
             try:
                 await page.keyboard.press("Escape")
             except Exception:
                 pass
             continue
 
-        suggested = download.suggested_filename or f"{notebook.name}-{i}.mp3"
-        stem = Path(suggested).stem
-        ext = Path(suggested).suffix.lower() or ".mp3"
+        suggested = download.suggested_filename or ""
+        ext = Path(suggested).suffix.lower() if suggested else ".mp3"
         if ext not in (".mp3", ".m4a"):
             ext = ".mp3"
-        suffix = f"__{slugify(notebook.name)}__{slugify(stem)}{ext}"
+        suffix = f"__{slugify(notebook_title)}__{slugify(episode_title)}{ext}"
 
         existing = next(
             (
