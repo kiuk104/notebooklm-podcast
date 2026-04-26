@@ -179,6 +179,50 @@ def _run_auto_download() -> None:
             JOB["returncode"] = proc.returncode
             return
 
+        _log(f"subprocess: {sys.executable} src/sync_with_notebooklm.py")
+        proc = subprocess.Popen(
+            [sys.executable, "src/sync_with_notebooklm.py", "--config", "config.yaml"],
+            cwd=str(ROOT),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+            encoding="utf-8",
+            errors="replace",
+            env=env,
+        )
+        assert proc.stdout is not None
+        for line in proc.stdout:
+            line = line.rstrip()
+            if line:
+                _log(line)
+        proc.wait()
+        if proc.returncode != 0:
+            _log(f"[WARN] sync_with_notebooklm.py exit={proc.returncode} — 계속 진행")
+
+        _log(f"subprocess: {sys.executable} src/main.py --skip-download (RSS 재생성)")
+        proc = subprocess.Popen(
+            [sys.executable, "src/main.py", "--config", "config.yaml", "--skip-download"],
+            cwd=str(ROOT),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+            encoding="utf-8",
+            errors="replace",
+            env=env,
+        )
+        assert proc.stdout is not None
+        for line in proc.stdout:
+            line = line.rstrip()
+            if line:
+                _log(line)
+        proc.wait()
+        if proc.returncode != 0:
+            _log(f"[FAIL] RSS 재생성 exit={proc.returncode}")
+            JOB["returncode"] = proc.returncode
+            return
+
         _log("git add episodes/ docs/")
         rc, out = run_git("add", "episodes/", "docs/")
         if out:
@@ -287,6 +331,131 @@ def delete():
             return redirect(url_for("index"))
 
     flash(f"삭제 + 배포 완료: {filename}\n\n" + "\n\n".join(logs), "success")
+    return redirect(url_for("index"))
+
+
+@app.route("/delete-batch", methods=["POST"])
+def delete_batch():
+    filenames = request.form.getlist("filenames")
+    if not filenames:
+        flash("선택된 파일이 없습니다.", "error")
+        return redirect(url_for("index"))
+
+    valid: list[str] = []
+    for fn in filenames:
+        if "/" in fn or "\\" in fn or ".." in fn:
+            flash(f"잘못된 파일명: {fn}", "error")
+            return redirect(url_for("index"))
+        if not fn.lower().endswith((".mp3", ".m4a")):
+            flash(f"mp3/m4a 파일만 삭제 가능: {fn}", "error")
+            return redirect(url_for("index"))
+        if not (EPISODES_DIR / fn).exists():
+            flash(f"파일이 없습니다: {fn}", "error")
+            return redirect(url_for("index"))
+        valid.append(fn)
+
+    rc, out = run_git("pull", "--rebase", "--autostash", "origin", "main")
+    if rc != 0:
+        flash(f"git pull --rebase 실패:\n{out}", "error")
+        return redirect(url_for("index"))
+
+    for fn in valid:
+        (EPISODES_DIR / fn).unlink(missing_ok=True)
+        (ROOT / "docs" / "episodes" / fn).unlink(missing_ok=True)
+
+    try:
+        generate(CONFIG_PATH)
+    except Exception as e:
+        flash(f"RSS 재생성 실패: {e}", "error")
+        return redirect(url_for("index"))
+
+    msg = (
+        f"remove episode: {valid[0]}"
+        if len(valid) == 1
+        else f"remove {len(valid)} episodes"
+    )
+    logs: list[str] = []
+    for args in (
+        ("add", "episodes/", "docs/"),
+        ("commit", "-m", msg),
+        ("push",),
+    ):
+        rc, out = run_git(*args)
+        logs.append(f"$ git {' '.join(args)}\n{out}")
+        if rc != 0:
+            flash("git 명령 실패:\n\n" + "\n\n".join(logs), "error")
+            return redirect(url_for("index"))
+
+    flash(f"{len(valid)}개 삭제 + 배포 완료", "success")
+    return redirect(url_for("index"))
+
+
+@app.route("/rename", methods=["POST"])
+def rename():
+    old = request.form.get("old", "").strip()
+    new_date = request.form.get("date", "").replace("-", "")
+    new_notebook = sanitize(request.form.get("notebook", ""))
+    new_title = sanitize(request.form.get("title", ""))
+
+    if "/" in old or "\\" in old or ".." in old:
+        flash(f"잘못된 파일명: {old}", "error")
+        return redirect(url_for("index"))
+    if not old.lower().endswith((".mp3", ".m4a")):
+        flash("mp3/m4a 파일만 이름 변경 가능합니다.", "error")
+        return redirect(url_for("index"))
+    if not (new_date and new_notebook and new_title):
+        flash("날짜·노트북·제목을 모두 채워주세요.", "error")
+        return redirect(url_for("index"))
+    if len(new_date) != 8 or not new_date.isdigit():
+        flash(f"날짜 형식이 잘못됐습니다: {new_date}", "error")
+        return redirect(url_for("index"))
+
+    src = EPISODES_DIR / old
+    if not src.exists():
+        flash(f"파일이 없습니다: {old}", "error")
+        return redirect(url_for("index"))
+
+    ext = src.suffix.lower()
+    new_name = f"{new_date}__{new_notebook}__{new_title}{ext}"
+    if new_name == old:
+        flash("변경사항 없음", "success")
+        return redirect(url_for("index"))
+
+    new_path = EPISODES_DIR / new_name
+    if new_path.exists():
+        flash(f"같은 이름의 파일이 이미 있습니다: {new_name}", "error")
+        return redirect(url_for("index"))
+
+    rc, out = run_git("pull", "--rebase", "--autostash", "origin", "main")
+    if rc != 0:
+        flash(f"git pull --rebase 실패:\n{out}", "error")
+        return redirect(url_for("index"))
+
+    src.rename(new_path)
+    docs_old = ROOT / "docs" / "episodes" / old
+    docs_new = ROOT / "docs" / "episodes" / new_name
+    if docs_old.exists():
+        docs_old.rename(docs_new)
+
+    try:
+        generate(CONFIG_PATH)
+    except Exception as e:
+        flash(f"RSS 재생성 실패: {e}", "error")
+        return redirect(url_for("index"))
+
+    logs: list[str] = []
+    for args in (
+        ("add", "episodes/", "docs/"),
+        ("commit", "-m", f"rename episode: {old} -> {new_name}"),
+        ("push",),
+    ):
+        rc, out = run_git(*args)
+        logs.append(f"$ git {' '.join(args)}\n{out}")
+        if rc != 0:
+            flash("git 명령 실패:\n\n" + "\n\n".join(logs), "error")
+            return redirect(url_for("index"))
+
+    flash(f"이름 변경 + 배포 완료: {new_name}", "success")
     return redirect(url_for("index"))
 
 
