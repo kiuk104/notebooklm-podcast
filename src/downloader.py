@@ -227,6 +227,64 @@ async def download_audio_for_notebook(page: Page, notebook: NotebookConfig, epis
     return saved
 
 
+async def cmd_debug(auth_dir: Path, notebook_id: str, headless: bool = False) -> None:
+    """
+    한 노트북을 열어 HTML 전체와 스크린샷을 저장하고, audio/download 관련
+    DOM 단서를 출력한다. 셀렉터 갱신용 디버그 명령.
+    """
+    out_dir = Path("debug")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"[debug] 출력 폴더: {out_dir.resolve()}")
+    print(f"[debug] headless={headless}")
+
+    ctx, pw = await open_context(auth_dir, headless=headless)
+    try:
+        page = await ctx.new_page()
+        url = NOTEBOOK_URL_TEMPLATE.format(id=notebook_id)
+        print(f"[debug] {url}")
+        try:
+            await page.goto(url, wait_until="domcontentloaded", timeout=20_000)
+        except PWTimeoutError:
+            print("[debug] domcontentloaded 타임아웃, 그래도 dump 시도")
+
+        await page.wait_for_timeout(5000)
+
+        try:
+            await page.locator(SELECTOR_AUDIO_TAB).first.click(timeout=5_000)
+            print("[debug] 음성 개요 탭 클릭 성공")
+            await page.wait_for_timeout(2000)
+        except PWTimeoutError:
+            print("[debug] 음성 개요 탭 못 찾음 — 이미 보이는 상태이거나 다른 UI일 수 있음")
+
+        html = await page.content()
+        (out_dir / "page.html").write_text(html, encoding="utf-8")
+        print(f"[debug] HTML 저장: {out_dir / 'page.html'} ({len(html):,} bytes)")
+
+        try:
+            await page.screenshot(path=str(out_dir / "page.png"), full_page=True)
+            print(f"[debug] 스크린샷 저장: {out_dir / 'page.png'}")
+        except Exception as e:
+            print(f"[debug] 스크린샷 실패: {e}")
+
+        for label, expr in [
+            ("data-testid 모음", "Array.from(new Set(Array.from(document.querySelectorAll('[data-testid]')).map(e => e.getAttribute('data-testid')))).filter(t => /audio|overview|studio|download/i.test(t))"),
+            ("aria-label에 다운로드/audio 포함된 버튼", "Array.from(document.querySelectorAll('button[aria-label]')).map(b => b.getAttribute('aria-label')).filter(a => /다운로드|download|audio|음성/i.test(a))"),
+            ("audio 관련 클래스", "Array.from(new Set(Array.from(document.querySelectorAll('[class]')).flatMap(e => e.className.toString().split(/\\s+/)))).filter(c => /audio|overview/i.test(c))"),
+        ]:
+            try:
+                vals = await page.evaluate(expr)
+                print(f"\n[debug] === {label} ({len(vals)}개) ===")
+                for v in vals[:30]:
+                    print(f"        {v}")
+                if len(vals) > 30:
+                    print(f"        … ({len(vals) - 30} more)")
+            except Exception as e:
+                print(f"[debug] {label} 평가 실패: {e}")
+    finally:
+        await ctx.close()
+        await pw.stop()
+
+
 async def cmd_run(config: DownloaderConfig) -> None:
     config.episodes_dir.mkdir(parents=True, exist_ok=True)
     ctx, pw = await open_context(config.auth_dir, headless=True)
@@ -257,6 +315,8 @@ def main() -> None:
     parser.add_argument("--config", default="config.yaml")
     parser.add_argument("--login", action="store_true", help="첫 실행 시 Google 로그인")
     parser.add_argument("--list", action="store_true", help="발견된 노트북만 출력 (다운로드 안 함)")
+    parser.add_argument("--debug", metavar="NOTEBOOK_ID", help="해당 노트북의 HTML/스크린샷을 debug/ 에 저장하고 audio 관련 셀렉터 단서 출력")
+    parser.add_argument("--headless", action="store_true", help="--debug 와 함께 사용 시 헤드리스 모드로 실행")
     args = parser.parse_args()
 
     cfg_path = Path(args.config)
@@ -284,6 +344,10 @@ def main() -> None:
                 await ctx.close()
                 await pw.stop()
         asyncio.run(_list())
+        return
+
+    if args.debug:
+        asyncio.run(cmd_debug(config.auth_dir, args.debug, headless=args.headless))
         return
 
     asyncio.run(cmd_run(config))
