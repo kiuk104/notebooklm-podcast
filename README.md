@@ -215,3 +215,9 @@ Unregister-ScheduledTask -TaskName 'notebooklm-podcast-daily' -Confirm:$false
 ## 라이선스 / 주의
 
 NotebookLM 콘텐츠는 본인 자료에서 생성된 것을 본인이 듣는 용도로만 사용하세요. **공개 팟캐스트로 배포하려면 원본 자료의 저작권을 직접 확인해야 합니다.**
+
+## v2 — Chrome 익스텐션
+
+이 v1 (Python + Playwright + Flask admin) 외에, 같은 기능을 **Chrome 익스텐션**으로 제공하는 v2 가 별도 repo 에서 진행 중입니다. Python/ffmpeg/Playwright 설치 없이 익스텐션만 설치하면 동작하는 게 목표입니다.
+
+→ [notebooklm-podcast-extension](https://github.com/kiuk104/notebooklm-podcast-extension)
