@@ -8,6 +8,7 @@
 """
 from __future__ import annotations
 
+import json
 import os
 import re
 import subprocess
@@ -20,11 +21,13 @@ from pathlib import Path
 
 from flask import Flask, flash, redirect, render_template, request, url_for
 
-from rss_generator import AUDIO_EXTS, fmt_duration, generate, parse_episode
+from rss_generator import AUDIO_EXTS, FILENAME_RE, fmt_duration, generate, parse_episode
 
 ROOT = Path(__file__).resolve().parent.parent
 EPISODES_DIR = ROOT / "episodes"
 CONFIG_PATH = ROOT / "config.yaml"
+NOTEBOOK_MAP_PATH = ROOT / ".notebook-map.json"
+NOTEBOOK_URL_TEMPLATE = "https://notebooklm.google.com/notebook/{id}"
 
 app = Flask(__name__, template_folder=str(Path(__file__).parent / "templates"))
 app.secret_key = "notebooklm-podcast-admin-local"
@@ -267,6 +270,26 @@ def _run_auto_download() -> None:
         JOB["running"] = False
 
 
+def _load_notebook_map() -> dict:
+    if not NOTEBOOK_MAP_PATH.exists():
+        return {}
+    try:
+        return json.loads(NOTEBOOK_MAP_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _notebook_url_for(filename: str, nb_map: dict) -> str | None:
+    """파일명의 가운데 슬러그를 키로 .notebook-map.json 에서 ID 를 lookup."""
+    m = FILENAME_RE.match(filename)
+    if not m:
+        return None
+    info = nb_map.get(m.group(2))
+    if not info or not info.get("id"):
+        return None
+    return NOTEBOOK_URL_TEMPLATE.format(id=info["id"])
+
+
 @app.route("/", methods=["GET"])
 def index():
     audio_files = []
@@ -277,12 +300,19 @@ def index():
         key=lambda e: e.pub_date,
         reverse=True,
     )
+    nb_map = _load_notebook_map()
+    notebook_urls = {
+        ep.path.name: url
+        for ep in episodes
+        if (url := _notebook_url_for(ep.path.name, nb_map))
+    }
     return render_template(
         "admin.html",
         today=date.today().strftime("%Y-%m-%d"),
         job=JOB,
         list_job=LIST_JOB,
         episodes=episodes,
+        notebook_urls=notebook_urls,
         fmt_duration=fmt_duration,
     )
 

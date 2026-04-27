@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import json
 import re
 import sys
 from dataclasses import dataclass
@@ -119,6 +120,39 @@ def slugify(text: str) -> str:
     return text[:60] or "episode"
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+NOTEBOOK_MAP_PATH = PROJECT_ROOT / ".notebook-map.json"
+
+
+def load_notebook_map() -> dict:
+    if not NOTEBOOK_MAP_PATH.exists():
+        return {}
+    try:
+        return json.loads(NOTEBOOK_MAP_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def update_notebook_map(name: str, nb_id: str) -> None:
+    """노트북 이름을 slugify 한 키로 ID 를 저장. admin 페이지에서 episode 파일명의
+    노트북 슬러그로 lookup 하면 NotebookLM URL 을 만들 수 있다."""
+    if not name or not nb_id:
+        return
+    slug = slugify(name)
+    m = load_notebook_map()
+    existing = m.get(slug)
+    if existing and existing.get("id") == nb_id and existing.get("name") == name:
+        return
+    m[slug] = {"id": nb_id, "name": name}
+    try:
+        NOTEBOOK_MAP_PATH.write_text(
+            json.dumps(m, ensure_ascii=False, indent=2, sort_keys=True),
+            encoding="utf-8",
+        )
+    except OSError as e:
+        print(f"[warn] notebook-map 저장 실패: {e}", file=sys.stderr)
+
+
 async def open_context(auth_dir: Path, headless: bool):
     auth_dir.mkdir(parents=True, exist_ok=True)
     pw = await async_playwright().start()
@@ -198,6 +232,7 @@ async def discover_notebooks(page: Page, exclude_names: list) -> list:
     print(f"[discover] 노트북 {len(discovered)}개 발견")
     for nb in discovered:
         print(f"           • {nb.name}  ({nb.id[:12]}…)")
+        update_notebook_map(nb.name, nb.id)
     return discovered
 
 
@@ -231,6 +266,9 @@ async def download_audio_for_notebook(
             notebook_title = text
     except PWTimeoutError:
         pass
+
+    # 파일명에 들어가는 슬러그 기준으로 ID 매핑 저장 (admin 페이지에서 NotebookLM URL 만들 때 lookup).
+    update_notebook_map(notebook_title, notebook.id)
 
     cover_date: datetime | None = None
     try:
