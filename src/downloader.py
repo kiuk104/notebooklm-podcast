@@ -46,6 +46,9 @@ SELECTOR_DOWNLOAD_MENUITEM = (
 HOME_URL = "https://notebooklm.google.com/"
 NOTEBOOK_URL_TEMPLATE = "https://notebooklm.google.com/notebook/{id}"
 NOTEBOOK_ID_RE = re.compile(r"/notebook/([^/?#]+)")
+# NotebookLM이 음성개요 생성 직후 제목 확정 전에 보여주는 플레이스홀더 ("audio 0", "audio-1" 등).
+# 이 상태로 받으면 나중에 실제 제목이 붙은 뒤 dedup 키가 어긋나 중복이 생긴다.
+PLACEHOLDER_TITLE_RE = re.compile(r"^audio[\s\-_]?\d+$", re.IGNORECASE)
 
 _MONTHS = {
     "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
@@ -257,6 +260,10 @@ async def download_audio_for_notebook(
                 episode_title = t
         except PWTimeoutError:
             pass
+
+        if PLACEHOLDER_TITLE_RE.match(episode_title):
+            print(f"[skip] {notebook_title} #{i}: 카드 제목이 플레이스홀더('{episode_title}'), 다음 실행에서 재시도")
+            continue
 
         more = card.locator('button.artifact-more-button').first
         try:
