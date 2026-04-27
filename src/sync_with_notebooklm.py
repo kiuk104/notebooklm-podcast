@@ -33,6 +33,7 @@ from downloader import (
     NOTEBOOK_URL_TEMPLATE,
     SELECTOR_ARTIFACT_TITLE,
     SELECTOR_AUDIO_PLAY,
+    SELECTOR_COVER_DATE,
     SELECTOR_HOME_NOTEBOOK_LINK,
     SELECTOR_NOTEBOOK_TITLE,
     open_context,
@@ -76,9 +77,26 @@ async def collect_notebooklm_state(auth_dir: Path) -> dict[str, set[str]]:
                 print(f"[{i}/{len(ids)}] {nid[:8]}…  page load timeout, skip")
                 continue
 
+            # 다운로더와 같은 패턴: 먼저 audio 가 있는지 12초까지 기다려본다.
+            # audio 가 잡히면 페이지가 충분히 그려진 상태이고 cover-title 도 진짜 텍스트.
+            audio_loaded = False
+            try:
+                await page.wait_for_selector(SELECTOR_AUDIO_PLAY, timeout=12_000)
+                audio_loaded = True
+            except PWTimeoutError:
+                pass
+
+            # audio 가 없는 노트북이면 cover-date 라도 떠야 빈 노트북이 맞음.
+            # 이게 안 떠도 protect-no-audio 안전장치가 잡지만 진단용으로 명확히 분기.
+            if not audio_loaded:
+                try:
+                    await page.wait_for_selector(SELECTOR_COVER_DATE, timeout=8_000)
+                except PWTimeoutError:
+                    print(f"[{i}/{len(ids)}] {nid[:8]}…  cover/audio 미로드, skip")
+                    continue
+
             title = ""
             try:
-                await page.wait_for_selector(SELECTOR_NOTEBOOK_TITLE, timeout=5_000)
                 t = await page.locator(SELECTOR_NOTEBOOK_TITLE).first.text_content(timeout=2_000)
                 if t:
                     title = t.strip()
@@ -90,23 +108,27 @@ async def collect_notebooklm_state(auth_dir: Path) -> dict[str, set[str]]:
 
             nb_slug = slugify(title)
             audio_slugs: set[str] = set()
-            try:
-                await page.wait_for_selector(SELECTOR_AUDIO_PLAY, timeout=5_000)
-                play_buttons = page.locator(SELECTOR_AUDIO_PLAY)
-                cnt = await play_buttons.count()
+
+            if audio_loaded:
+                cards = page.locator('.artifact-item-button')
+                cnt = await cards.count()
+                audio_index = 0
                 for j in range(cnt):
-                    play = play_buttons.nth(j)
-                    card = play.locator(
-                        'xpath=ancestor::*[.//button[contains(@class, "artifact-more-button")]][1]'
-                    ).first
+                    card = cards.nth(j)
+                    # audio 카드만 골라낸다 (재생 버튼 보유 = audio 전용)
+                    if await card.locator(SELECTOR_AUDIO_PLAY).count() == 0:
+                        continue
+                    # legacy compat: 옛 다운로더는 카드 제목 추출이 깨져 audio-{i} 로 저장돼 있음.
+                    # 새 다운로더는 진짜 제목 사용. 둘 다 매칭 키로 등록해 둬야 prune 이 옛 파일을
+                    # false-positive 로 안 지움.
+                    audio_slugs.add(f"audio-{audio_index}")
+                    audio_index += 1
                     try:
                         t = await card.locator(SELECTOR_ARTIFACT_TITLE).first.text_content(timeout=2_000)
-                        if t:
+                        if t and t.strip():
                             audio_slugs.add(slugify(t.strip()))
                     except PWTimeoutError:
                         pass
-            except PWTimeoutError:
-                pass
 
             nb_map.setdefault(nb_slug, set()).update(audio_slugs)
             print(f"[{i}/{len(ids)}] {title[:50]:50} audio={len(audio_slugs)}")
@@ -142,6 +164,7 @@ def main() -> None:
 
     to_delete: list[Path] = []
     protected_unknown_nb: list[str] = []
+    protected_no_audio: list[str] = []
     bad_format: list[str] = []
     keep = 0
 
@@ -154,6 +177,10 @@ def main() -> None:
         if nb_slug not in nb_map:
             protected_unknown_nb.append(f.name)
             continue
+        if not nb_map[nb_slug]:
+            # 노트북은 발견됐지만 audio 카드 0개 — scraping 실패 가능성도 있어 보수적으로 보호
+            protected_no_audio.append(f.name)
+            continue
         if audio_slug not in nb_map[nb_slug]:
             to_delete.append(f)
         else:
@@ -162,6 +189,7 @@ def main() -> None:
     print(
         f"\n[summary] 유지 {keep}, 삭제 후보 {len(to_delete)}, "
         f"보호(노트북 미발견) {len(protected_unknown_nb)}, "
+        f"보호(audio 미스캔) {len(protected_no_audio)}, "
         f"파일명 형식 오류 {len(bad_format)}"
     )
 

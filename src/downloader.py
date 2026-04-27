@@ -238,16 +238,18 @@ async def download_audio_for_notebook(
     except PWTimeoutError:
         pass
 
-    play_buttons = page.locator(SELECTOR_AUDIO_PLAY)
-    count = await play_buttons.count()
+    # audio 카드만 골라낸다 (재생 버튼 보유 = audio 전용 artifact)
+    all_cards = page.locator('.artifact-item-button')
+    n_all = await all_cards.count()
+    audio_cards = []
+    for j in range(n_all):
+        c = all_cards.nth(j)
+        if await c.locator(SELECTOR_AUDIO_PLAY).count() > 0:
+            audio_cards.append(c)
+    count = len(audio_cards)
     print(f"[fetch] {notebook_title}: 음성개요 {count}개 발견")
 
-    for i in range(count):
-        play = play_buttons.nth(i)
-        card = play.locator(
-            'xpath=ancestor::*[.//button[contains(@class, "artifact-more-button")]][1]'
-        ).first
-
+    for i, card in enumerate(audio_cards):
         episode_title = f"audio-{i}"
         try:
             t = ((await card.locator(SELECTOR_ARTIFACT_TITLE).first.text_content(timeout=2_000)) or "").strip()
