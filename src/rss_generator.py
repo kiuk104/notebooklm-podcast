@@ -5,6 +5,7 @@ episodes/ 폴더의 mp3/m4a들을 스캔해서 podcast-spec 호환 RSS 2.0 피�
 from __future__ import annotations
 import html
 import mimetypes
+import os
 import re
 import shutil
 import subprocess
@@ -24,6 +25,21 @@ FILENAME_RE = re.compile(r"^(\d{8})__(.+?)__(.+)\.(?:mp3|m4a)$", re.IGNORECASE)
 AUDIO_EXTS = ("*.mp3", "*.m4a")
 
 
+def _long_path(p: Path) -> str:
+    """Windows MAX_PATH (260) 한계를 회피하는 \\?\ prefix 자동 적용.
+    한국어/긴 노트북 제목 + 긴 audio 제목 조합으로 mp3 절대 경로가
+    250자를 넘기는 케이스에서 mutagen/ffprobe/shutil 등이 fail."""
+    s = str(p)
+    if os.name == "nt":
+        try:
+            s = str(p.resolve())
+        except OSError:
+            s = str(p.absolute())
+        if len(s) >= 240 and not s.startswith("\\\\?\\"):
+            s = "\\\\?\\" + s
+    return s
+
+
 def _ffprobe_duration(path: Path) -> int:
     bin_path = find_bin("ffprobe")
     if not bin_path:
@@ -31,7 +47,7 @@ def _ffprobe_duration(path: Path) -> int:
     try:
         r = subprocess.run(
             [bin_path, "-v", "error", "-show_entries", "format=duration",
-             "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+             "-of", "default=noprint_wrappers=1:nokey=1", _long_path(path)],
             capture_output=True, text=True, timeout=15,
         )
         if r.returncode == 0 and r.stdout.strip():
@@ -59,18 +75,27 @@ class Episode:
         return f"episodes/{quote(self.path.name)}"
 
 
+def _safe_stat(path: Path) -> os.stat_result | None:
+    try:
+        return os.stat(_long_path(path))
+    except OSError:
+        return None
+
+
 def parse_episode(path: Path) -> Episode:
     m = FILENAME_RE.match(path.name)
+    st = _safe_stat(path)
     if m:
         date_str, notebook, title = m.group(1), m.group(2), m.group(3)
         pub = datetime.strptime(date_str, "%Y%m%d").replace(tzinfo=timezone.utc)
     else:
         notebook = "기타"
         title = path.stem
-        pub = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+        mt = st.st_mtime if st else 0
+        pub = datetime.fromtimestamp(mt, tz=timezone.utc)
     duration = 0
     try:
-        meta = mutagen.File(str(path))
+        meta = mutagen.File(_long_path(path))
         if meta and meta.info and meta.info.length and meta.info.length > 0:
             duration = int(meta.info.length)
     except Exception:
@@ -83,7 +108,7 @@ def parse_episode(path: Path) -> Episode:
         notebook=notebook.replace("-", " "),
         pub_date=pub,
         duration_sec=duration,
-        size_bytes=path.stat().st_size,
+        size_bytes=st.st_size if st else 0,
     )
 
 
@@ -189,8 +214,16 @@ def generate(config_path: Path) -> None:
     episodes = [parse_episode(p) for p in sorted(audio_files)]
     for ep in episodes:
         target = public_episodes / ep.path.name
-        if not target.exists() or target.stat().st_size != ep.path.stat().st_size:
-            shutil.copy2(ep.path, target)
+        try:
+            target_size = target.stat().st_size if target.exists() else -1
+        except OSError:
+            target_size = -1
+        try:
+            src_size = ep.path.stat().st_size
+        except OSError:
+            src_size = ep.size_bytes  # parse_episode 가 이미 잡아둠
+        if target_size != src_size:
+            shutil.copy2(_long_path(ep.path), _long_path(target))
 
     (public_dir / "feed.xml").write_text(build_rss(config, episodes), encoding="utf-8")
     (public_dir / "index.html").write_text(build_index_html(config, episodes), encoding="utf-8")
