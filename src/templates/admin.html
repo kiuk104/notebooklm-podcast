@@ -39,12 +39,38 @@
   table.episodes { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
   table.episodes th, table.episodes td { padding: 8px 10px; border-bottom: 1px solid #eee; text-align: left; vertical-align: middle; }
   table.episodes th { background: #fafafa; font-weight: 600; font-size: 12px; color: #555; }
+  table.episodes th.sortable { cursor: pointer; user-select: none; }
+  table.episodes th.sortable:hover { background: #f0f0f0; }
+  table.episodes th.sortable .arrow { color: #ccc; margin-left: 4px; font-size: 10px; }
+  table.episodes th.sortable.sort-asc .arrow,
+  table.episodes th.sortable.sort-desc .arrow { color: #2563eb; }
   table.episodes td.num { text-align: right; color: #666; font-variant-numeric: tabular-nums; }
   table.episodes .title { color: #111; font-weight: 500; }
   table.episodes .notebook { color: #666; font-size: 12px; }
+  table.episodes .col-check { width: 28px; text-align: center; padding-right: 0; }
+  table.episodes .col-actions { width: 110px; text-align: right; white-space: nowrap; }
+  table.episodes tr.group-header td { background: #f4f7fb; font-size: 12px; font-weight: 600; color: #1e3a8a; padding: 6px 10px; border-top: 1px solid #d8e4f4; }
+  table.episodes tr.edit-row { display: none; }
+  table.episodes tr.edit-row.open { display: table-row; }
+  table.episodes tr.edit-row td { background: #fffbeb; padding: 12px 10px; border-bottom: 1px solid #fcd34d; }
+  table.episodes tr.edit-row .edit-grid { display: grid; grid-template-columns: 130px 1fr 1fr auto auto; gap: 8px; align-items: end; }
+  table.episodes tr.edit-row label { margin-top: 0; font-size: 11px; }
+  table.episodes tr.edit-row input { padding: 6px 8px; font-size: 13px; }
+  table.episodes tr.edit-row button { margin-top: 0; padding: 8px 14px; font-size: 13px; }
+  table.episodes tr.edit-row button.cancel { background: #6b7280; }
+  table.episodes tr.edit-row button.cancel:hover { background: #4b5563; }
   button.danger { margin: 0; padding: 5px 12px; font-size: 12px; background: #dc2626; }
   button.danger:hover:not(:disabled) { background: #b91c1c; }
+  button.icon-btn { margin: 0; padding: 5px 8px; font-size: 12px; background: #6b7280; }
+  button.icon-btn:hover:not(:disabled) { background: #4b5563; }
   .empty { color: #888; font-size: 13px; padding: 20px 0; text-align: center; font-style: italic; }
+  .toolbar { display: flex; gap: 8px; align-items: center; margin-top: 16px; flex-wrap: wrap; }
+  .toolbar button { margin-top: 0; padding: 8px 14px; font-size: 13px; }
+  .toolbar button.toggle.on { background: #1d4ed8; }
+  .toolbar .selected-count { font-size: 13px; color: #555; margin-left: auto; }
+  .toolbar button.batch-delete { background: #dc2626; }
+  .toolbar button.batch-delete:hover:not(:disabled) { background: #b91c1c; }
+  .toolbar button:disabled { background: #d1d5db; }
 </style>
 </head>
 <body>
@@ -136,38 +162,211 @@
 
 <h2>에피소드 목록 ({{ episodes|length }}개)</h2>
 {% if episodes %}
-<table class="episodes">
-  <thead>
-    <tr>
-      <th>날짜</th>
-      <th>노트북 / 제목</th>
-      <th>길이</th>
-      <th>크기</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for ep in episodes %}
-    <tr>
-      <td class="num">{{ ep.pub_date.strftime('%Y-%m-%d') }}</td>
-      <td>
-        <div class="notebook">{{ ep.notebook }}</div>
-        <div class="title">{{ ep.title }}</div>
-      </td>
-      <td class="num">{{ fmt_duration(ep.duration_sec) }}</td>
-      <td class="num">{{ (ep.size_bytes // 1024 // 1024) or '<1' }} MB</td>
-      <td>
-        <form method="POST" action="{{ url_for('delete') }}"
-              onsubmit="return confirm('정말 삭제할까요?\n{{ ep.path.name }}');"
-              style="margin:0;">
-          <input type="hidden" name="filename" value="{{ ep.path.name }}">
-          <button type="submit" class="danger" {% if job.running %}disabled{% endif %}>삭제</button>
-        </form>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<form id="batch-form" method="POST" action="{{ url_for('delete_batch') }}"
+      onsubmit="return confirm('선택한 ' + document.querySelectorAll('.row-check:checked').length + '개를 삭제할까요?');">
+  <div class="toolbar">
+    <button type="button" class="toggle" id="group-toggle">노트북별 그룹화</button>
+    <button type="button" class="icon-btn" id="reset-sort">정렬 초기화 (날짜 ↓)</button>
+    <span class="selected-count" id="selected-count"></span>
+    <button type="submit" class="batch-delete" id="batch-delete-btn" disabled>선택 삭제</button>
+  </div>
+
+  <table class="episodes" id="episode-table">
+    <thead>
+      <tr>
+        <th class="col-check"><input type="checkbox" id="check-all"></th>
+        <th class="sortable" data-key="date" data-type="str">날짜<span class="arrow">▲▼</span></th>
+        <th class="sortable" data-key="notebook" data-type="str">노트북<span class="arrow">▲▼</span></th>
+        <th class="sortable" data-key="title" data-type="str">제목<span class="arrow">▲▼</span></th>
+        <th class="sortable num" data-key="duration" data-type="num">길이<span class="arrow">▲▼</span></th>
+        <th class="sortable num" data-key="size" data-type="num">크기<span class="arrow">▲▼</span></th>
+        <th class="col-actions"></th>
+      </tr>
+    </thead>
+    <tbody id="episode-tbody">
+      {% for ep in episodes %}
+      <tr class="ep-row"
+          data-filename="{{ ep.path.name }}"
+          data-date="{{ ep.pub_date.strftime('%Y-%m-%d') }}"
+          data-notebook="{{ ep.notebook }}"
+          data-title="{{ ep.title }}"
+          data-duration="{{ ep.duration_sec }}"
+          data-size="{{ ep.size_bytes }}">
+        <td class="col-check"><input type="checkbox" class="row-check" name="filenames" value="{{ ep.path.name }}" form="batch-form"></td>
+        <td class="num">{{ ep.pub_date.strftime('%Y-%m-%d') }}</td>
+        <td class="notebook">{{ ep.notebook }}</td>
+        <td class="title">{{ ep.title }}</td>
+        <td class="num">{{ fmt_duration(ep.duration_sec) }}</td>
+        <td class="num">{{ (ep.size_bytes // 1024 // 1024) or '<1' }} MB</td>
+        <td class="col-actions">
+          <button type="button" class="icon-btn edit-btn" {% if job.running %}disabled{% endif %}>편집</button>
+          <button type="button" class="danger row-delete" {% if job.running %}disabled{% endif %}>삭제</button>
+        </td>
+      </tr>
+      <tr class="edit-row" data-for="{{ ep.path.name }}">
+        <td colspan="7">
+          <form method="POST" action="{{ url_for('rename') }}" class="edit-form">
+            <input type="hidden" name="old" value="{{ ep.path.name }}">
+            <div class="edit-grid">
+              <label>날짜
+                <input type="date" name="date" value="{{ ep.pub_date.strftime('%Y-%m-%d') }}" required>
+              </label>
+              <label>노트북
+                <input type="text" name="notebook" value="{{ ep.notebook }}" required>
+              </label>
+              <label>제목
+                <input type="text" name="title" value="{{ ep.title }}" required>
+              </label>
+              <button type="submit">저장</button>
+              <button type="button" class="cancel">취소</button>
+            </div>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</form>
+
+<form id="single-delete-form" method="POST" action="{{ url_for('delete') }}" style="display:none;">
+  <input type="hidden" name="filename" id="single-delete-filename">
+</form>
+
+<script>
+(function() {
+  const tbody = document.getElementById('episode-tbody');
+  const epRows = () => Array.from(tbody.querySelectorAll('tr.ep-row'));
+  const editRowFor = name => tbody.querySelector(`tr.edit-row[data-for="${CSS.escape(name)}"]`);
+
+  // --- inline edit (펼치기/접기, 취소) ---
+  tbody.addEventListener('click', e => {
+    const editBtn = e.target.closest('button.edit-btn');
+    if (editBtn) {
+      const row = editBtn.closest('tr.ep-row');
+      const er = editRowFor(row.dataset.filename);
+      if (er) er.classList.toggle('open');
+      return;
+    }
+    const cancelBtn = e.target.closest('button.cancel');
+    if (cancelBtn) {
+      cancelBtn.closest('tr.edit-row').classList.remove('open');
+      return;
+    }
+    const delBtn = e.target.closest('button.row-delete');
+    if (delBtn) {
+      const row = delBtn.closest('tr.ep-row');
+      const fn = row.dataset.filename;
+      if (!confirm('정말 삭제할까요?\n' + fn)) return;
+      document.getElementById('single-delete-filename').value = fn;
+      document.getElementById('single-delete-form').submit();
+    }
+  });
+
+  // --- multi-select ---
+  const checkAll = document.getElementById('check-all');
+  const batchBtn = document.getElementById('batch-delete-btn');
+  const countLabel = document.getElementById('selected-count');
+  function updateBatchUI() {
+    const selected = tbody.querySelectorAll('.row-check:checked').length;
+    countLabel.textContent = selected ? `${selected}개 선택됨` : '';
+    batchBtn.disabled = selected === 0;
+    const total = tbody.querySelectorAll('.row-check').length;
+    checkAll.indeterminate = selected > 0 && selected < total;
+    checkAll.checked = selected > 0 && selected === total;
+  }
+  checkAll.addEventListener('change', () => {
+    tbody.querySelectorAll('.row-check').forEach(cb => { cb.checked = checkAll.checked; });
+    updateBatchUI();
+  });
+  tbody.addEventListener('change', e => {
+    if (e.target.classList.contains('row-check')) updateBatchUI();
+  });
+
+  // --- sort ---
+  let sortKey = 'date', sortDir = 'desc';
+  function applySort() {
+    const headers = document.querySelectorAll('th.sortable');
+    headers.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+    const active = document.querySelector(`th.sortable[data-key="${sortKey}"]`);
+    if (active) active.classList.add(sortDir === 'asc' ? 'sort-asc' : 'sort-desc');
+
+    const pairs = epRows().map(row => [row, editRowFor(row.dataset.filename)]);
+    const isNum = active && active.dataset.type === 'num';
+    pairs.sort((a, b) => {
+      let va = a[0].dataset[sortKey], vb = b[0].dataset[sortKey];
+      if (isNum) { va = +va; vb = +vb; } else { va = (va || '').toLowerCase(); vb = (vb || '').toLowerCase(); }
+      if (va < vb) return sortDir === 'asc' ? -1 : 1;
+      if (va > vb) return sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+    pairs.forEach(([row, er]) => {
+      tbody.appendChild(row);
+      if (er) tbody.appendChild(er);
+    });
+    if (groupOn) applyGroups();
+  }
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if (sortKey === key) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+      else { sortKey = key; sortDir = 'asc'; }
+      applySort();
+    });
+  });
+  document.getElementById('reset-sort').addEventListener('click', () => {
+    sortKey = 'date'; sortDir = 'desc'; applySort();
+  });
+
+  // --- group by notebook ---
+  let groupOn = false;
+  const groupToggle = document.getElementById('group-toggle');
+  function clearGroups() {
+    tbody.querySelectorAll('tr.group-header').forEach(r => r.remove());
+  }
+  function applyGroups() {
+    clearGroups();
+    if (!groupOn) return;
+    const rows = epRows();
+    rows.sort((a, b) => {
+      const na = a.dataset.notebook.toLowerCase(), nb = b.dataset.notebook.toLowerCase();
+      if (na < nb) return -1;
+      if (na > nb) return 1;
+      // 그룹 안에서는 현재 정렬 유지
+      let va = a.dataset[sortKey], vb = b.dataset[sortKey];
+      const isNum = document.querySelector(`th.sortable[data-key="${sortKey}"]`).dataset.type === 'num';
+      if (isNum) { va = +va; vb = +vb; } else { va = (va || '').toLowerCase(); vb = (vb || '').toLowerCase(); }
+      if (va < vb) return sortDir === 'asc' ? -1 : 1;
+      if (va > vb) return sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+    let prev = null;
+    rows.forEach(row => {
+      const er = editRowFor(row.dataset.filename);
+      if (row.dataset.notebook !== prev) {
+        const gh = document.createElement('tr');
+        gh.className = 'group-header';
+        const td = document.createElement('td');
+        td.colSpan = 7;
+        const count = rows.filter(r => r.dataset.notebook === row.dataset.notebook).length;
+        td.textContent = `📓 ${row.dataset.notebook}  (${count}개)`;
+        gh.appendChild(td);
+        tbody.appendChild(gh);
+        prev = row.dataset.notebook;
+      }
+      tbody.appendChild(row);
+      if (er) tbody.appendChild(er);
+    });
+  }
+  groupToggle.addEventListener('click', () => {
+    groupOn = !groupOn;
+    groupToggle.classList.toggle('on', groupOn);
+    if (groupOn) applyGroups(); else { clearGroups(); applySort(); }
+  });
+
+  // 초기: 날짜 내림차순 헤더 표시 (서버가 이미 정렬해서 줌)
+  document.querySelector('th.sortable[data-key="date"]').classList.add('sort-desc');
+})();
+</script>
 {% else %}
 <p class="empty">아직 에피소드가 없습니다.</p>
 {% endif %}
