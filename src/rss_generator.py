@@ -225,6 +225,21 @@ def generate(config_path: Path) -> None:
         if target_size != src_size:
             shutil.copy2(_long_path(ep.path), _long_path(target))
 
+    # episodes/ 에서 사라진 mp3/m4a 가 docs/episodes/ 에 남아 artifact 를
+    # 부풀리지 않도록 청소. feed.xml 미참조 = 누구도 듣지 않는 데이터.
+    keep = {ep.path.name for ep in episodes}
+    removed = 0
+    for ext in AUDIO_EXTS:
+        for f in public_episodes.glob(ext):
+            if f.name not in keep:
+                try:
+                    os.remove(_long_path(f))
+                    removed += 1
+                except OSError:
+                    pass
+    if removed:
+        print(f"[rss] docs/episodes/ 고아 {removed}개 정리")
+
     (public_dir / "feed.xml").write_text(build_rss(config, episodes), encoding="utf-8")
     (public_dir / "index.html").write_text(build_index_html(config, episodes), encoding="utf-8")
     print(f"[rss] {len(episodes)}개 에피소드로 feed.xml 생성 완료")
