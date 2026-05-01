@@ -1,97 +1,122 @@
-# mp3 외부 호스팅 로드맵
+# 용량 관리 — 두 가지 Plan
 
-`episodes/` mp3 파일을 GitHub Pages artifact 에서 분리하기 위한 마이그레이션 계획.
+GitHub Pages artifact 가 1 GB 임계를 넘으면 (`docs/` 합계 기준) 배포 경고가 뜨고, 10 GB hard limit 까지 도달하면 진짜 막힘. 이를 다루는 두 가지 전략.
 
-## 왜 필요한가
+## 현 상황 (2026-05-01)
 
-| 시점 | docs/ artifact | 상태 |
-|---|---:|---|
-| 청소 전 (a47c201) | 2.02 GB | ⚠️ "Deployment might fail" 경고 + 1 GB 한도 2× 초과 |
-| 청소 후 (d4e1cfb) | 1.34 GB | ⚠️ 같은 경고, 한도 0.34 GB 초과 |
-| 에피소드 +50편 후 (예상) | ~1.7 GB | ❌ 한도 초과 폭 확대 — 언젠가 hard fail |
+- `episodes/`: 199 files, **1,388 MB** (모두 mp3 64k mono — [src/downloader.py:349](src/downloader.py#L349) 의 자동 transcode 로 이미 압축 끝)
+- `docs/episodes/`: 199 files, 1,388 MB (방금 d4e1cfb 에서 청소 + sync 완료)
+- artifact 업로드: 1.34 GB → "Deployment might fail" 경고
+- 임계까지 여유: ~340 MB ≈ **약 50편**
 
-- GitHub Pages 의 `actions/upload-pages-artifact@v3` 는 **1 GB 권장 / 10 GB 하드 한도.** 1 GB 는 경고로 끝나지만 대형 배포가 점점 느려지고, 10 GB 임박 시 진짜 막힘.
-- 평균 에피소드 ~7 MB. **현재 199편, 한 달에 ~10편 증가 추세** → 1년 후 +120편 ≈ +840 MB.
-- mp3 가 git 에도 들어가 있어 `git clone` / `git fetch` / push 가 모두 무거움. 외부 호스팅 = 저장소 슬림화 + 배포 가속 + git 히스토리 부담 완화.
+평균 7 MB/episode 가 **64k mono mp3 의 사실상 floor** — 더 압축하면 한국어 음성 명료도가 손상. 즉 추가 transcode 로는 못 줄임. **에피소드 수를 관리하는 게 유일한 레버.**
 
-## 호스팅 후보 비교
+---
 
-| 옵션 | 비용 (1.5 GB 기준) | 설정 난이도 | 비고 |
-|---|---|---|---|
-| **Cloudflare R2** ⭐ | $0/월 (10 GB 까지 무료) | 중 | egress 무료, S3 호환, 커스텀 도메인 OK |
-| GitHub Releases | $0 | 낮음 | 파일당 2 GB, 동일 provider, 다만 URL 이 release tag 종속이라 신규 업로드마다 release 갱신 |
-| Backblaze B2 + Cloudflare CDN | ~$0.01/월 | 중 | Bandwidth Alliance 로 egress 무료, 셋업 단계가 R2 보다 많음 |
-| AWS S3 | ~$0.04/월 + egress $0.09/GB | 중 | 인기 팟캐스트면 egress 비용 누적 — 비추 |
-| 그대로 GitHub Pages | $0 | - | 10 GB 하드 한도까지 ~6년 버틸 수 있지만 계속 무거워짐 |
+## Plan A — Transcode + Retention (현재 권장)
 
-**권장: Cloudflare R2.** 비용·확장성·egress 정책 모두 팟캐스트 호스팅에 최적. 셋업도 1회성.
+> **상태:** transcode 는 이미 적용됨 ✓ / retention 추가 필요
 
-## 마이그레이션 단계
+### A-1. Transcode (이미 동작 중)
 
-### Phase 0 — 셋업 (1회, ~30분)
+[src/downloader.py](src/downloader.py) 가 다운로드 직후 m4a → mp3 64k mono 로 변환 + 원본 m4a 삭제. config.yaml 의 `transcode_to_mp3: true` 가 토글. 이미 199편 모두 적용됨.
 
-- [ ] Cloudflare 계정 생성, R2 활성화
-- [ ] 버킷 생성 (예: `notebooklm-podcast`)
-- [ ] API token 발급 (Object Read & Write, 해당 버킷 한정)
-- [ ] **공개 접근 설정** 결정: r2.dev 임시 URL vs 커스텀 도메인 (예: `audio.kiuk104.dev`)
-  - 커스텀 도메인 권장: r2.dev URL 은 운영 용도 비추 (Cloudflare 정책)
-- [ ] `config.yaml` 에 `r2:` 블록 추가 (endpoint, bucket, public_base_url)
-- [ ] `requirements.txt` 에 `boto3` 추가 (S3 호환 SDK)
+기존 m4a 가 있는 경우 일괄 변환:
+```bash
+python src/transcode_episodes.py
+```
 
-### Phase 1 — 코드 변경 (rss_generator.py 중심)
+### A-2. Retention (추가 필요)
 
-- [ ] `Episode.url` 을 `f"{r2_public_base}/{quote(self.path.name)}"` 로 변경
-- [ ] `generate()` 의 docs/episodes 복사 루프 제거 (또는 옵션 플래그)
-- [ ] 신규 함수 `upload_to_r2(path)` — 멱등성 (이미 있으면 skip, 크기/etag 비교)
-- [ ] `generate()` 마지막에 episodes/ 의 신규 파일을 R2 에 업로드
-- [ ] `docs/episodes/` 청소 sweep 은 그대로 두되 결국엔 디렉토리 자체 삭제
+용량 기반 rolling window:
+- `docs/episodes/` 합계가 N MB 넘으면 가장 오래된 에피소드부터 prune
+- `feed.xml` 에서도 동일하게 제외
+- `episodes/` (소스) 는 그대로 — 백업 / 추후 복원 가능
 
-### Phase 2 — 일괄 업로드 (1회, ~10분)
+config.yaml 추가될 키:
+```yaml
+retention:
+  max_total_mb: 900   # docs/episodes/ 합계 상한 (default 비활성)
+  # 향후 추가 예정: max_items, max_age_days
+```
 
-- [ ] 스크립트 `scripts/migrate_to_r2.py` 작성 — `episodes/*.mp3` 전부 업로드
-- [ ] checksum 검증 (로컬 SHA256 vs R2 ETag/메타데이터)
-- [ ] 199개 × 7 MB ≈ 1.4 GB. R2 free tier 안에 들어감 (10 GB까지 무료, 이후 $0.015/GB/월)
+900 MB 권장 이유: 1 GB 경고선 아래 + 신규 push 1편 (~7 MB) 마진. 사용자 원하는 만큼 줄이거나 늘릴 수 있음.
 
-### Phase 3 — 컷오버
+### Plan A 의 손익
 
-- [ ] 로컬에서 `python src/rss_generator.py` 재실행 → feed.xml 의 enclosure URL 이 R2 로 바뀜
-- [ ] git push (docs/feed.xml + docs/index.html 만 변경됨)
-- [ ] **구독자 영향 0** — `<guid>` 가 여전히 파일명이라 같은 episode 로 인식, URL 만 교체
-- [ ] 1주일 정도 검증 후 `docs/episodes/` 디렉토리 git rm + 커밋
-- [ ] update.yml 의 `paths: docs/**` 트리거는 그대로 (feed.xml 변경 시에만 배포)
+| | + | − |
+|---|---|---|
+| 비용 | $0 | - |
+| 셋업 | retention 코드만 추가 | - |
+| 다운타임 | 없음 | - |
+| 청취 경험 | 늘 최신 N편 RSS | 오래된 에피소드는 RSS 에서 사라짐 (소스는 보존) |
+| 신규 인프라 | 없음 | - |
 
-### Phase 4 — 신규 워크플로우 (자동화)
+NotebookLM 음성개요는 보통 "지금 공부 중인 자료" 의 요약이라 6개월~1년 후 다시 들을 일이 적음 → rolling window 가 자연스러움.
 
-- [ ] [src/main.py](src/main.py) 가 다운로드 → episodes/ 저장 → **R2 업로드** → RSS 생성 순서로 동작
-- [ ] [scripts/daily-update.ps1](scripts/daily-update.ps1) 은 변화 없음 (main.py 가 알아서 처리)
-- [ ] R2 API token 을 환경변수 또는 `.env` (gitignore) 로 관리. CI 에는 secret 으로
+### Plan A 의 한계
 
-### Phase 5 — 선택적 정리
+- 1편이 100 MB 초과 (드물지만 가능 — 매우 긴 음성개요) 시 GitHub blob 한계 도달. 그땐 Plan B 필요.
+- 사용자가 모든 과거 에피소드를 RSS 에 노출하고 싶은 경우 부적절.
 
-- [ ] `episodes/` 를 git 에서 제외할지 결정:
-  - **A안 (간단):** 그대로 두고 R2 와 이중 보관 (백업)
-  - **B안 (슬림):** `.gitignore` 에 `episodes/` 추가 + `git-filter-repo` 로 history 청소. 저장소 ~1.4 GB 슬림화. 단, 클론 시 mp3 가 없어 R2 다운로드 스크립트 필요
-- A안 이 백업·복구 단순함 — B안 은 진짜로 저장소가 무거워졌을 때만
+---
 
-## 리스크 / 영향
+## Plan B — 외부 호스팅 (헤비 유저 / 미래용)
 
-| 항목 | 평가 |
+> **상태:** 미래 옵션. Plan A 가 막히는 케이스를 위한 프리미엄 노선.
+
+### 언제 Plan B 가 필요한가
+
+| 트리거 | Plan A 가 못 잡는 이유 |
 |---|---|
-| 비용 | R2 free tier 안 (1.4 GB << 10 GB). 초과 시 $0.015/GB/월. 1년 후 +840 MB 이어도 여전히 0원 |
-| 다운타임 | 거의 없음. feed.xml URL 만 바뀌고 구독자 GUID 동일 |
-| 롤백 | `git revert` 로 feed.xml 되돌리면 즉시 Pages 로 복귀 (docs/episodes/ mp3 가 git history 에 남아있는 동안) |
-| 종속성 | Cloudflare 계정 1개 추가, boto3 의존성 추가 |
-| 보안 | R2 token 유출 시 누군가 버킷에 쓰기 가능 — token scope 를 해당 버킷 한정으로 |
+| 1편이 100 MB 초과 | GitHub blob hard limit |
+| 모든 과거 에피소드 영구 보존 + RSS 노출 | retention 으로 못 잘라냄 |
+| 월 100편+ 추가하는 헤비 유저 | retention 으로 따라잡으려면 청취 가능 윈도우가 너무 좁아짐 |
+| 공개 repo 가 부담 (민감 자료) | GitHub Pages 가 public 노출 |
+| Egress 비용 / CDN 분리가 필요 | GitHub Pages 트래픽 정책 한계 |
 
-## 비결정 사안 (마이그레이션 시작 전 답변 필요)
+### 후보 비교 (1.5 GB 기준)
 
-1. **커스텀 도메인** 사용? (Cloudflare DNS 에 audio 서브도메인 추가)
-2. `episodes/` 를 git 에 계속 둘 것인가 (Phase 5 A안 vs B안)?
-3. **분기점:** Pages artifact 가 1.5 GB / 2 GB / 5 GB 중 어디 도달했을 때 마이그레이션 시작? — 늦출수록 누적 업로드 분량은 늘지만 Phase 0~2 작업은 동일
+| 옵션 | 비용/월 | 셋업 | 비고 |
+|---|---|---|---|
+| **Cloudflare R2** ⭐ | $0 (10 GB 까지 무료) | 중 | egress 무료, S3 호환, 커스텀 도메인 |
+| GitHub Releases | $0 | 낮음 | 파일당 2 GB, release tag 종속 |
+| Backblaze B2 + CF CDN | ~$0.01 | 중 | Bandwidth Alliance 로 egress 무료 |
+| AWS S3 | ~$0.04 + egress $0.09/GB | 중 | egress 누적 시 부담 |
 
-## 참고 — 현 시점 측정값 (2026-05-01)
+### 마이그레이션 순서 (Plan B 진행 시)
 
-- `episodes/` 199 files, 1,388 MB
-- `docs/episodes/` 199 files, 1,388 MB (청소 직후, 동기화 상태)
-- artifact 업로드: 1,439,432,716 bytes ≈ 1.34 GB (Run 25211107054)
-- 권장 한도까지 여유: ~340 MB ≈ 약 50편
+1. **셋업** (~30분): R2 버킷 + API token + (선택) 커스텀 도메인. config.yaml 에 r2 블록 추가, requirements.txt 에 boto3.
+2. **코드 변경**: `Episode.url` 을 `f"{r2_public_base}/{quote(name)}"` 로. docs/episodes 복사 단계 제거.
+3. **일괄 업로드** (~10분): `scripts/migrate_to_r2.py` — episodes/ 의 모든 mp3 를 R2 로 PUT + checksum 검증.
+4. **컷오버**: feed.xml 재생성 → push. 구독자 GUID 동일 → URL 만 교체 → 다운타임 0.
+5. **자동화**: src/main.py 가 다운로드 직후 R2 업로드 → RSS 생성. daily-update.ps1 변화 없음.
+
+### Plan B 의 손익
+
+| | + | − |
+|---|---|---|
+| 비용 | R2 free tier 안 ($0) | Cloudflare 계정 1개 추가 |
+| 모든 에피소드 영구 보존 | ✓ | retention 안 해도 됨 |
+| 100 MB+ 초과 파일 | ✓ | - |
+| 다운타임 | 0 (URL 만 교체, GUID 동일) | - |
+| 종속성 | - | 외부 서비스 1개 |
+
+### Plan B 진행 전 결정 필요한 것
+
+1. 커스텀 도메인 vs r2.dev URL (운영용은 커스텀 권장)
+2. `episodes/` 를 git 에 계속 둘지 (백업) vs `.gitignore` + git-filter-repo 로 history 청소
+3. **분기점**: artifact 가 어디 도달했을 때 마이그레이션 시작? — 현재 1.34 GB 가 1.5 / 2 / 5 GB 어디?
+
+---
+
+## 의사결정 프레임
+
+```
+artifact 1 GB 초과 시작?
+└─ 예 → 모든 과거 에피소드 RSS 에 보존이 중요?
+   ├─ 아니오 → Plan A (transcode + retention)  ← 현재 99% 사용자
+   └─ 예    → Plan B (외부 호스팅)              ← 헤비 유저
+```
+
+**현재 본인 = Plan A 로 충분.** Plan B 는 청취 패턴이 "역대 모든 에피소드 listen 가능해야 함" 으로 바뀌거나, 1편이 100 MB 초과되거나, 공개 repo 가 부담스러워질 때 다시 검토.
