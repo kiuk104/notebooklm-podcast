@@ -33,6 +33,8 @@ NotebookLM의 음성개요(Audio Overview)를 자동으로 다운로드해서 RS
 
 > 음성개요에 민감한 내부 자료가 들어간다면 public repo가 부담스러울 수 있습니다. 그 경우엔 Cloudflare R2 + 별도 RSS 호스팅(예: Vercel)을 추천해요. 필요하면 그 버전도 만들어드릴게요.
 
+> 📈 **artifact 가 1 GB 초과해서 "Deployment might fail" 경고가 뜨기 시작한 경우** → mp3 외부 호스팅 마이그레이션 계획은 [EXTERNAL_HOSTING.md](EXTERNAL_HOSTING.md) 참고.
+
 ## 폴더 구조
 
 ```
